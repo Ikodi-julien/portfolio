@@ -1,8 +1,10 @@
 # Portfolio IKODI
 
+_**Projet débuté le 08/12/2022, en cours de développement**_
+
 ## Présentation du projet
 
-C’est le site que j'ai développé pour démontrer mes compétences en tant que développeur d’application pour le web - fullstack javascript.
+C’est le site développé pour démontrer mes compétences en tant que développeur d’application pour le web - fullstack javascript.
 
 ## Pages et fonctionnalités
 
@@ -60,7 +62,7 @@ C’est le site que j'ai développé pour démontrer mes compétences en tant qu
 ## Liste des fonctionnalités
 
 - Thème « dark » et « light »
-- La connexion avec un compte ikodi modifie certaines données de la Home page + Feedback et pré rempli les champs dnas le composant feedback,
+- La connexion avec un compte ikodi modifie certaines données de la Home page + Feedback et pré rempli les champs dans le composant feedback,
 - Formulaire de feedback,
 - Jeux et news,
 
