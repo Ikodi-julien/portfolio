@@ -17,10 +17,14 @@
 
 !["wireframe page AppDesc"](./wf_appdesc.png)
 
+- Fin des wireframes pour l'instant.
+
 A faire :
 
-- Setup app next
-- Setup premier build sur AWS EC2 en vue d'un déploiement continu
+- Setup repo github + app next avec un composant Hello world ->
+- setup GANDI DNS,
+- setup AWS Nginx,
+- Deploy premier build sur AWS EC2 (voir si possible uniquement le build)
 
 ### Le 08/12/2021
 
