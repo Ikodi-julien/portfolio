@@ -1,10 +1,12 @@
+/* eslint-disable @next/next/link-passhref */
 import Head from "next/head";
+import Link from "next/link";
 import Image from "next/image";
-import styles from "../styles/Home.module.css";
+import { Title, Wrapper, Button } from "../styled_components";
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
         <title>Portfolio - J. PELLIN</title>
         <meta
@@ -14,10 +16,15 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>Bienvenue sur mon futur portfolio 😅</h1>
+      <Wrapper>
+        <Link href="/homepage">
+          <Button>Homepage 👷</Button>
+        </Link>
+        {/* <Button invert>Test Theme prop inverted</Button> */}
 
-        <div style={{ position: "relative", width: "80%" }}>
+        <Title>Bienvenue sur mon futur portfolio 😅</Title>
+
+        <div>
           <Image
             src="/wf_homepage.png"
             alt="Wireframe de la homepage"
@@ -26,12 +33,12 @@ export default function Home() {
             layout={`responsive`}
           />
         </div>
-      </main>
+      </Wrapper>
 
-      <footer className={styles.footer}>
+      <footer>
         <a href="https://ikodi.eu" target="_blank" rel="noopener noreferrer">
           Mais le vieux est là{" "}
-          <span className={styles.logo}>
+          <span>
             <Image
               src="/logo_ikodi_lettres.png"
               alt="Logo Ikodi"
