@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/link-passhref */
-import { Button } from "../styled_components";
-import { Container, NavLinks, NavLink } from "./HeaderStyles";
+import Button from "../styled_components/Button";
+import { LogoContainer } from "../styled_components";
+import { Container, NavLinks, NavLink, Burger } from "./HeaderStyles";
 import { FaHome } from "react-icons/fa";
 import Image from "next/image";
 import Link from "next/link";
@@ -9,18 +10,33 @@ import Logo from "../public/logo_ikodi_lettres.png";
 const Header = (props) => {
   return (
     <Container>
-      <Image src={Logo} alt="Logo Ikodi" width={80} height={20} />
+      <Burger />
+
+      <LogoContainer>
+        <Image src={Logo} alt="Logo Ikodi" width={100} height={25} />
+      </LogoContainer>
+
       <NavLinks>
         <Link href="/">
           <NavLink>
             <FaHome />
           </NavLink>
         </Link>
-        <NavLink>Projets</NavLink>
-        <NavLink>Technos</NavLink>
-        <NavLink>Mon parcours</NavLink>
-        <NavLink>Blog</NavLink>
-        <NavLink>Contact</NavLink>
+        <Link href="#projects">
+          <NavLink>Projets</NavLink>
+        </Link>
+        <Link href="#tech">
+          <NavLink>Technos</NavLink>
+        </Link>
+        <Link href="#about">
+          <NavLink>Mon parcours</NavLink>
+        </Link>
+        <Link href="https://ikodi.eu/blog">
+          <NavLink>Blog</NavLink>
+        </Link>
+        <Link href="https://ikodi.eu/blog?page_id=36">
+          <NavLink>Contact</NavLink>
+        </Link>
       </NavLinks>
       <Button>Sign Up</Button>
     </Container>

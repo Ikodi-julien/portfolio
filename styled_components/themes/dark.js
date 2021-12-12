@@ -9,8 +9,8 @@ const darkTheme = {
     fontInverted: "#474747",
   },
   fonts: {
-    main: "roboto, 'comic sans'",
-    title: "roboto, 'comic sans'",
+    main: "'Raleway', sans-serif",
+    title: "'Raleway', sans-serif",
   },
 };
 

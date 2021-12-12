@@ -2,7 +2,8 @@
 import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
-import { Title, Wrapper, Button } from "../styled_components";
+import { Title, Wrapper } from "../styled_components";
+import Button from "../styled_components/Button";
 
 export default function Home() {
   return (
@@ -17,12 +18,22 @@ export default function Home() {
       </Head>
 
       <Wrapper>
-        <Link href="/homepage">
-          <Button>Homepage 👷</Button>
-        </Link>
-        {/* <Button invert>Test Theme prop inverted</Button> */}
-
         <Title>Bienvenue sur mon futur portfolio 😅</Title>
+        <Link href="/homepage" passHref>
+          <a>
+            <Button>Homepage 👷</Button>
+          </a>
+        </Link>
+        <Link href="/doc/cdc_portfolio.odt">
+          <a>
+            <Button>CDC</Button>
+          </a>
+        </Link>
+        <Link href="/doc/journal.md">
+          <a>
+            <Button>Journal</Button>
+          </a>
+        </Link>
 
         <div>
           <Image
