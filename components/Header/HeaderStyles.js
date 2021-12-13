@@ -14,10 +14,19 @@ export const Container = styled.section`
 `;
 
 export const NavLinks = styled.ul`
+  position: relative;
   display: flex;
 
   @media screen and (max-width: 900px) {
-    display: none;
+    position: absolute;
+    top: 50px;
+    left: ${(props) => (props.isVisible ? 0 : "-200vw")};
+    transition: left 300ms;
+    display: block;
+    padding: 50px 20px;
+    width: 100%;
+    background-color: black;
+    color: ${({ theme }) => theme.colors.font};
   }
 `;
 

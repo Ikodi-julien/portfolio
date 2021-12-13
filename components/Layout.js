@@ -1,5 +1,6 @@
-import Header from "./Header";
-import Footer from "./Footer";
+import Header from "./Header/Header";
+import Footer from "./Footer/Footer";
+import { Wrapper } from "../styled_components/index";
 import styled from "styled-components";
 
 const StyledContainer = styled.div`
@@ -14,7 +15,7 @@ const Layout = ({ children }) => {
   return (
     <StyledContainer>
       <Header />
-      <main>{children}</main>
+      <Wrapper>{children}</Wrapper>
       <Footer />
     </StyledContainer>
   );

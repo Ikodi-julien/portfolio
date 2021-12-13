@@ -14,7 +14,6 @@ export default function Home() {
           name="description"
           content="Le portfolio de Julien PELLIN, développeur d'applications pour le web"
         />
-        <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <Wrapper>

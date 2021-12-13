@@ -12,21 +12,25 @@ ${normalize};
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
-
 }
+
 body {
   font-family: ${(props) => props.theme.fonts.main};
   font-size: 1.6rem;
   background: ${(props) => props.theme.colors.pageBackground};
   color: ${(props) => props.theme.colors.font};
   cursor: default;
-
 }
+
 h1,h2,h3,h4,h5,h6,button {
   font-family: ${(props) => props.theme.fonts.title};
 }
 a {
   text-decoration: none;
+  color: inherit;
+}
+a:hover {
+  color: rgba(64,99,124,1);
 }
 li{
   list-style: none;
