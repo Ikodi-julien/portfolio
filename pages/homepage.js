@@ -1,9 +1,12 @@
 import Layout from "../components/Layout";
+import Hero from "/components/Hero/Hero";
+import { Divider } from "../styled_components";
 
 const Homepage = () => {
   return (
     <Layout>
-      <div>Homepage</div>
+      <Hero />
+      <Divider />
     </Layout>
   );
 };

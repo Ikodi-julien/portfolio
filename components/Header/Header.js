@@ -2,8 +2,7 @@
 import Button from "/styled_components/Button";
 import Nav from "./Nav";
 import { LogoContainer } from "/styled_components";
-import { Container, NavLinks, NavLink, Burger } from "./HeaderStyles";
-import { FaHome } from "react-icons/fa";
+import { Container, Burger } from "./HeaderStyles";
 import Image from "next/image";
 import Link from "next/link";
 import Logo from "/public/logo_ikodi_lettres.png";
@@ -21,7 +20,11 @@ const Header = (props) => {
 
       <Nav visible={isVisible} />
       {isVisible}
-      <Button>Sign Up {isVisible ? "true" : "false"}</Button>
+      <Link href="https://auth.ikodi.eu" passHref>
+        <a>
+          <Button>Sign Up {isVisible ? "true" : "false"}</Button>
+        </a>
+      </Link>
     </Container>
   );
 };

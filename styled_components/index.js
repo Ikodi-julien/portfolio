@@ -1,16 +1,28 @@
 import styled from "styled-components";
 
 const btnBR = 15;
-// Create a Title component that'll render an <h1> tag with some styles
-export const Title = styled.h1`
-  font-size: 1.5em;
-  text-align: center;
-  color: palevioletred;
+
+export const Title = styled.h2`
+  font-size: 2em;
+  text-align: left;
+  color: inherit;
+`;
+export const Section = styled.section`
+  position: relative;
 `;
 
-// Create a Wrapper component that'll render a <section> tag with some styles
 export const Wrapper = styled.main`
-  padding: 4em;
+  padding: 8em;
+
+  ${({ theme }) => theme.breakPoints.dt} {
+    padding: 4em;
+  }
+  ${({ theme }) => theme.breakPoints.ip} {
+    padding: 2em;
+  }
+  ${({ theme }) => theme.breakPoints.sp} {
+    padding: 1em;
+  }
 `;
 
 export const ButtonBack = styled.div`
@@ -44,7 +56,17 @@ export const LogoContainer = styled.div`
   padding: 5px;
   border-radius: 5px;
 
-  @media screen and (max-width: 900px) {
+  ${({ theme }) => theme.breakPoints.ip} {
     display: none;
   }
+`;
+
+export const Divider = styled.hr`
+  width: 20%;
+  min-width: 120px;
+  height: 10px;
+  border-radius: 5px;
+  background: ${({ theme }) => theme.colors.buttonBack};
+  border: none;
+  margin: 10px 0;
 `;
