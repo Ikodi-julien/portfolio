@@ -1,9 +1,11 @@
 const darkTheme = {
   colors: {
     pageBackground: "rgba(1,1,20,1)",
-    cardBackground: "black",
+    cardBackground: "rgba(0,0,15,1)",
     footerBackground: "black",
     divider: "white",
+    primary: "rgba(172,38,143,1)",
+    secondary: "rgba(38,142,172,1)",
     buttonBack:
       "linear-gradient(90deg, rgba(172,38,143,1) 0%, rgba(38,142,172,1) 100%)",
     font: "#d9e4fa",

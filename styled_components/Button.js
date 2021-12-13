@@ -1,8 +1,8 @@
 import { ButtonBack, ButtonFront } from ".";
 
-const Button = ({ children }) => (
+const Button = (props) => (
   <ButtonBack>
-    <ButtonFront>{children}</ButtonFront>
+    <ButtonFront color={props.color}>{props.children}</ButtonFront>
   </ButtonBack>
 );
 export default Button;

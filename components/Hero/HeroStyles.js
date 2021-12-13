@@ -9,7 +9,7 @@ export const StyledHeroAnimation = styled(HeroAnimation)`
   display: "block";
 `;
 
-export const HeroTitle = styled.div`
+export const HeroTitles = styled.div`
   font-family: ${({ theme }) => theme.fonts.title};
   position: absolute;
   top: 0;
@@ -21,5 +21,11 @@ export const HeroTitle = styled.div`
 export const MainTitle = styled.h1`
   font-size: 4em;
   text-align: left;
+`;
+
+export const SubTitle = styled.h2`
+  font-size: 2em;
+  text-align: left;
   color: inherit;
+  display: flex;
 `;

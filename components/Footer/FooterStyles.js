@@ -21,11 +21,3 @@ export const FooterRow = styled.div`
   font-size: 2em;
   flex-wrap: wrap;
 `;
-
-export const FooterLink = styled.div`
-  padding: 1rem 0;
-  margin: 0 1rem;
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-`;

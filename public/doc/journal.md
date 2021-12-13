@@ -1,5 +1,46 @@
 # PORTFOLIO IKODI
 
+### le 13/12/2021
+
+Fait :
+
+- Mise en place de l'animation à l'accueil,
+- Le Héro,
+- La section Projets bien avancée,
+
+Reste à faire :
+
+- Créer les composants communs :
+  - Header :
+    - Navbar -> ok (les finitions de style seront fait globalement à la fin),
+    - NavMenu mobile (hamburger) -> ok
+  - Button -> ok
+  - Footer -> ok
+  - Divider -> ok
+  - AsideMenu,
+- Créer les composants et sous-composants pour la Homepage :
+  - Hero -> ok
+  - Title -> ok (dans Hero)
+  - Main :
+    - Projects :
+      - ProjectCard -> En cours (bien avancé)
+    - Tech&Secu,
+      - TechCard,
+    - About :
+      - Timeline (voir celle de MUI)
+- Créer les composants et sous-composant pour la page de description d'une app, AppPage :
+  - AppHero,
+  - AppResume, (Le même composant pour "son histoire" et "Fonctionnalités" ),
+  - réutiliser TechCard,
+
+### Le 12/12/2021
+
+- Créer les composants communs (version brut) :
+  - Header :
+    - Navbar -> ok (les finitions de style seront fait globalement à la fin),
+    - NavMenu mobile (hamburger) -> ok
+  - Button -> ok
+
 ### Le 11/12/2021
 
 - Se renseigner sur:
@@ -11,25 +52,6 @@
 - Créer les composants communs :
   - Header :
     - Navbar -> En cours,
-    - NavMenu,
-  - AsideMenu,
-  - Footer,
-  - Button,
-  - Divider,
-- Créer les composants et sous-composants pour la Homepage :
-  - Hero,
-  - Title,
-  - Main :
-    - Projects :
-      - ProjectCard,
-    - Tech&Secu,
-      - TechCard,
-    - About :
-      - Timeline (voir celle de MUI)
-- Créer les composants et sous-composant pour la page de description d'une app, AppPage :
-  - AppHero,
-  - AppResume, (Le même composant pour "son histoire" et "Fonctionnalités" ),
-  - réutiliser TechCard,
 
 ### Le 10/12/2021
 

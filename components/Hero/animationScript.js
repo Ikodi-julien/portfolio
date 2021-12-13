@@ -4,7 +4,7 @@ export const createAnimation = () => {
 
   canvas.style.display = "block";
   canvas.style.width = "100%";
-  canvas.style.height = "40vh";
+  canvas.style.height = "50vh";
   canvas.width = canvas.offsetWidth;
   canvas.height = canvas.offsetHeight;
 

@@ -2,7 +2,8 @@
 import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
-import { Title, Wrapper } from "../styled_components";
+import { Wrapper } from "../styled_components";
+import { MainTitle, SubTitle } from "../components/Hero/HeroStyles";
 import Button from "../styled_components/Button";
 
 export default function Home() {
@@ -17,23 +18,27 @@ export default function Home() {
       </Head>
 
       <Wrapper>
-        <Title>Bienvenue sur mon futur portfolio 😅</Title>
-        <Link href="/homepage" passHref>
-          <a>
-            <Button>Homepage 👷</Button>
-          </a>
-        </Link>
-        <Link href="/doc/cdc_portfolio.odt">
-          <a>
-            <Button>CDC</Button>
-          </a>
-        </Link>
-        <Link href="/doc/journal.md">
-          <a>
-            <Button>Journal</Button>
-          </a>
-        </Link>
+        <div style={{ display: "flex" }}>
+          <Link href="/homepage" passHref>
+            <a>
+              <Button color="secondary">Homepage 👷</Button>
+            </a>
+          </Link>
+          <Link href="/doc/cdc_portfolio.odt">
+            <a>
+              <Button color="secondary">CDC</Button>
+            </a>
+          </Link>
+          <Link href="/doc/journal.md">
+            <a>
+              <Button color="secondary">Journal</Button>
+            </a>
+          </Link>
+        </div>
+        <MainTitle>Bienvenue sur mon futur portfolio 😅</MainTitle>
 
+        <SubTitle>Voilà à quoi ça devrait ressembler</SubTitle>
+        <br />
         <div>
           <Image
             src="/wf_homepage.png"
@@ -45,10 +50,10 @@ export default function Home() {
         </div>
       </Wrapper>
 
-      <footer>
+      <footer style={{ textAlign: "center" }}>
         <a href="https://ikodi.eu" target="_blank" rel="noopener noreferrer">
-          Mais le vieux est là{" "}
-          <span>
+          Mais le vieux est toujours là{" "}
+          <span style={{ marginLeft: "1em" }}>
             <Image
               src="/logo_ikodi_lettres.png"
               alt="Logo Ikodi"

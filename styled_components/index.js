@@ -3,12 +3,15 @@ import styled from "styled-components";
 const btnBR = 15;
 
 export const Title = styled.h2`
-  font-size: 2em;
+  font-size: 3em;
   text-align: left;
-  color: inherit;
+  color: ${({ theme }) => theme.colors.font};
+  margin-bottom: 1em;
 `;
+
 export const Section = styled.section`
   position: relative;
+  margin-bottom: 4em;
 `;
 
 export const Wrapper = styled.main`
@@ -42,12 +45,14 @@ export const ButtonFront = styled.button`
   color: ${(props) =>
     props.invert ? props.theme.colors.fontInverted : props.theme.colors.font};
   background: ${(props) =>
-    props.invert
-      ? props.theme.colors.buttonBackInverted
+    props.color
+      ? props.theme.colors[props.color]
       : props.theme.colors.buttonBack};
   border-radius: ${btnBR}px;
   border: none;
   cursor: pointer;
+  display: flex;
+  align-items: center;
 `;
 
 export const LogoContainer = styled.div`
@@ -69,4 +74,17 @@ export const Divider = styled.hr`
   background: ${({ theme }) => theme.colors.buttonBack};
   border: none;
   margin: 10px 0;
+`;
+
+export const IconLink = styled.div`
+  padding: 1rem 0;
+  margin: 0 1rem;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+`;
+
+export const ButtonRow = styled.div`
+  display: flex;
+  flex-wrap: wrap;
 `;

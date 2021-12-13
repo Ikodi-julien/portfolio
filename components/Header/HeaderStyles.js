@@ -11,6 +11,7 @@ export const Container = styled.section`
   justify-content: space-between;
   align-items: center;
   padding: 5px 10px;
+  z-index: 10;
 `;
 
 export const NavLinks = styled.ul`
