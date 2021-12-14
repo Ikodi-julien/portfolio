@@ -2,8 +2,8 @@ import Link from "next/link";
 import { NavLinks, NavLink } from "./HeaderStyles";
 import { FaHome } from "react-icons/fa";
 
-const Nav = ({ visible }) => (
-  <NavLinks isVisible={visible}>
+const Nav = ({ visible, setIsVisible }) => (
+  <NavLinks isVisible={visible} onClick={() => setIsVisible(false)}>
     <Link href="/" passHref>
       <NavLink>
         <FaHome />

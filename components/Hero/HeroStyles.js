@@ -13,9 +13,10 @@ export const HeroTitles = styled.div`
   font-family: ${({ theme }) => theme.fonts.title};
   position: absolute;
   top: 0;
-  left: 0;
-  width: 100%;
+  left: 10%;
+  width: 80%;
   height: 100%;
+  text-shadow: 0 0 5px black;
 `;
 
 export const MainTitle = styled.h1`

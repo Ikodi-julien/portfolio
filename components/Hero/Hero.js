@@ -1,5 +1,5 @@
 import { Section, IconLink } from "/styled_components";
-import { FaLinkedin, FaGithubSquare } from "react-icons/fa";
+import { FaLinkedin, FaGithubSquare, FaRecordVinyl } from "react-icons/fa";
 import {
   StyledHeroAnimation,
   HeroTitles,

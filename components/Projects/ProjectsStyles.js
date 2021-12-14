@@ -11,7 +11,7 @@ export const ProjectCard = styled.article`
   width: 300px;
   padding: 15px;
   border-radius: 5px;
-  box-shadow: 0 0 20px 1px rgba(255, 255, 255, 0.12);
+  box-shadow: 0 0 2px 1px rgba(255, 255, 255, 0.1);
   margin: 20px 10%;
   background: ${({ theme }) => theme.colors.cardBackground};
 `;

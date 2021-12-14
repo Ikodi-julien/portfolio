@@ -1,7 +1,7 @@
 const darkTheme = {
   colors: {
     pageBackground: "rgba(1,1,20,1)",
-    cardBackground: "rgba(0,0,15,1)",
+    cardBackground: "rgba(13,13,22,1)",
     footerBackground: "black",
     divider: "white",
     primary: "rgba(172,38,143,1)",

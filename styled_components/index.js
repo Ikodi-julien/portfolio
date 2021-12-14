@@ -2,16 +2,9 @@ import styled from "styled-components";
 
 const btnBR = 15;
 
-export const Title = styled.h2`
-  font-size: 3em;
-  text-align: left;
-  color: ${({ theme }) => theme.colors.font};
-  margin-bottom: 1em;
-`;
-
 export const Section = styled.section`
   position: relative;
-  margin-bottom: 4em;
+  margin-bottom: 2em;
 `;
 
 export const Wrapper = styled.main`
@@ -87,4 +80,8 @@ export const IconLink = styled.div`
 export const ButtonRow = styled.div`
   display: flex;
   flex-wrap: wrap;
+`;
+
+export const Text = styled.p`
+  position: relative;
 `;

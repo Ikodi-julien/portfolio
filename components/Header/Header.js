@@ -18,8 +18,7 @@ const Header = (props) => {
         <Image src={Logo} alt="Logo Ikodi" width={100} height={25} />
       </LogoContainer>
 
-      <Nav visible={isVisible} />
-      {isVisible}
+      <Nav visible={isVisible} setIsVisible={setIsVisible} />
       <Link href="https://auth.ikodi.eu" passHref>
         <a>
           <Button>Sign Up {isVisible ? "true" : "false"}</Button>

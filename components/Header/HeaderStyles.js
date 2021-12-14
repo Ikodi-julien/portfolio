@@ -2,15 +2,16 @@ import styled from "styled-components";
 import { FaEllipsisV } from "react-icons/fa";
 
 export const Container = styled.section`
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
-  max-width: 1280px;
-  margin: auto;
   height: 60px;
   display: flex;
   justify-content: space-between;
+  background-color: ${({ theme }) => theme.colors.pageBackground};
   align-items: center;
-  padding: 5px 10px;
+  padding: 5px 5%;
   z-index: 10;
 `;
 
