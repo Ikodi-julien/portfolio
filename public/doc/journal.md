@@ -2,15 +2,18 @@
 
 ### le 15/12/2021
 
+#### Fait
+
+- Création dynamique de la page détails d'une app, lien avec les props -> ok
+- Créer les composants et sous-composant pour la page de description d'une app :
+  - AppDetails -> ok (reste le css),
+  - réutiliser TechCard -> non, composant AppTech -> en cours
+
 #### Reste à faire :
 
 - Créer les composants communs :
   - AsideMenu ->
-- Créer les composants et sous-composant pour la page de description d'une app :
-  - AppPage :
-    - AppHero,
-    - AppResume, (Le même composant pour "son histoire" et "Fonctionnalités" ),
-    - réutiliser TechCard,
+- Voir le comportement des liens dans la nav depuis AppPage.
 - Mettre en place les animations, transitions et styles définitifs :
   - Sur liens et boutons,
   - Sur timeline,

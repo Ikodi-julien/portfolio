@@ -11,10 +11,13 @@ const Title = ({ title, id, className }) => (
 export const StyledTitle = styled(Title)`
   text-align: left;
   color: ${({ theme }) => theme.colors.font};
-  margin-bottom: 1em;
+  margin-bottom: 3em;
   padding-top: 60px;
   & h2 {
-    font-size: 3em;
+    font-size: 2.5em;
+    ${({ theme }) => theme.breakPoints.sp} {
+      font-size: 2em;
+    }
   }
 `;
 export default StyledTitle;

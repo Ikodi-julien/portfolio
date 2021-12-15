@@ -1,13 +1,12 @@
 import { useRouter } from "next/router";
 import { Row } from "../../styled_components";
 import Button from "../../styled_components/Button";
-import { StyledTag } from "../Tag/TagStyles";
-import { TagContainer } from "../Tag/TagStyles";
+import { StyledTag, TagContainer } from "../Tag/TagStyles";
 import {
   ProjectCard,
-  ProjectTitle,
   ProjectText,
   ProjectLink,
+  ProjectTitle,
 } from "./ProjectsStyles";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import Image from "next/image";

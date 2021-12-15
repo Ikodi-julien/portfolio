@@ -13,20 +13,21 @@ export const appList = [
     ],
     techno: {
       frontend: {
-        lang: ["Vue.js", "sass"],
-        package: ["axios"],
+        lang: ["Vue.js"],
+        packages: ["sass", "axios"],
         tests: "mocha + chaï",
       },
       backend: {
-        lang: ["Node.js", "Express"],
+        lang: ["Node.js"],
         db: ["PostgreSQL", "Redis"],
-        package: [
+        packages: [
           "axios",
           "base-64",
           "bcrypt",
           "cookie-parser",
           "cors",
           "dotenv",
+          "express",
           "ejs",
           "email-validator",
           "googleapis",
@@ -62,7 +63,7 @@ export const appList = [
     techno: {
       frontend: {
         lang: ["React", "Redux", "sass"],
-        package: [
+        packages: [
           "axios",
           "chai",
           "dotenv",
@@ -79,7 +80,7 @@ export const appList = [
       backend: {
         lang: ["Node.js", "Express"],
         db: ["PostgreSQL", "Redis"],
-        package: [
+        packages: [
           "base-64",
           "bcrypt",
           "cors",
@@ -119,13 +120,12 @@ export const appList = [
     techno: {
       frontend: {
         lang: ["React", "Redux", "sass"],
-        package: ["axios", "sortablejs"],
+        packages: ["axios", "sortablejs"],
       },
       backend: {
         lang: [],
         db: ["LocalStorage"],
-        package: [],
-        tests: "",
+        packages: [],
       },
       deployment: {
         host: "AWS EC2",
@@ -147,12 +147,12 @@ export const appList = [
   //   techno: {
   //     frontend: {
   //       lang: ["html", "scss"],
-  //       package: ["ejs"],
+  //       packages: ["ejs"],
   //     },
   //     backend: {
   //       lang: "PHP",
   //       db: "MySQL",
-  //       package: "à définir"
+  //       packages: "à définir"
   //     },
   //     deployment: {
   //       host: "AWS EC2",
@@ -171,16 +171,21 @@ export const appList = [
     title: "Les multiplications ça fait avancer les licornes",
     imgUrl: ["/assets/multiplicorne_portfolio.png"],
     desc: "Multiplicorne est une application de révision des opérations mathématiques de base (addition, soustraction et multiplication) destinée aux enfants de 6 à 12 ans. Le but étant que la licorne (ou un des personnage choisi) atteigne la ligne d'arrivée.",
-    features: ["à définir"],
+    features: [
+      "Courses rapides ou 'Marathon', additions / soustractions / multiplications",
+      "Création de compte, identification par mot de passe et pseudo",
+      "Possibilité de modification des données personnelles, choix d'avatar pour les courses, choix parmis 3 thèmes visuels",
+      "Enregistrement des temps et consultation de l'historique",
+    ],
     techno: {
       frontend: {
         lang: ["html", "sass"],
-        package: ["à définir"],
+        packages: [],
       },
       backend: {
         lang: ["PHP"],
         db: ["MySQL"],
-        package: "à définir",
+        packages: ["PHPMailer", "PDO", "webpack"],
       },
       deployment: {
         host: "Gandi",
