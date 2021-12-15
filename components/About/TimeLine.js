@@ -42,9 +42,9 @@ export default function OppositeContentTimeline() {
           </TimelineSeparator>
           <TimelineContent>
             Référent paramètrages, développement des fonctionnalités (côté
-            client) et formation du personnel lors d'un projet de changement de
-            logiciel professionnel (150 salariés, groupe de travail sur 18
-            mois).
+            client) et formation du personnel lors d&apos;un projet de
+            changement de logiciel professionnel (150 salariés, groupe de
+            travail sur 18 mois).
           </TimelineContent>
         </TimelineItem>
         <TimelineItem>
@@ -54,10 +54,10 @@ export default function OppositeContentTimeline() {
             <TimelineConnector />
           </TimelineSeparator>
           <TimelineContent>
-            Diplôme d'état Infirmier
+            Diplôme d&apos;état Infirmier
             <br />
-            Exercice en milieu hospitalier, dans l'industrie agro-alimentaire
-            puis à la Médecine du Travail.
+            Exercice en milieu hospitalier, dans l&apos;industrie
+            agro-alimentaire puis à la Médecine du Travail.
           </TimelineContent>
         </TimelineItem>
         <TimelineItem>
@@ -69,8 +69,7 @@ export default function OppositeContentTimeline() {
           <TimelineContent>
             Technicien Qualité dans les industries plastique, automobile et TP.
             <br />
-            Audits de processus, contr .ôles, analyses, formation du
-            personnel...
+            Audits de processus, contrôles, analyses, formation du personnel...
           </TimelineContent>
         </TimelineItem>
         <TimelineItem>
