@@ -1,5 +1,6 @@
 export const appList = [
   {
+    id: "appId-1",
     name: "Auth.Ikodi",
     title: "Ikodi - Authentification",
     imgUrl: ["/assets/auth-hero.png"],
@@ -47,6 +48,7 @@ export const appList = [
     },
   },
   {
+    id: "appId-2",
     name: "Concord",
     title: "Concord - Application de tchat",
     imgUrl: ["/assets/concord-portefolio.png"],
@@ -105,6 +107,7 @@ export const appList = [
     },
   },
   {
+    id: "appId-3",
     name: "Chronofit",
     title: "Chronofit V2.0 - Application de Sport",
     imgUrl: ["/assets/chronofit-v2.png"],
@@ -163,6 +166,7 @@ export const appList = [
   //   }
   // },
   {
+    id: "appId-4",
     name: "Multiplicorne",
     title: "Les multiplications ça fait avancer les licornes",
     imgUrl: ["/assets/multiplicorne_portfolio.png"],
