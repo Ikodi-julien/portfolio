@@ -1,3 +1,10 @@
+import { pageBackground } from "../../styled_components/themes/dark";
+const [r, g, b, a] = pageBackground
+  .replace(" ", "")
+  .split("(")[1]
+  .split(")")[0]
+  .split(",");
+
 export const createAnimation = () => {
   console.clear();
   const canvas = document.getElementById("canvas");
@@ -123,7 +130,7 @@ void main() {
   //----- render
 
   gl.viewport(0, 0, gl.canvas.width, gl.canvas.height);
-  gl.clearColor(1 / 255, 1 / 255, 20 / 255, 1);
+  gl.clearColor(r / 255, g / 255, b / 255, a);
   gl.blendFunc(gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA);
   gl.enable(gl.BLEND);
   gl.disable(gl.CULL_FACE);

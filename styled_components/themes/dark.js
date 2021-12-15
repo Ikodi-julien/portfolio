@@ -1,15 +1,17 @@
+export const pageBackground = `rgba( 10, 10, 20, 1)`;
+const primaryColor = `rgba(93,0,133,1)`;
+const secondaryColor = `rgba(0,49,97,1)`;
+
 const darkTheme = {
   colors: {
-    pageBackground: "rgba(1,1,20,1)",
-    cardBackground: "rgba(13,13,22,1)",
+    pageBackground,
+    cardBackground: "rgba(15,15,25,1)",
     footerBackground: "black",
-    divider: "white",
-    primary: "rgba(172,38,143,1)",
-    secondary: "rgba(38,142,172,1)",
-    buttonBack:
-      "linear-gradient(90deg, rgba(172,38,143,1) 0%, rgba(38,142,172,1) 100%)",
-    font: "#d9e4fa",
-    fontInverted: "#474747",
+    primary: primaryColor,
+    secondary: secondaryColor,
+    buttonBack: `linear-gradient(90deg, ${primaryColor} 0%, ${secondaryColor} 100%)`,
+    font: `#d9e4fa`,
+    fontInverted: `#474747`,
   },
   fonts: {
     main: "'Raleway', sans-serif",

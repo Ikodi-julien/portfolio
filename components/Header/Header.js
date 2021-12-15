@@ -21,7 +21,7 @@ const Header = (props) => {
       <Nav visible={isVisible} setIsVisible={setIsVisible} />
       <Link href="https://auth.ikodi.eu" passHref>
         <a>
-          <Button>Sign Up {isVisible ? "true" : "false"}</Button>
+          <Button>Se connecter</Button>
         </a>
       </Link>
     </Container>

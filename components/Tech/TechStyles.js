@@ -12,7 +12,7 @@ export const TechCard = styled.article`
   padding: 15px;
   border-radius: 5px;
   box-shadow: 0 0 2px 1px rgba(255, 255, 255, 0.1);
-  margin: 20px 5%;
+  margin: 30px 3%;
   background: ${({ theme }) => theme.colors.cardBackground};
 `;
 

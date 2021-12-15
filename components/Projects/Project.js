@@ -1,4 +1,4 @@
-import { ButtonRow } from "../../styled_components";
+import { Row } from "../../styled_components";
 import Button from "../../styled_components/Button";
 import { StyledTag } from "../Tag/TagStyles";
 import { TagContainer } from "../Tag/TagStyles";
@@ -33,7 +33,7 @@ const Project = ({ project }) => (
         <StyledTag key={db} text={db} />
       ))}
     </TagContainer>
-    <ButtonRow>
+    <Row>
       <Button color="primary">
         <FaExternalLinkAlt style={{ fontSize: "1.2em", marginRight: "1em" }} />
         {project.name}
@@ -41,7 +41,7 @@ const Project = ({ project }) => (
       <Button color="secondary">
         <FaGithub style={{ fontSize: "1.2em" }} />
       </Button>
-    </ButtonRow>
+    </Row>
     <ProjectLink>
       <em>
         <Link href={"/details"} passHref>

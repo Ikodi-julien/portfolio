@@ -1,5 +1,36 @@
 # PORTFOLIO IKODI
 
+### le 15/12/2021
+
+#### Reste à faire :
+
+- Créer les composants communs :
+  - AsideMenu ->
+- Créer les composants et sous-composant pour la page de description d'une app :
+  - AppPage :
+    - AppHero,
+    - AppResume, (Le même composant pour "son histoire" et "Fonctionnalités" ),
+    - réutiliser TechCard,
+- Mettre en place les animations, transitions et styles définitifs :
+  - Sur liens et boutons,
+  - Sur timeline,
+  - Sur menu Aside,
+  - Dans section About,
+
+### le 14/12/2021
+
+#### Fait :
+
+- TechCard, et object techList.js,
+- Position fixed pour le Header,
+- Du css sur les cartes,
+- Galérer sur comment transmettre des composants via les props... (indice : Importe les dans le composant ou ils sont utilisés...)
+- Créer les composants et sous-composants pour la Homepage :
+  - Main :
+    - About :
+      - Timeline (voir celle de MUI) -> ok
+      - Animation (à finaliser)
+
 ### le 13/12/2021
 
 Fait :
@@ -7,8 +38,6 @@ Fait :
 - Mise en place de l'animation à l'accueil,
 - Le Héro,
 - La section Projets bien avancée,
-
-Reste à faire :
 
 - Créer les composants communs :
   - Header :
@@ -23,15 +52,7 @@ Reste à faire :
   - Title -> ok (dans Hero)
   - Main :
     - Projects :
-      - ProjectCard -> En cours (bien avancé)
-    - Tech&Secu,
-      - TechCard,
-    - About :
-      - Timeline (voir celle de MUI)
-- Créer les composants et sous-composant pour la page de description d'une app, AppPage :
-  - AppHero,
-  - AppResume, (Le même composant pour "son histoire" et "Fonctionnalités" ),
-  - réutiliser TechCard,
+      - ProjectCard -> ok (styles à finaliser)
 
 ### Le 12/12/2021
 

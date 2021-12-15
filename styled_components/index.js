@@ -77,7 +77,7 @@ export const IconLink = styled.div`
   cursor: pointer;
 `;
 
-export const ButtonRow = styled.div`
+export const Row = styled.div`
   display: flex;
   flex-wrap: wrap;
 `;
