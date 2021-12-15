@@ -22,8 +22,8 @@ export default function OppositeContentTimeline() {
             <br />
             Certification Opquast 890/1000
             <br />
-            Développement de plusieurs applications avec Next.JS, Vue.JS, SQL,
-            NoSQL...
+            Développement de plusieurs applications avec Next.JS, React, Vue.JS,
+            SQL, NoSQL...
           </TimelineContent>
         </TimelineItem>
         <TimelineItem>
@@ -32,7 +32,9 @@ export default function OppositeContentTimeline() {
             <TimelineDot />
             <TimelineConnector />
           </TimelineSeparator>
-          <TimelineContent>Première app complète, avec PHP</TimelineContent>
+          <TimelineContent>
+            Première app complète, avec PHP et MySQL
+          </TimelineContent>
         </TimelineItem>
         <TimelineItem>
           <TimelineOppositeContent>2018</TimelineOppositeContent>

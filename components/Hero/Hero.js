@@ -13,6 +13,7 @@ const Hero = (props) => {
       <HeroTitles>
         <MainTitle>Portfolio</MainTitle>
         <SubTitle>Julien PELLIN</SubTitle>
+        <SubTitle>Développeur d&apos;applications pour le web</SubTitle>
         <SubTitle>
           <IconLink>
             <a href="https://www.linkedin.com/in/julien-pellin-934720188/">

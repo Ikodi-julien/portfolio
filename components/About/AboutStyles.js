@@ -23,7 +23,8 @@ export const LogoAnimationContainer = styled.div.attrs((props) => ({
   id: "logoanimationcontainer",
 }))`
   position: relative;
-  width: 500px;
-  height: 500px;
+  margin-top: 100px;
+  width: 400px;
+  height: 400px;
   // border: 1px solid white;
 `;

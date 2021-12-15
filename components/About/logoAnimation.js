@@ -15,6 +15,7 @@ export const logoAnimation = () => {
   const logoElt = [];
   let increment = 360 / 9;
   let angle = 0;
+  let radius = 200;
 
   function radian(deg) {
     return deg * (Math.PI / 180);
@@ -31,8 +32,8 @@ export const logoAnimation = () => {
       newLogo.style.width = "80px";
       newLogo.style.height = "80px";
 
-      let top = Math.sin(radian(angle)) * 250 + 250;
-      let left = Math.cos(radian(angle)) * 250 + 250;
+      let top = Math.sin(radian(angle)) * radius + radius;
+      let left = Math.cos(radian(angle)) * radius + radius;
       angle += increment;
 
       newLogo.style.top = `${top}px`;

@@ -1,30 +1,44 @@
 import Link from "next/link";
-import { NavLinks, NavLink } from "./HeaderStyles";
+import { Fragment } from "react";
+import { useState } from "react";
+import { NavLinks, NavLink, StyledNavSup } from "./HeaderStyles";
+import NavSup from "./NavSup";
 import { FaHome } from "react-icons/fa";
 
-const Nav = ({ visible, setIsVisible }) => (
-  <NavLinks isVisible={visible} onClick={() => setIsVisible(false)}>
-    <Link href="/" passHref>
-      <NavLink>
-        <FaHome />
-      </NavLink>
-    </Link>
-    <Link href="#projects" passHref>
-      <NavLink>Projets</NavLink>
-    </Link>
-    <Link href="#tech" passHref>
-      <NavLink>Technos</NavLink>
-    </Link>
-    <Link href="#about" passHref>
-      <NavLink>Mon parcours</NavLink>
-    </Link>
-    <Link href="https://ikodi.eu/blog" passHref>
-      <NavLink>Blog</NavLink>
-    </Link>
-    <Link href="https://ikodi.eu/blog?page_id=36" passHref>
-      <NavLink>Contact</NavLink>
-    </Link>
-  </NavLinks>
-);
+const Nav = ({ visible, setIsVisible }) => {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <Fragment>
+      <NavLinks isVisible={visible}>
+        <Link href="/" passHref>
+          <NavLink onClick={() => setIsVisible(false)}>
+            <FaHome />
+          </NavLink>
+        </Link>
+        <Link href="/homepage/#projects" passHref>
+          <NavLink onClick={() => setIsVisible(false)}>Projets</NavLink>
+        </Link>
+        <Link href="/homepage/#tech" passHref>
+          <NavLink onClick={() => setIsVisible(false)}>Technos</NavLink>
+        </Link>
+        <Link href="/homepage/#about" passHref>
+          <NavLink onClick={() => setIsVisible(false)}>Mon parcours</NavLink>
+        </Link>
+        <Link href="https://ikodi.eu/blog?page_id=36" passHref>
+          <NavLink onClick={() => setIsVisible(false)}>Contact</NavLink>
+        </Link>
+        <NavLink onClick={() => setOpen(!open)}>
+          {open ? "Plutôt -" : "Encore +"}
+        </NavLink>
+        <StyledNavSup
+          open={open}
+          setOpen={setOpen}
+          setIsVisible={setIsVisible}
+        />
+      </NavLinks>
+    </Fragment>
+  );
+};
 
 export default Nav;
