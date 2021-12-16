@@ -4,7 +4,8 @@
 
 ### Fait
 
-- Vérifier les liens internes et externes ->
+- Vérifier les liens internes et externes -> ok
+- Intégration du feedback -> en cours
 - Fin mis en forme About ->
 - Changement thème dark / light ->
 

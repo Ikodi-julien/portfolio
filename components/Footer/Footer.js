@@ -18,7 +18,7 @@ const Footer = (props) => {
             julien.pellin@ikodi.eu
           </IconLink>
         </a>
-        <Link href="/feedback" passHref>
+        <Link href="https://feedback.ikodi.eu" passHref>
           <a>
             <IconLink>
               <FaWpforms style={{ fontSize: "1.5em", marginRight: "1em" }} />

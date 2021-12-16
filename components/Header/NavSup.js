@@ -28,7 +28,7 @@ const NavSup = ({ open, setOpen, setIsVisible, className }) => {
           </NavLink>
         </a>
       </Link>
-      <Link href="/homepage" passHref>
+      <Link href="https://feedback.ikodi.eu" passHref>
         <a>
           <NavLink>
             <FaWpforms style={{ marginRight: "0.5em" }} /> Donner mon avis
