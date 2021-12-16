@@ -15,19 +15,22 @@ import Link from "next/link";
 const Project = ({ project }) => {
   const router = useRouter();
   const handleClick = () => {
-    console.log("hé");
     router.push(`/${project.name}`);
   };
 
   return (
     <ProjectCard key={project.title}>
       <ProjectTitle>{project.name}</ProjectTitle>
-      <Image
-        src={project.imgUrl[0]}
-        alt={project.title}
-        width={250}
-        height={150}
-      />
+
+      <div style={{ cursor: "pointer" }}>
+        <Image
+          src={project.imgUrl[0]}
+          alt={project.title}
+          width={250}
+          height={150}
+          onClick={handleClick}
+        />
+      </div>
       <ProjectText>{project.desc}</ProjectText>
       <TagContainer>
         {project.techno.frontend.lang.map((lang) => (
@@ -42,19 +45,26 @@ const Project = ({ project }) => {
       </TagContainer>
       <Row>
         <Button color="primary" onClick={handleClick}>
-          <FaExternalLinkAlt
-            style={{ fontSize: "1.2em", marginRight: "1em" }}
-          />
-          {project.name}
+          + Détails
         </Button>
-        <Button color="secondary">
-          <FaGithub style={{ fontSize: "1.2em" }} />
-        </Button>
+        <a href={project.links.github}>
+          <Button color="secondary">
+            <FaGithub style={{ fontSize: "1.2em" }} />
+          </Button>
+        </a>
       </Row>
       <ProjectLink>
         <em>
-          <Link href={"/details"} passHref>
-            Voir la description détaillée
+          <Link
+            href={`https://${project.name.toLowerCase()}.ikodi.eu`}
+            passHref
+          >
+            <a>
+              {project.name.toLowerCase()}.ikodi.eu{" "}
+              <FaExternalLinkAlt
+                style={{ fontSize: "1.2em", marginLeft: "0.5em" }}
+              />
+            </a>
           </Link>
         </em>
       </ProjectLink>

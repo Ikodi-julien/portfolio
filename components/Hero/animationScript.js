@@ -151,10 +151,12 @@ void main() {
 
   // ---
   gl.bindBuffer(gl.ARRAY_BUFFER, buf);
-  document.body.onmousemove = (e) => {
+  const moveFocus = (e) => {
     ps[0] = 2 * (e.clientX / window.innerWidth) - 1;
     ps[1] = -2 * (e.clientY / window.innerHeight) + 1;
     gl.bufferSubData(gl.ARRAY_BUFFER, 0, ps.slice(0, 2)); // that's why DYNAMIC_DRAW
     f();
   };
+  document.body.onmousemove = moveFocus;
+  document.body.ontouchmove = moveFocus;
 };

@@ -1,7 +1,7 @@
 export const appList = [
   {
     id: "appId-1",
-    name: "Auth.Ikodi",
+    name: "Auth",
     title: "Ikodi - Authentification",
     imgUrl: ["/assets/auth-hero.png"],
     desc: "Un application d'authentification en standalone, elle permet de créer un compte et de se connecter à certaines applications du domain ikodi.eu",
@@ -100,10 +100,7 @@ export const appList = [
       },
     },
     links: {
-      github: [
-        "https://github.com/Ikodi-julien/concord-API",
-        "https://github.com/Ikodi-julien/concord-react",
-      ],
+      github: "https://github.com/Ikodi-julien/concord-API",
       app: "https://concord.ikodi.eu",
     },
   },

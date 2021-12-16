@@ -1,5 +1,21 @@
 # PORTFOLIO IKODI
 
+### le 16/12/2021
+
+### Fait
+
+- Vérifier les liens internes et externes ->
+- Fin mis en forme About ->
+- Changement thème dark / light ->
+
+#### Reste à faire :
+
+- Ajouter le formulaire de feedback,
+- Mettre en place les animations, transitions et styles définitifs :
+  - Sur liens et boutons,
+  - Sur timeline,
+  - Dans section About ajouter un autre "ring" pour les xp d'avant.
+
 ### le 15/12/2021
 
 #### Fait
@@ -11,14 +27,6 @@
 - Voir le comportement des liens dans la nav depuis AppPage -> ok (si tout pouvais être aussi simple...),
 - Créer les composants communs :
   - AsideMenu ->non, devient un menu contenant des liens vers blog, jeux, app de news et formulaire de feedback -> ok (nice !)
-
-#### Reste à faire :
-
-- Mettre en place les animations, transitions et styles définitifs :
-  - Sur liens et boutons,
-  - Sur timeline,
-  - Dans section About,
-  - Changement thème dark / light,
 
 ### le 14/12/2021
 

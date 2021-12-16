@@ -29,12 +29,15 @@ export const ProjectText = styled.p`
 export const ProjectLink = styled.div`
   font-style: italic;
   font-weight: 600;
-  margin: 8px 0;
+  font-size: 1.2em;
+  width: 100%;
+  text-align: center;
+  padding: 1em 0;
   transform: scale(1);
   transition: all 300ms;
 
   &:hover {
-    transform: scale(1.05);
+    transform: scale(1.01);
     transition: all 300ms;
   }
 `;

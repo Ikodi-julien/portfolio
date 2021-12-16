@@ -12,6 +12,7 @@ const darkTheme = {
     buttonBack: `linear-gradient(90deg, ${primaryColor} 0%, ${secondaryColor} 100%)`,
     font: `#d9e4fa`,
     fontInverted: `#474747`,
+    linkHovered: `rgba(0,85,173,1)`,
   },
   fonts: {
     main: "'Raleway', sans-serif",

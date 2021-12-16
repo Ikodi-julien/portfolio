@@ -46,6 +46,10 @@ export const ButtonFront = styled.button`
   cursor: pointer;
   display: flex;
   align-items: center;
+
+  &:hover {
+    background-color: ${({ theme }) => theme.colors.linkHovered};
+  }
 `;
 
 export const LogoContainer = styled.div`
@@ -79,9 +83,11 @@ export const IconLink = styled.div`
 
 export const Row = styled.div`
   display: flex;
+  justify-content: space-evenly;
   flex-wrap: wrap;
 `;
 
 export const Text = styled.p`
+  font-size: 1.1em;
   position: relative;
 `;

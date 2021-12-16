@@ -40,7 +40,7 @@ export const NavLinks = styled.ul`
 
 export const NavLink = styled.li`
   font-size: 1.2em;
-  padding: 2rem 2rem 1rem 2rem;
+  padding: 1em;
   height: 100%;
   cursor: pointer;
   font-weight: 400;

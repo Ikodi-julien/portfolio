@@ -16,13 +16,13 @@ const Nav = ({ visible, setIsVisible }) => {
             <FaHome />
           </NavLink>
         </Link>
-        <Link href="/homepage/#projects" passHref>
+        <Link href="/#projects" passHref>
           <NavLink onClick={() => setIsVisible(false)}>Projets</NavLink>
         </Link>
-        <Link href="/homepage/#tech" passHref>
+        <Link href="/#tech" passHref>
           <NavLink onClick={() => setIsVisible(false)}>Technos</NavLink>
         </Link>
-        <Link href="/homepage/#about" passHref>
+        <Link href="/#about" passHref>
           <NavLink onClick={() => setIsVisible(false)}>Mon parcours</NavLink>
         </Link>
         <Link href="https://ikodi.eu/blog?page_id=36" passHref>

@@ -14,20 +14,26 @@ const NavSup = ({ open, setOpen, setIsVisible, className }) => {
       }}
     >
       <Link href="https://ikodi.eu/blog" passHref>
-        <NavLink>
-          <FaBloggerB /> Blog
-        </NavLink>
+        <a>
+          <NavLink>
+            <FaBloggerB style={{ marginRight: "0.5em" }} /> Blog
+          </NavLink>
+        </a>
       </Link>
       <Link href="https://ikodi.eu/games" passHref>
-        <NavLink>
-          <FaGamepad />
-          Jeux
-        </NavLink>
+        <a>
+          <NavLink>
+            <FaGamepad style={{ marginRight: "0.5em" }} />
+            Jeux
+          </NavLink>
+        </a>
       </Link>
       <Link href="/homepage" passHref>
-        <NavLink>
-          <FaWpforms /> Donner mon avis
-        </NavLink>
+        <a>
+          <NavLink>
+            <FaWpforms style={{ marginRight: "0.5em" }} /> Donner mon avis
+          </NavLink>
+        </a>
       </Link>
     </NavSupContainer>
   );
