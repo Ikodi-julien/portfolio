@@ -2,8 +2,19 @@ export const pageBackground = `rgba( 10, 10, 20, 1)`;
 const primaryColor = `rgba(93,0,133,1)`;
 const secondaryColor = `rgba(0,49,97,1)`;
 
-const darkTheme = {
-  colors: {
+const themes = {
+  dark: {
+    pageBackground,
+    cardBackground: "rgba(15,15,25,1)",
+    footerBackground: "black",
+    primary: primaryColor,
+    secondary: secondaryColor,
+    buttonBack: `linear-gradient(90deg, ${primaryColor} 0%, ${secondaryColor} 100%)`,
+    font: `#d9e4fa`,
+    fontInverted: `#474747`,
+    linkHovered: `rgba(0,85,173,1)`,
+  },
+  light: {
     pageBackground,
     cardBackground: "rgba(15,15,25,1)",
     footerBackground: "black",
@@ -30,4 +41,4 @@ const darkTheme = {
   },
 };
 
-export default darkTheme;
+export default themes;

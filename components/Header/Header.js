@@ -7,9 +7,12 @@ import Image from "next/image";
 import Link from "next/link";
 import Logo from "/public/logo_ikodi_lettres.png";
 import { useState } from "react";
+import ThemeButton from "../ThemeButton/ThemeButton";
+import { ThemeCtxProvider, themeContext } from "../../context/theme-context";
 
 const Header = (props) => {
   const [isVisible, setIsVisible] = useState(false);
+
   return (
     <Container>
       <Burger onClick={() => setIsVisible(!isVisible)} />
@@ -24,6 +27,9 @@ const Header = (props) => {
           <Button>Se connecter</Button>
         </a>
       </Link>
+      <ThemeCtxProvider>
+        <ThemeButton />
+      </ThemeCtxProvider>
     </Container>
   );
 };
