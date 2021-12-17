@@ -8,14 +8,16 @@ export const TimelineContainer = styled.div`
     font-size: 1em;
   }
 
+  ${({ theme }) => theme.breakPoints.dt} {
+    width: 70%;
+  }
+
   ${({ theme }) => theme.breakPoints.ip} {
-    width: 90%;
-    margin: 30px 0;
+    width: 100%;
   }
 
   ${({ theme }) => theme.breakPoints.sp} {
     width: 100%;
-    margin: 30px 0;
   }
 `;
 
@@ -27,4 +29,7 @@ export const LogoAnimationContainer = styled.div.attrs((props) => ({
   width: 400px;
   height: 400px;
   // border: 1px solid white;
+  ${({ theme }) => theme.breakPoints.dt} {
+    display: none;
+  }
 `;

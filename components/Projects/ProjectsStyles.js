@@ -8,12 +8,23 @@ export const ProjectsContainer = styled.div`
   flex-wrap: wrap;
 `;
 export const ProjectCard = styled.article`
-  width: 300px;
+  width: 40%;
+  max-width: 450px;
+  min-width: 280px;
   padding: 15px;
   border-radius: 5px;
   box-shadow: 0 0 2px 1px rgba(255, 255, 255, 0.1);
-  margin: 20px 10%;
+  margin: 20px 5%;
   background: ${({ theme }) => theme.colors.cardBackground};
+
+  ${({ theme }) => theme.breakPoints.dt} {
+    margin: 20px 3%;
+    padding: 8px;
+  }
+
+  ${({ theme }) => theme.breakPoints.sp} {
+    padding: 8px;
+  }
 `;
 
 export const ProjectTitle = styled.h1`

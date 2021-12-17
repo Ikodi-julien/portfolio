@@ -8,12 +8,21 @@ export const TechsContainer = styled.div`
   flex-wrap: wrap;
 `;
 export const TechCard = styled.article`
-  width: 200px;
+  width: 10%;
+  max-width: 200px;
+  min-width: 140px;
   padding: 15px;
   border-radius: 5px;
   box-shadow: 0 0 2px 1px rgba(255, 255, 255, 0.1);
   margin: 30px 3%;
   background: ${({ theme }) => theme.colors.cardBackground};
+
+  ${({ theme }) => theme.breakPoints.sp} {
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 0 0 2px 1px rgba(255, 255, 255, 0.1);
+    margin: 30px 0;
+  }
 `;
 
 export const TechTitle = styled.h1`

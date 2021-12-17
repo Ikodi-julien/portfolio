@@ -16,7 +16,7 @@ const techList = [
     desc: ["Expérience avec React-Redux, scss et un peu avec Vue.js"],
   },
   {
-    title: "Déploiement",
+    title: "Serveur",
     icon: "FaAws",
     desc: [
       "Avec AWS, Nginx.",

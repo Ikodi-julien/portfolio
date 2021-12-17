@@ -9,13 +9,12 @@ const logoList = [
   "/assets/logo_redis.png",
   "/assets/logo_vue.png",
 ];
+let increment = 360 / 9;
+let angle = 0;
+let radius = 160;
 
 export const logoAnimation = () => {
   const container = document.getElementById("logoanimationcontainer");
-  const logoElt = [];
-  let increment = 360 / 9;
-  let angle = 0;
-  let radius = 200;
 
   function radian(deg) {
     return deg * (Math.PI / 180);

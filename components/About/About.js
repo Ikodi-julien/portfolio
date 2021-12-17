@@ -10,7 +10,7 @@ const About = ({}) => {
 
   return (
     <Section>
-      <Title title="Mon parcours" id="about" />
+      <Title title="Parcours pro" id="about" />
       <Text>
         Developpeur d’applications pour le web depuis 2019, j’ai aussi une
         expérience dans les secteurs de la santé et de l’industrie

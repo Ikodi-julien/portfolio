@@ -23,7 +23,7 @@ const Nav = ({ visible, setIsVisible }) => {
           <NavLink onClick={() => setIsVisible(false)}>Technos</NavLink>
         </Link>
         <Link href="/#about" passHref>
-          <NavLink onClick={() => setIsVisible(false)}>Mon parcours</NavLink>
+          <NavLink onClick={() => setIsVisible(false)}>Parcours pro</NavLink>
         </Link>
         <Link href="https://ikodi.eu/blog?page_id=36" passHref>
           <NavLink onClick={() => setIsVisible(false)}>Contact</NavLink>

@@ -14,10 +14,10 @@ export const Wrapper = styled.main`
     padding: 4em;
   }
   ${({ theme }) => theme.breakPoints.ip} {
-    padding: 2em;
+    padding: 3em 2em;
   }
   ${({ theme }) => theme.breakPoints.sp} {
-    padding: 1em;
+    padding: 3em 0.5em;
   }
 `;
 
@@ -28,6 +28,7 @@ export const ButtonBack = styled.div`
   border-radius: ${btnBR + 2}px;
   overflow: hidden;
   width: fit-content;
+  height: fit-content;
 `;
 
 export const ButtonFront = styled.button`
@@ -58,7 +59,7 @@ export const LogoContainer = styled.div`
   padding: 5px;
   border-radius: 5px;
 
-  ${({ theme }) => theme.breakPoints.ip} {
+  ${({ theme }) => theme.breakPoints.dt} {
     display: none;
   }
 `;
@@ -84,6 +85,7 @@ export const IconLink = styled.div`
 export const Row = styled.div`
   display: flex;
   justify-content: space-evenly;
+  align-items: center;
   flex-wrap: wrap;
 `;
 

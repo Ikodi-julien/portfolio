@@ -158,5 +158,5 @@ void main() {
     f();
   };
   document.body.onmousemove = moveFocus;
-  document.body.ontouchmove = moveFocus;
+  document.body.ontouchstart = moveFocus;
 };

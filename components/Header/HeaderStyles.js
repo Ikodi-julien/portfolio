@@ -14,6 +14,13 @@ export const Container = styled.section`
   align-items: center;
   padding: 0 5%;
   z-index: 10;
+
+  ${({ theme }) => theme.breakPoints.ip} {
+    padding: 0 5%;
+  }
+  ${({ theme }) => theme.breakPoints.dt} {
+    padding: 0;
+  }
 `;
 
 export const NavLinks = styled.ul`
@@ -68,7 +75,7 @@ export const StyledNavSup = styled(NavSup)`
   z-index: -1;
   transition: top 300ms;
 
-  @media screen and (max-width: 900px) {
+  ${({ theme }) => theme.breakPoints.ip} {
     display: block;
     background-color: black;
     top: 50px;
@@ -79,11 +86,12 @@ export const StyledNavSup = styled(NavSup)`
 `;
 
 export const Burger = styled(FaEllipsisV)`
-  margin-right: 10px;
+  display: none;
+  margin: 12px;
   font-size: 1.5em;
   color: white;
 
-  @media screen and (min-width: 900px) {
-    display: none;
+  ${({ theme }) => theme.breakPoints.ip} {
+    display: block;
   }
 `;

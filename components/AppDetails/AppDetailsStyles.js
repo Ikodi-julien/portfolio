@@ -4,6 +4,13 @@ export const AppDetailsHero = styled.div`
   width: 100%;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+`;
+
+export const AppDetailsTitleWrapper = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
   justify-content: space-between;
 `;
 
