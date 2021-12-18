@@ -8,7 +8,7 @@ import Link from "next/link";
 import Logo from "/public/logo_ikodi_lettres.png";
 import { useState } from "react";
 import ThemeButton from "../ThemeButton/ThemeButton";
-import { ThemeCtxProvider, themeContext } from "../../context/theme-context";
+import { ThemeCtxProvider } from "../../context/theme-context";
 
 const Header = (props) => {
   const [isVisible, setIsVisible] = useState(false);

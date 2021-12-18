@@ -36,9 +36,9 @@ export const ButtonFront = styled.button`
   margin: 0;
   padding: ${(props) => (props.nopadding ? "0" : "0.5em 1em")};
   color: ${(props) =>
-    props.invert ? props.theme.dark.fontInverted : props.theme.dark.font};
+    props.invert ? props.theme.fontInverted : props.theme.font};
   background: ${(props) =>
-    props.color ? props.theme.dark[props.color] : props.theme.dark.buttonBack};
+    props.color ? props.theme[props.color] : props.theme.buttonBack};
   border-radius: ${btnBR}px;
   border: none;
   cursor: pointer;
@@ -46,7 +46,7 @@ export const ButtonFront = styled.button`
   align-items: center;
 
   &:hover {
-    background-color: ${({ theme }) => theme.dark.linkHovered};
+    background-color: ${({ theme }) => theme.linkHovered};
   }
 `;
 
@@ -66,7 +66,7 @@ export const Divider = styled.hr`
   min-width: 120px;
   height: 10px;
   border-radius: 5px;
-  background: ${({ theme }) => theme.dark.buttonBack};
+  background: ${({ theme }) => theme.buttonBack};
   border: none;
   margin: 10px 0;
 `;

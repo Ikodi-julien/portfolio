@@ -10,7 +10,7 @@ const Title = ({ title, id, className }) => (
 
 export const StyledTitle = styled(Title)`
   text-align: left;
-  color: ${({ theme }) => theme.dark.font};
+  color: ${({ theme }) => theme.font};
   margin-bottom: 3em;
   padding-top: 60px;
   & h2 {

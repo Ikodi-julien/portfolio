@@ -10,7 +10,7 @@ export const Container = styled.section`
   height: 60px;
   display: flex;
   justify-content: space-between;
-  background-color: ${({ theme }) => theme.dark.pageBackground};
+  background-color: ${({ theme }) => theme.pageBackground};
   align-items: center;
   padding: 0 5%;
   z-index: 10;
@@ -22,7 +22,7 @@ export const NavLinks = styled.ul`
   display: flex;
   align-items: center;
   z-index: 10;
-  background-color: ${({ theme }) => theme.dark.pageBackground};
+  background-color: ${({ theme }) => theme.pageBackground};
 
   ${({ theme }) => theme.breakPoints.ip} {
     position: absolute;
@@ -44,7 +44,7 @@ export const NavLink = styled.li`
   height: 100%;
   cursor: pointer;
   font-weight: 400;
-  background-color: ${({ theme }) => theme.dark.pageBackground};
+  background-color: ${({ theme }) => theme.pageBackground};
 
   ${({ theme }) => theme.breakPoints.ip} {
     padding: 0;
@@ -62,7 +62,7 @@ export const NavSupContainer = styled.ul`
 export const StyledNavSup = styled(NavSup)`
   position: absolute;
   display: block;
-  background-color: ${({ theme }) => theme.dark.pageBackground};
+  background-color: ${({ theme }) => theme.pageBackground};
   top: ${(props) => (props.open ? "60px" : "-200px")};
   right: 0;
   z-index: -1;

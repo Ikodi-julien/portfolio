@@ -1,21 +1,32 @@
 # PORTFOLIO IKODI
 
+### le 18/12/2021
+
+#### Fait
+
+- Changement thème dark / light -> en cours
+
+#### Reste à faire :
+
+- Mettre en place les animations, transitions et styles définitifs :
+  - Sur liens et boutons,
+  - Sur timeline,
+  - Dans section About ajouter un autre "ring" pour les xp d'avant.
+
+### le 17/12/2021
+
+#### Fait
+
+- Intégration du feedback -> ok
+- Fin mis en forme About -> ok
+- Changement thème dark / light -> en cours
+
 ### le 16/12/2021
 
 ### Fait
 
 - Vérifier les liens internes et externes -> ok
 - Intégration du feedback -> en cours
-- Fin mis en forme About ->
-- Changement thème dark / light ->
-
-#### Reste à faire :
-
-- Ajouter le formulaire de feedback,
-- Mettre en place les animations, transitions et styles définitifs :
-  - Sur liens et boutons,
-  - Sur timeline,
-  - Dans section About ajouter un autre "ring" pour les xp d'avant.
 
 ### le 15/12/2021
 

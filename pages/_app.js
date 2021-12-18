@@ -1,11 +1,5 @@
-import Theme from "../styled_components/themes";
-
 function MyApp({ Component, pageProps }) {
-  return (
-    <Theme>
-      <Component {...pageProps} />
-    </Theme>
-  );
+  return <Component {...pageProps} />;
 }
 
 export default MyApp;

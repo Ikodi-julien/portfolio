@@ -17,8 +17,8 @@ html {
 body {
   font-family: ${(props) => props.theme.fonts.main};
   font-size: 1.6rem;
-  background: ${(props) => props.theme.dark.pageBackground};
-  color: ${(props) => props.theme.dark.font};
+  background: ${(props) => props.theme.pageBackground};
+  color: ${(props) => props.theme.font};
   cursor: default;
 }
 

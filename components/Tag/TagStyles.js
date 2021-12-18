@@ -11,8 +11,8 @@ export const StyledTag = styled(Tag)`
   font-size: 0.8em;
   padding: 4px;
   margin: 5px;
-  // border: 1px solid ${({ theme }) => theme.dark.secondary};
-  background: ${({ theme }) => theme.dark.secondary};
+  // border: 1px solid ${({ theme }) => theme.secondary};
+  background: ${({ theme }) => theme.secondary};
   font-weight: 600;
   border-radius: 4px;
 `;

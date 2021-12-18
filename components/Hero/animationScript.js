@@ -1,4 +1,4 @@
-import { pageBackground } from "../../styled_components/themes/dark";
+const pageBackground = `rgba( 10, 10, 20, 1)`;
 const [r, g, b, a] = pageBackground
   .replace(" ", "")
   .split("(")[1]

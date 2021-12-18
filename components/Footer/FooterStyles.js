@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const FooterWrapper = styled.section`
   padding: 6em;
-  background: ${({ theme }) => theme.dark.footerBackground};
+  background: ${({ theme }) => theme.footerBackground};
   display: flex;
   justify-content: space-between;
   ${({ theme }) => theme.breakPoints.dt} {
