@@ -3,7 +3,6 @@ import Footer from "./Footer/Footer";
 import { Wrapper } from "../styled_components/index";
 import styled from "styled-components";
 import Theme from "../styled_components/themes";
-import { ThemeCtxProvider } from "../context/theme-context";
 
 const StyledContainer = styled.div`
   width: 100%;
@@ -15,15 +14,13 @@ const StyledContainer = styled.div`
 
 const Layout = (props) => {
   return (
-    <ThemeCtxProvider>
-      <Theme>
-        <StyledContainer>
-          <Header />
-          <Wrapper>{props.children}</Wrapper>
-          <Footer />
-        </StyledContainer>
-      </Theme>
-    </ThemeCtxProvider>
+    <Theme theme={props.theme}>
+      <StyledContainer>
+        <Header />
+        <Wrapper>{props.children}</Wrapper>
+        <Footer />
+      </StyledContainer>
+    </Theme>
   );
 };
 export default Layout;

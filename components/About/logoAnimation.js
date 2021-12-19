@@ -15,7 +15,7 @@ export const logoAnimation = () => {
   const logoElt = [];
   let increment = 360 / 9;
   let angle = 0;
-  let radius = 200;
+  let radius = 150;
 
   function radian(deg) {
     return deg * (Math.PI / 180);
