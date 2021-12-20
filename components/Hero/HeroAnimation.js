@@ -4,7 +4,7 @@ import { createAnimation } from "./animationScript";
 const HeroAnimation = (props) => {
   useEffect(() => {
     createAnimation();
-  }, []);
+  });
   return <canvas id="canvas"></canvas>;
 };
 

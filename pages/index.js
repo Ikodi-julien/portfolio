@@ -5,8 +5,9 @@ import Hero from "/components/Hero/Hero";
 import Projects from "/components/Projects/Projects";
 import Technos from "../components/Tech/Technos";
 import About from "../components/About/About";
+import { dark, light, shared } from "../styled_components/themes/theme";
 
-const Homepage = () => {
+const Homepage = (props) => {
   return (
     <Fragment>
       <Head>
@@ -16,9 +17,9 @@ const Homepage = () => {
           content="Le portfolio de Julien PELLIN, développeur d'applications pour le web"
         />
       </Head>
-      <Layout>
+      <Layout theme={props.theme} slug={props.slug}>
         <Hero />
-        <Projects />
+        <Projects slug={props.slug} />
         <Technos />
         <About />
       </Layout>
@@ -26,3 +27,9 @@ const Homepage = () => {
   );
 };
 export default Homepage;
+
+export async function getStaticProps(context) {
+  return {
+    props: { theme: { ...dark, ...shared }, slug: "" },
+  };
+}

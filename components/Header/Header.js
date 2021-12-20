@@ -7,9 +7,11 @@ import Image from "next/image";
 import Link from "next/link";
 import Logo from "/public/logo_ikodi_lettres.png";
 import { useState } from "react";
+import ThemeButton from "../ThemeButton/ThemeButton";
 
 const Header = (props) => {
   const [isVisible, setIsVisible] = useState(false);
+
   return (
     <Container>
       <Burger onClick={() => setIsVisible(!isVisible)} />
@@ -18,12 +20,13 @@ const Header = (props) => {
         <Image src={Logo} alt="Logo Ikodi" width={100} height={25} />
       </LogoContainer>
 
-      <Nav visible={isVisible} setIsVisible={setIsVisible} />
+      <Nav visible={isVisible} setIsVisible={setIsVisible} slug={props.slug} />
       <Link href="https://auth.ikodi.eu" passHref>
         <a>
           <Button>Se connecter</Button>
         </a>
       </Link>
+      <ThemeButton slug={props.slug} appName={props.appName} />
     </Container>
   );
 };

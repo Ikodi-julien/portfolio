@@ -22,7 +22,7 @@ export const Wrapper = styled.main`
 `;
 
 export const ButtonBack = styled.div`
-  background: ${({ theme }) => theme.colors.font};
+  background: ${({ theme }) => theme.buttonBorder};
   padding: 2px;
   margin: ${(props) => (props.nomargin ? "0" : ".5em")};
   border-radius: ${btnBR + 2}px;
@@ -37,11 +37,9 @@ export const ButtonFront = styled.button`
   margin: 0;
   padding: ${(props) => (props.nopadding ? "0" : "0.5em 1em")};
   color: ${(props) =>
-    props.invert ? props.theme.colors.fontInverted : props.theme.colors.font};
+    props.invert ? props.theme.fontInverted : props.theme.font};
   background: ${(props) =>
-    props.color
-      ? props.theme.colors[props.color]
-      : props.theme.colors.buttonBack};
+    props.color ? props.theme[props.color] : props.theme.buttonBack};
   border-radius: ${btnBR}px;
   border: none;
   cursor: pointer;
@@ -49,7 +47,7 @@ export const ButtonFront = styled.button`
   align-items: center;
 
   &:hover {
-    background-color: ${({ theme }) => theme.colors.linkHovered};
+    background-color: ${({ theme }) => theme.linkHovered};
   }
 `;
 
@@ -69,7 +67,7 @@ export const Divider = styled.hr`
   min-width: 120px;
   height: 10px;
   border-radius: 5px;
-  background: ${({ theme }) => theme.colors.buttonBack};
+  background: ${({ theme }) => theme.buttonBack};
   border: none;
   margin: 10px 0;
 `;

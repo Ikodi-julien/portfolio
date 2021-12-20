@@ -1,29 +1,27 @@
 import Link from "next/link";
-import { Fragment } from "react";
-import { useState } from "react";
+import { Fragment, useState } from "react";
 import { NavLinks, NavLink, StyledNavSup } from "./HeaderStyles";
-import NavSup from "./NavSup";
 import { FaHome } from "react-icons/fa";
 
-const Nav = ({ visible, setIsVisible }) => {
+const Nav = ({ visible, setIsVisible, slug }) => {
   const [open, setOpen] = useState(false);
 
   return (
     <Fragment>
       <NavLinks isVisible={visible}>
-        <Link href="/" passHref>
+        <Link href={`/${slug}`} passHref>
           <NavLink onClick={() => setIsVisible(false)}>
             <FaHome />
           </NavLink>
         </Link>
-        <Link href="/#projects" passHref>
+        <Link href={`/${slug}#projects`} passHref>
           <NavLink onClick={() => setIsVisible(false)}>Projets</NavLink>
         </Link>
-        <Link href="/#tech" passHref>
+        <Link href={`/${slug}#tech`} passHref>
           <NavLink onClick={() => setIsVisible(false)}>Technos</NavLink>
         </Link>
-        <Link href="/#about" passHref>
-          <NavLink onClick={() => setIsVisible(false)}>Parcours pro</NavLink>
+        <Link href={`/${slug}#about`} passHref>
+          <NavLink onClick={() => setIsVisible(false)}>Mon parcours</NavLink>
         </Link>
         <Link href="https://ikodi.eu/blog?page_id=36" passHref>
           <NavLink onClick={() => setIsVisible(false)}>Contact</NavLink>

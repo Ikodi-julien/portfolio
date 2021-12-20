@@ -1,15 +1,12 @@
 # PORTFOLIO IKODI
 
-### le 17/12/2021
+### le 20/12/2021
 
-#### Fait
-
-- Faire un scrollTo top au changement de page de l'app feedback -> ok
-- css et breakpoints -> ok
+- Finaliser le changement de thème -> ok (plus compliqué que prévu)
+- Animation Hero pour smartphone -> ok (nice !)
 
 #### Reste à faire :
 
-- Changement thème dark / light ->
 - Mettre en place les animations, transitions et styles définitifs :
   - Sur liens et boutons,
   - Dans section About ajouter un autre "ring" pour les xp d'avant.
@@ -22,6 +19,35 @@
 - Vérifier les liens internes et externes -> ok
 - Intégration du feedback -> ok (y compris déploiement de l'app feedback)
 - Fin mis en forme About -> en cours
+
+### le 19/12/2021
+
+#### Fait
+
+- Fin mise en place des thèmes :
+  - Refaire les routes propres -> ok
+  - Mettre le bouton -> en cours
+
+### le 18/12/2021
+
+#### Fait
+
+- Changement thème dark / light -> ok sur le principe, il a fallut faire passer la logique sur le pre-rendering de pages ayant le theme choisi.
+
+### le 17/12/2021
+
+#### Fait
+
+- Intégration du feedback -> ok
+- Fin mis en forme About -> ok
+- Changement thème dark / light -> en cours
+
+### le 16/12/2021
+
+### Fait
+
+- Vérifier les liens internes et externes -> ok
+- Intégration du feedback -> en cours
 
 ### le 15/12/2021
 

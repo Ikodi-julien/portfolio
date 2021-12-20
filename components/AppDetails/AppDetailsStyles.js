@@ -12,6 +12,7 @@ export const AppDetailsTitleWrapper = styled.div`
   flex-wrap: wrap;
   width: 100%;
   justify-content: space-between;
+  padding: 2em 0;
 `;
 
 export const AppDetailsMainTitle = styled.h1`
@@ -23,7 +24,7 @@ export const AppTechCard = styled.article`
   padding: 1em;
   border-radius: 5px;
   box-shadow: 0 0 2px 1px rgba(255, 255, 255, 0.1);
-  background: ${({ theme }) => theme.colors.cardBackground};
+  background: ${({ theme }) => theme.cardBackground};
   margin-right: 1em;
   margin-bottom: 1em;
 

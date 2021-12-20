@@ -12,10 +12,12 @@ import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import Image from "next/image";
 import Link from "next/link";
 
-const Project = ({ project }) => {
+const Project = ({ project, slug }) => {
   const router = useRouter();
+  const pathName = router.pathname;
+
   const handleClick = () => {
-    router.push(`/${project.name}`);
+    router.push(`/details/${project.name}/${slug}`);
   };
 
   return (
