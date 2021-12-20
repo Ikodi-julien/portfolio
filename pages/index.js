@@ -17,9 +17,9 @@ const Homepage = (props) => {
           content="Le portfolio de Julien PELLIN, développeur d'applications pour le web"
         />
       </Head>
-      <Layout theme={props.theme}>
+      <Layout theme={props.theme} slug={props.slug}>
         <Hero />
-        <Projects />
+        <Projects slug={props.slug} />
         <Technos />
         <About />
       </Layout>
@@ -30,6 +30,6 @@ export default Homepage;
 
 export async function getStaticProps(context) {
   return {
-    props: { theme: { ...dark, ...shared } },
+    props: { theme: { ...dark, ...shared }, slug: "" },
   };
 }

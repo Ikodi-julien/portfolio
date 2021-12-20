@@ -1,12 +1,19 @@
-const pageBackground = `rgba( 10, 10, 20, 1)`;
-const [r, g, b, a] = pageBackground
-  .replace(" ", "")
-  .split("(")[1]
-  .split(")")[0]
-  .split(",");
-
 export const createAnimation = () => {
   console.clear();
+  const pathname = document.location.pathname;
+  const isLight = /(?:theme-light)/.test(pathname);
+
+  const pageBackground = isLight
+    ? `rgba(247,246,240,1)`
+    : `rgba( 10, 10, 20, 1)`;
+  const triangleColor = isLight ? [0, 0, 0, 0.15] : [255, 255, 255, 0.05];
+
+  const [r, g, b, a] = pageBackground
+    .replace(" ", "")
+    .split("(")[1]
+    .split(")")[0]
+    .split(",");
+
   const canvas = document.getElementById("canvas");
 
   canvas.style.display = "block";
@@ -131,6 +138,7 @@ void main() {
 
   gl.viewport(0, 0, gl.canvas.width, gl.canvas.height);
   gl.clearColor(r / 255, g / 255, b / 255, a);
+  // gl.clearColor(1 - r / 255, 1 - g / 255, 1 - b / 255, a);
   gl.blendFunc(gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA);
   gl.enable(gl.BLEND);
   gl.disable(gl.CULL_FACE);
@@ -139,7 +147,7 @@ void main() {
 
   function f() {
     gl.clear(gl.COLOR_BUFFER_BIT);
-    gl.uniform4fv($c, [255, 255, 255, 0.05]);
+    gl.uniform4fv($c, triangleColor);
     gl.drawElements(
       gl.TRIANGLES,
       idxs.length, // n indices
@@ -157,6 +165,38 @@ void main() {
     gl.bufferSubData(gl.ARRAY_BUFFER, 0, ps.slice(0, 2)); // that's why DYNAMIC_DRAW
     f();
   };
-  document.body.onmousemove = moveFocus;
-  document.body.ontouchmove = moveFocus;
+  const moveRandomFocus = (a, b) => {
+    // ps[0] = 2 * Math.random() - 1;
+    // ps[1] = 2 * Math.random() - 1;
+    ps[0] = a;
+    ps[1] = b;
+
+    gl.bufferSubData(gl.ARRAY_BUFFER, 0, ps.slice(0, 2)); // that's why DYNAMIC_DRAW
+    f();
+  };
+
+  if (canvas.width >= 768) {
+    document.body.onmousemove = moveFocus;
+  } else {
+    const start = [-0.9, 0.3];
+    const end = [0.9, 0.4];
+    const coordinate = [start[0], start[1]];
+    let forward = true;
+    let backward = false;
+    setInterval(() => {
+      if (forward && coordinate[0] < end[0]) coordinate[0] += 0.01;
+      if (forward && coordinate[0] >= end[0]) {
+        backward = true;
+        forward = false;
+      }
+      if (backward && coordinate[0] > start[0]) coordinate[0] -= 0.01;
+      if (backward && coordinate[0] <= start[0]) {
+        forward = true;
+        backward = false;
+      }
+
+      moveRandomFocus(coordinate[0], start[1]);
+    }, 50);
+  }
+  //
 };

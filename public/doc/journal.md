@@ -1,10 +1,9 @@
 # PORTFOLIO IKODI
 
-### le 18/12/2021
+### le 20/12/2021
 
-#### Fait
-
-- Changement thème dark / light -> en cours
+- Finaliser le changement de thème -> ok (plus compliqué que prévu)
+- Animation Hero pour smartphone -> ok (nice !)
 
 #### Reste à faire :
 
@@ -12,6 +11,20 @@
   - Sur liens et boutons,
   - Sur timeline,
   - Dans section About ajouter un autre "ring" pour les xp d'avant.
+
+### le 19/12/2021
+
+#### Fait
+
+- Fin mise en place des thèmes :
+  - Refaire les routes propres -> ok
+  - Mettre le bouton -> en cours
+
+### le 18/12/2021
+
+#### Fait
+
+- Changement thème dark / light -> ok sur le principe, il a fallut faire passer la logique sur le pre-rendering de pages ayant le theme choisi.
 
 ### le 17/12/2021
 

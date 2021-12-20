@@ -22,7 +22,7 @@ export const Wrapper = styled.main`
 `;
 
 export const ButtonBack = styled.div`
-  background: ${({ theme }) => theme.font};
+  background: ${({ theme }) => theme.buttonBorder};
   padding: 2px;
   margin: ${(props) => (props.nomargin ? "0" : ".5em")};
   border-radius: ${btnBR + 2}px;

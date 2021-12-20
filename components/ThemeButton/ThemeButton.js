@@ -1,23 +1,29 @@
-import { Fragment } from "react";
-import { themeContext } from "../../context/theme-context";
-import { useContext } from "react";
-import { dark, light, shared } from "../../styled_components/themes/theme";
+import Link from "next/link";
+import { useRouter } from "next/router";
+import { CgDarkMode } from "react-icons/cg";
+import { ThemeButtonContainer } from "./ThemeButtonStyles";
 
-const ThemeButton = (props) => {
-  const [theme, setTheme] = useContext(themeContext);
+const ThemeButton = ({ slug, appName }) => {
+  const router = useRouter();
+  const pathName = router.pathname.split("/")[1];
+
+  const hrefs = {
+    "": "/theme-light",
+    "theme-light": "/theme-dark",
+    "theme-dark": "/theme-light",
+  };
 
   return (
-    <Fragment>
-      <button onClick={() => setTheme({ ...dark, ...shared })}>Dark</button>
-      <button
-        onClick={() => {
-          console.log("hé");
-          setTheme({ ...light, ...shared });
-        }}
+    <ThemeButtonContainer>
+      <Link
+        href={`${pathName === "details" ? "/details" : ""}${
+          appName !== "" && appName !== undefined ? `/${appName}` : ""
+        }${hrefs[slug]}`}
+        passHref
       >
-        Light
-      </button>
-    </Fragment>
+        <CgDarkMode style={{ fontSize: "2em" }} />
+      </Link>
+    </ThemeButtonContainer>
   );
 };
 export default ThemeButton;

@@ -5,6 +5,7 @@ export const AppDetailsHero = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  padding: 2em 0;
 `;
 
 export const AppDetailsMainTitle = styled.h1`

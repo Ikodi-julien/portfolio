@@ -12,7 +12,7 @@ const Projects = (props) => {
       <ProjectsContainer>
         {/* ---- CARD --- */}
         {appList.map((project, index) => (
-          <Project key={index} project={project} />
+          <Project key={index} project={project} slug={props.slug} />
         ))}
       </ProjectsContainer>
     </Section>

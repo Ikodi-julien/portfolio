@@ -2,9 +2,6 @@ const primaryColor = `rgba(93,0,133,1)`;
 const secondaryColor = `rgba(0,49,97,1)`;
 
 export const shared = {
-  primary: primaryColor,
-  secondary: secondaryColor,
-  buttonBack: `linear-gradient(90deg, ${primaryColor} 0%, ${secondaryColor} 100%)`,
   linkHovered: `rgba(0,85,173,1)`,
   fonts: {
     main: "'Raleway', sans-serif",
@@ -23,6 +20,11 @@ export const shared = {
 };
 
 export const dark = {
+  primary: primaryColor,
+  secondary: secondaryColor,
+  buttonBack: `linear-gradient(90deg, ${primaryColor} 0%, ${secondaryColor} 100%)`,
+  buttonBorder: `#d9e4fa`,
+
   pageBackground: `rgba( 10, 10, 20, 1)`,
   cardBackground: "rgba(15,15,25,1)",
   footerBackground: "black",
@@ -30,7 +32,14 @@ export const dark = {
   fontInverted: `#474747`,
 };
 
+const lightPColor = `rgba(152,201,255,1)`;
+const lightSColor = `rgba(255,192,152,1)`;
+
 export const light = {
+  primary: lightPColor,
+  secondary: lightSColor,
+  buttonBack: `linear-gradient(90deg, ${lightPColor} 0%, ${lightSColor} 100%)`,
+  buttonBorder: `white`,
   pageBackground: `rgba(247,246,240,1)`,
   cardBackground: `rgba(241,239,231,1)`,
   footerBackground: `rgba(206,205,196,1)`,
