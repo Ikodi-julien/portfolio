@@ -1,3 +1,5 @@
+let refSetInterval;
+
 export const createAnimation = () => {
   console.clear();
   const pathname = document.location.pathname;
@@ -183,7 +185,7 @@ void main() {
     const coordinate = [start[0], start[1]];
     let forward = true;
     let backward = false;
-    setInterval(() => {
+    refSetInterval = setInterval(() => {
       if (forward && coordinate[0] < end[0]) coordinate[0] += 0.01;
       if (forward && coordinate[0] >= end[0]) {
         backward = true;
@@ -200,3 +202,4 @@ void main() {
   }
   //
 };
+export const cleanUp = () => clearInterval(refSetInterval);
