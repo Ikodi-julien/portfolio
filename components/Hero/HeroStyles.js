@@ -16,7 +16,7 @@ export const HeroTitles = styled.div`
   left: 10%;
   width: 80%;
   height: 100%;
-  text-shadow: 0 0 5px black;
+  text-shadow: 0 0 5px ${({ theme }) => theme.fontInverted};
 `;
 
 export const MainTitle = styled.h1`

@@ -3,8 +3,8 @@ import styled from "styled-components";
 export const AppDetailsHero = styled.div`
   width: 100%;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  flex-wrap: wrap-reverse;
+  justify-content: space-evenly;
   padding: 2em 0;
 `;
 

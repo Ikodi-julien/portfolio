@@ -14,10 +14,10 @@ export const Wrapper = styled.main`
     padding: 4em;
   }
   ${({ theme }) => theme.breakPoints.ip} {
-    padding: 2em;
+    padding: 4em 2em;
   }
   ${({ theme }) => theme.breakPoints.sp} {
-    padding: 1em;
+    padding: 4em 1em;
   }
 `;
 
@@ -56,7 +56,7 @@ export const LogoContainer = styled.div`
   padding: 5px;
   border-radius: 5px;
 
-  ${({ theme }) => theme.breakPoints.ip} {
+  ${({ theme }) => theme.breakPoints.dt} {
     display: none;
   }
 `;
@@ -82,6 +82,7 @@ export const IconLink = styled.div`
 export const Row = styled.div`
   display: flex;
   justify-content: space-evenly;
+  align-items: center;
   flex-wrap: wrap;
 `;
 
