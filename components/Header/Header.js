@@ -8,9 +8,12 @@ import Link from "next/link";
 import Logo from "/public/logo_ikodi_lettres.png";
 import { useState } from "react";
 import ThemeButton from "../ThemeButton/ThemeButton";
+import { useEffect } from "react";
 
 const Header = (props) => {
   const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => props.getUser());
 
   return (
     <Container>

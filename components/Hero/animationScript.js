@@ -1,5 +1,5 @@
 export const createAnimation = () => {
-  console.clear();
+  // console.clear();
   const pathname = document.location.pathname;
   const isLight = /(?:theme-light)/.test(pathname);
 

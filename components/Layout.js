@@ -16,7 +16,11 @@ const Layout = (props) => {
   return (
     <Theme theme={props.theme}>
       <StyledContainer>
-        <Header slug={props.slug} appName={props.appName} />
+        <Header
+          slug={props.slug}
+          appName={props.appName}
+          getUser={props.getUser}
+        />
         <Wrapper>{props.children}</Wrapper>
         <Footer />
       </StyledContainer>
