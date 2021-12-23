@@ -8,16 +8,16 @@ export const Section = styled.section`
 `;
 
 export const Wrapper = styled.main`
-  padding: 8em;
+  padding: 7em;
 
   ${({ theme }) => theme.breakPoints.dt} {
-    padding: 4em;
+    padding: 4em 3em;
   }
   ${({ theme }) => theme.breakPoints.ip} {
     padding: 4em 2em;
   }
   ${({ theme }) => theme.breakPoints.sp} {
-    padding: 4em 1em;
+    padding: 4em 0.5em;
   }
 `;
 
