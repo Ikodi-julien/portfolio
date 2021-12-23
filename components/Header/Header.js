@@ -32,7 +32,7 @@ const Header = (props) => {
       }
     }
     fetchData();
-  });
+  }, [user]);
 
   return (
     <Container>
