@@ -4,11 +4,14 @@ export const createAnimation = () => {
   // console.clear();
   const pathname = document.location.pathname;
   const isLight = /(?:theme-light)/.test(pathname);
+  const N = isLight ? 20 : 50; // n triangles
 
   const pageBackground = isLight
     ? `rgba(247,246,240,1)`
     : `rgba( 10, 10, 20, 1)`;
-  const triangleColor = isLight ? [0, 0, 0, 0.15] : [255, 255, 255, 0.05];
+  const triangleColor = isLight
+    ? [0, 22 / 255, 62 / 255, 0.5]
+    : [255, 255, 255, 0.05];
 
   const [r, g, b, a] = pageBackground
     .replace(" ", "")
@@ -89,8 +92,6 @@ void main() {
 
   const va = gl.createVertexArray();
   gl.bindVertexArray(va);
-
-  const N = 50; // n triangles
 
   let ps;
   {

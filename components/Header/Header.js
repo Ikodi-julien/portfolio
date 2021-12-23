@@ -6,11 +6,33 @@ import { Container, Burger, UserGreating } from "./HeaderStyles";
 import Image from "next/image";
 import Link from "next/link";
 import Logo from "/public/logo_ikodi_lettres.png";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import ThemeButton from "../ThemeButton/ThemeButton";
+import axios from "axios";
 
 const Header = (props) => {
   const [isVisible, setIsVisible] = useState(false);
+  const [user, setUser] = useState({ pseudo: "" });
+
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        const response = await axios.get("https://auth.ikodi.eu/me", {
+          withCredentials: true,
+        });
+        if (response.data) {
+          console.log("data", response.data);
+          console.log("status", response.status);
+          setUser(response.data);
+        } else {
+          console.log("error response", response);
+        }
+      } catch (error) {
+        console.log("error", error.toString());
+      }
+    }
+    fetchData();
+  });
 
   return (
     <Container>
@@ -21,7 +43,7 @@ const Header = (props) => {
       </LogoContainer>
 
       <Nav visible={isVisible} setIsVisible={setIsVisible} slug={props.slug} />
-      {props.user.pseudo === "" ? (
+      {user.pseudo === "" ? (
         <Link href="https://auth.ikodi.eu" passHref>
           <a>
             <Button>Se connecter</Button>
@@ -35,8 +57,8 @@ const Header = (props) => {
         </Link>
       )}
       <ThemeButton slug={props.slug} appName={props.appName} />
-      {props.user.pseudo !== "" && (
-        <UserGreating>Bienvenue {props.user.pseudo} !</UserGreating>
+      {user.pseudo !== "" && (
+        <UserGreating>Bienvenue {user.pseudo} !</UserGreating>
       )}
     </Container>
   );

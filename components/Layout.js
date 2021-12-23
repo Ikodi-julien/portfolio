@@ -16,7 +16,7 @@ const Layout = (props) => {
   return (
     <Theme theme={props.theme}>
       <StyledContainer>
-        <Header slug={props.slug} appName={props.appName} user={props.user} />
+        <Header slug={props.slug} appName={props.appName} />
         <Wrapper>{props.children}</Wrapper>
         <Footer />
       </StyledContainer>
