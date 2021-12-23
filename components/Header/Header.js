@@ -62,11 +62,7 @@ const Header = (props) => {
           </a>
         </Link>
       ) : (
-        <Link href="https://auth.ikodi.eu/logout" passHref>
-          <a>
-            <Button onClick={postLogout}>Déconnexion</Button>
-          </a>
-        </Link>
+        <Button onClick={postLogout}>Déconnexion</Button>
       )}
       <ThemeButton slug={props.slug} appName={props.appName} />
       {user.nickname !== "" && (
