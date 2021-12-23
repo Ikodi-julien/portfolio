@@ -1,3 +1,11 @@
+// /* Smartphones (portrait) ----------- */
+// sp: "@media screen and (max-width : 380px)",
+// /* iPads ----------- */
+// ip: "@media screen and (max-width : 768px)",
+// /* Desktops and laptops ----------- */
+// dt: "@media screen and (max-width : 1224px)",
+// /* Large screens ----------- */
+// ls: "@media screen and (max-width : 1824px)",
 import styled from "styled-components";
 
 export const ProjectsContainer = styled.div`
@@ -8,22 +16,20 @@ export const ProjectsContainer = styled.div`
   flex-wrap: wrap;
 `;
 export const ProjectCard = styled.article`
-  width: 40%;
-  max-width: 450px;
+  width: 30%;
   min-width: 280px;
+  max-width: 450px
   padding: 15px;
   border-radius: 5px;
   box-shadow: 0 0 2px 1px rgba(255, 255, 255, 0.1);
-  margin: 20px 5%;
+  margin: 20px 8%;
   background: ${({ theme }) => theme.cardBackground};
 
   ${({ theme }) => theme.breakPoints.dt} {
-    margin: 20px 3%;
-    padding: 8px;
+    margin: 20px 5%;
   }
-
-  ${({ theme }) => theme.breakPoints.sp} {
-    padding: 8px;
+  ${({ theme }) => theme.breakPoints.ip} {
+    margin: 20px 1%;
   }
 `;
 

@@ -24,12 +24,12 @@ const Project = ({ project, slug }) => {
     <ProjectCard key={project.title}>
       <ProjectTitle>{project.name}</ProjectTitle>
 
-      <div style={{ cursor: "pointer" }}>
+      <div style={{ cursor: "pointer", textAlign: "center" }}>
         <Image
           src={project.imgUrl[0]}
           alt={project.title}
-          width={250}
-          height={150}
+          width={375}
+          height={240}
           onClick={handleClick}
         />
       </div>

@@ -10,7 +10,7 @@ export const createAnimation = () => {
     ? `rgba(247,246,240,1)`
     : `rgba( 10, 10, 20, 1)`;
   const triangleColor = isLight
-    ? [0, 22 / 255, 62 / 255, 0.5]
+    ? [0, 22 / 255, 62 / 255, 0.4]
     : [255, 255, 255, 0.05];
 
   const [r, g, b, a] = pageBackground
