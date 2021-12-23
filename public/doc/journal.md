@@ -2,10 +2,14 @@
 
 ### le 23/12/2021
 
-- connexion auth -> en cours
+- connexion auth -> ok
+- logout -> ok
 
 #### Reste à faire :
 
+- Gestion d'erreur en sortie de fetch,
+- Info login success et redirect auto sur portfolio après login success,
+- Préremplir les données de feedback si loggué,
 - Mettre en place les animations, transitions et styles définitifs :
   - Sur liens et boutons,
   - Sur timeline,
