@@ -1,3 +1,12 @@
+// /* Smartphones (portrait) ----------- */
+// sp: "@media screen and (max-width : 380px)",
+// /* iPads ----------- */
+// ip: "@media screen and (max-width : 768px)",
+// /* Desktops and laptops ----------- */
+// dt: "@media screen and (max-width : 1224px)",
+// /* Large screens ----------- */
+// ls: "@media screen and (max-width : 1824px)",
+
 import styled from "styled-components";
 import NavSup from "./NavSup";
 import { FaEllipsisV } from "react-icons/fa";
@@ -15,11 +24,11 @@ export const Container = styled.section`
   padding: 0 5%;
   z-index: 10;
 
-  ${({ theme }) => theme.breakPoints.ip} {
-    padding: 0 5%;
-  }
   ${({ theme }) => theme.breakPoints.dt} {
     padding: 0;
+  }
+  ${({ theme }) => theme.breakPoints.ip} {
+    padding: 0 5%;
   }
 `;
 
@@ -32,6 +41,7 @@ export const NavLinks = styled.ul`
   background-color: ${({ theme }) => theme.pageBackground};
 
   ${({ theme }) => theme.breakPoints.ip} {
+    background-color: ${({ theme }) => theme.navBackground};
     position: absolute;
     top: 50px;
     left: ${(props) => (props.isVisible ? 0 : "-200vw")};
@@ -40,7 +50,6 @@ export const NavLinks = styled.ul`
     display: block;
     padding: 50px 15px;
     width: 100%;
-    background-color: black;
     color: ${({ theme }) => theme.font};
   }
 `;
@@ -54,11 +63,11 @@ export const NavLink = styled.li`
   background-color: ${({ theme }) => theme.pageBackground};
 
   ${({ theme }) => theme.breakPoints.ip} {
-    padding: 0;
+    background-color: ${({ theme }) => theme.navBackground};
+    padding: 8px;
     height: 2em;
     cursor: pointer;
     font-weight: 400;
-    background-color: black;
   }
 `;
 
@@ -70,16 +79,16 @@ export const StyledNavSup = styled(NavSup)`
   position: absolute;
   display: block;
   background-color: ${({ theme }) => theme.pageBackground};
+  box-shadow: ${({ theme }) => theme.shadow};
   top: ${(props) => (props.open ? "60px" : "-200px")};
   right: 0;
   z-index: -1;
   transition: top 300ms;
 
   ${({ theme }) => theme.breakPoints.ip} {
-    display: block;
-    background-color: black;
-    top: 50px;
-    right: ${(props) => (props.open ? "0" : "-200px")};
+    background-color: ${({ theme }) => theme.navBackground};
+    top: 60px;
+    right: ${(props) => (props.open ? "2px" : "-200px")};
     z-index: 1;
     transition: right 300ms;
   }
@@ -87,11 +96,18 @@ export const StyledNavSup = styled(NavSup)`
 
 export const Burger = styled(FaEllipsisV)`
   display: none;
-  margin: 12px;
+  margin-right: 10px;
   font-size: 1.5em;
-  color: white;
+  color: ${({ theme }) => theme.font};
 
   ${({ theme }) => theme.breakPoints.ip} {
     display: block;
   }
+`;
+
+export const UserGreating = styled.div`
+  position: absolute;
+  top: 60px;
+  left: 10px;
+  font-weight: bold;
 `;

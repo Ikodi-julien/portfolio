@@ -14,10 +14,10 @@ export const Wrapper = styled.main`
     padding: 4em;
   }
   ${({ theme }) => theme.breakPoints.ip} {
-    padding: 3em 2em;
+    padding: 4em 2em;
   }
   ${({ theme }) => theme.breakPoints.sp} {
-    padding: 3em 0.5em;
+    padding: 4em 1em;
   }
 `;
 

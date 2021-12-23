@@ -2,15 +2,51 @@
 import Button from "/styled_components/Button";
 import Nav from "./Nav";
 import { LogoContainer } from "/styled_components";
-import { Container, Burger } from "./HeaderStyles";
+import { Container, Burger, UserGreating } from "./HeaderStyles";
 import Image from "next/image";
 import Link from "next/link";
 import Logo from "/public/logo_ikodi_lettres.png";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import ThemeButton from "../ThemeButton/ThemeButton";
+import axios from "axios";
 
 const Header = (props) => {
   const [isVisible, setIsVisible] = useState(false);
+  const [user, setUser] = useState({ nickname: "" });
+
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        const response = await axios.get("https://auth.ikodi.eu/me", {
+          withCredentials: true,
+        });
+        if (response.data) {
+          console.log("data", response.data);
+          console.log("status", response.status);
+          setUser(response.data);
+        } else {
+          console.log("error response", response);
+        }
+      } catch (error) {
+        console.log("error", error.toString());
+      }
+    }
+    fetchData();
+  }, []);
+
+  const postLogout = async () => {
+    console.log("hé!");
+    try {
+      await axios.post(
+        "https://auth.ikodi.eu/logout",
+        {},
+        { withCredentials: true }
+      );
+      setUser({ nickname: "" });
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   return (
     <Container>
@@ -21,12 +57,19 @@ const Header = (props) => {
       </LogoContainer>
 
       <Nav visible={isVisible} setIsVisible={setIsVisible} slug={props.slug} />
-      <Link href="https://auth.ikodi.eu" passHref>
-        <a>
-          <Button>Se connecter</Button>
-        </a>
-      </Link>
+      {user.nickname === "" ? (
+        <Link href="https://auth.ikodi.eu" passHref>
+          <a>
+            <Button>Se connecter</Button>
+          </a>
+        </Link>
+      ) : (
+        <Button onClick={postLogout}>Déconnexion</Button>
+      )}
       <ThemeButton slug={props.slug} appName={props.appName} />
+      {user.nickname !== "" && (
+        <UserGreating>Bienvenue {user.nickname} !</UserGreating>
+      )}
     </Container>
   );
 };

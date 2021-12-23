@@ -37,6 +37,21 @@ const AppDetails = ({ appDetails }) => (
         height={560}
       />
     </AppDetailsHero>
+    <Row>
+      <a>
+        <Button color="primary">
+          {appDetails.name.toLowerCase()}.ikodi.eu{" "}
+          <FaExternalLinkAlt
+            style={{ fontSize: "1.2em", marginLeft: "0.5em" }}
+          />
+        </Button>
+      </a>
+      <a href={appDetails.links.github}>
+        <Button color="secondary">
+          <FaGithub style={{ fontSize: "1.2em" }} />
+        </Button>
+      </a>
+    </Row>
     <Title title="Son Histoire" />
     <Text>{appDetails.desc}</Text>
     <Title title="Fonctionnalités" />

@@ -12,6 +12,8 @@ export const AppDetailsTitleWrapper = styled.div`
   flex-wrap: wrap;
   width: 100%;
   justify-content: space-between;
+  flex-wrap: wrap-reverse;
+  justify-content: space-evenly;
   padding: 2em 0;
 `;
 

@@ -1,12 +1,15 @@
 # PORTFOLIO IKODI
 
-### le 20/12/2021
+### le 23/12/2021
 
-- Finaliser le changement de thème -> ok (plus compliqué que prévu)
-- Animation Hero pour smartphone -> ok (nice !)
+- connexion auth -> ok
+- logout -> ok
 
 #### Reste à faire :
 
+- Gestion d'erreur en sortie de fetch,
+- Info login success et redirect auto sur portfolio après login success,
+- Préremplir les données de feedback si loggué,
 - Mettre en place les animations, transitions et styles définitifs :
   - Sur liens et boutons,
   - Dans section About ajouter un autre "ring" pour les xp d'avant.
@@ -19,6 +22,20 @@
 - Vérifier les liens internes et externes -> ok
 - Intégration du feedback -> ok (y compris déploiement de l'app feedback)
 - Fin mis en forme About -> en cours
+
+### le 22/12/2021
+
+- connexion auth -> en cours
+
+### le 21/12/2021
+
+- Finalisation des styles sur page détails d'une app -> ok (ajout de liens),
+- Animation du Hero pour theme light -> ok;
+
+### le 20/12/2021
+
+- Finaliser le changement de thème -> ok (plus compliqué que prévu)
+- Animation Hero pour smartphone -> ok (nice !)
 
 ### le 19/12/2021
 

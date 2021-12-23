@@ -26,14 +26,15 @@ export const dark = {
   buttonBorder: `#d9e4fa`,
 
   pageBackground: `rgba( 10, 10, 20, 1)`,
+  navBackground: `black`,
   cardBackground: "rgba(15,15,25,1)",
   footerBackground: "black",
   font: `#d9e4fa`,
   fontInverted: `#474747`,
 };
 
-const lightPColor = `rgba(152,201,255,1)`;
-const lightSColor = `rgba(255,192,152,1)`;
+const lightPColor = `rgba(166,212,255,1)`;
+const lightSColor = `rgba(189,166,255,1)`;
 
 export const light = {
   primary: lightPColor,
@@ -41,8 +42,10 @@ export const light = {
   buttonBack: `linear-gradient(90deg, ${lightPColor} 0%, ${lightSColor} 100%)`,
   buttonBorder: `white`,
   pageBackground: `rgba(247,246,240,1)`,
+  navBackground: `rgba(206,205,196,1)`,
   cardBackground: `rgba(241,239,231,1)`,
   footerBackground: `rgba(206,205,196,1)`,
-  font: `rgba(20,20,19,1)`,
+  font: `rgba(25,25,24,1)`,
   fontInverted: `rgba(247,246,240,1)`,
+  shadow: `0 0 5px rgba(25,25,24, 0.2)`,
 };

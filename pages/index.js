@@ -30,6 +30,6 @@ export default Homepage;
 
 export async function getStaticProps(context) {
   return {
-    props: { theme: { ...dark, ...shared }, slug: "" },
+    props: { theme: { ...dark, ...shared }, slug: "theme-dark" },
   };
 }
