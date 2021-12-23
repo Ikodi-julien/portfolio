@@ -12,7 +12,7 @@ import axios from "axios";
 
 const Header = (props) => {
   const [isVisible, setIsVisible] = useState(false);
-  const [user, setUser] = useState({ pseudo: "" });
+  const [user, setUser] = useState({ nickname: "" });
 
   useEffect(() => {
     async function fetchData() {
@@ -23,7 +23,7 @@ const Header = (props) => {
         if (response.data) {
           console.log("data", response.data);
           console.log("status", response.status);
-          setUser(response.data);
+          if (response.data !== user) setUser(response.data);
         } else {
           console.log("error response", response);
         }
@@ -43,7 +43,7 @@ const Header = (props) => {
       </LogoContainer>
 
       <Nav visible={isVisible} setIsVisible={setIsVisible} slug={props.slug} />
-      {user.pseudo === "" ? (
+      {user.nickname === "" ? (
         <Link href="https://auth.ikodi.eu" passHref>
           <a>
             <Button>Se connecter</Button>
@@ -57,8 +57,8 @@ const Header = (props) => {
         </Link>
       )}
       <ThemeButton slug={props.slug} appName={props.appName} />
-      {user.pseudo !== "" && (
-        <UserGreating>Bienvenue {user.pseudo} !</UserGreating>
+      {user.nickname !== "" && (
+        <UserGreating>Bienvenue {user.nickname} !</UserGreating>
       )}
     </Container>
   );
