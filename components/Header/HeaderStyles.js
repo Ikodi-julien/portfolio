@@ -104,3 +104,10 @@ export const Burger = styled(FaEllipsisV)`
     display: block;
   }
 `;
+
+export const UserGreating = styled.div`
+  position: absolute;
+  top: 60px;
+  left: 10px;
+  font-weight: bold;
+`;

@@ -1,9 +1,8 @@
 # PORTFOLIO IKODI
 
-### le 20/12/2021
+### le 23/12/2021
 
-- Finaliser le changement de thème -> ok (plus compliqué que prévu)
-- Animation Hero pour smartphone -> ok (nice !)
+- connexion auth -> en cours
 
 #### Reste à faire :
 
@@ -11,6 +10,20 @@
   - Sur liens et boutons,
   - Sur timeline,
   - Dans section About ajouter un autre "ring" pour les xp d'avant.
+
+### le 22/12/2021
+
+- connexion auth -> en cours
+
+### le 21/12/2021
+
+- Finalisation des styles sur page détails d'une app -> ok (ajout de liens),
+- Animation du Hero pour theme light -> ok;
+
+### le 20/12/2021
+
+- Finaliser le changement de thème -> ok (plus compliqué que prévu)
+- Animation Hero pour smartphone -> ok (nice !)
 
 ### le 19/12/2021
 

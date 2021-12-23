@@ -2,18 +2,15 @@
 import Button from "/styled_components/Button";
 import Nav from "./Nav";
 import { LogoContainer } from "/styled_components";
-import { Container, Burger } from "./HeaderStyles";
+import { Container, Burger, UserGreating } from "./HeaderStyles";
 import Image from "next/image";
 import Link from "next/link";
 import Logo from "/public/logo_ikodi_lettres.png";
 import { useState } from "react";
 import ThemeButton from "../ThemeButton/ThemeButton";
-import { useEffect } from "react";
 
 const Header = (props) => {
   const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => props.getUser());
 
   return (
     <Container>
@@ -24,12 +21,23 @@ const Header = (props) => {
       </LogoContainer>
 
       <Nav visible={isVisible} setIsVisible={setIsVisible} slug={props.slug} />
-      <Link href="https://auth.ikodi.eu" passHref>
-        <a>
-          <Button>Se connecter</Button>
-        </a>
-      </Link>
+      {props.user.pseudo === "" ? (
+        <Link href="https://auth.ikodi.eu" passHref>
+          <a>
+            <Button>Se connecter</Button>
+          </a>
+        </Link>
+      ) : (
+        <Link href="https://auth.ikodi.eu/logout" passHref>
+          <a>
+            <Button>Déconnexion</Button>
+          </a>
+        </Link>
+      )}
       <ThemeButton slug={props.slug} appName={props.appName} />
+      {props.user.pseudo !== "" && (
+        <UserGreating>Bienvenue {props.user.pseudo} !</UserGreating>
+      )}
     </Container>
   );
 };

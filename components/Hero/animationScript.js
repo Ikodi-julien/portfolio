@@ -1,15 +1,14 @@
+let refSetInterval;
+
 export const createAnimation = () => {
   // console.clear();
   const pathname = document.location.pathname;
   const isLight = /(?:theme-light)/.test(pathname);
 
-  const N = isLight ? 20 : 50; // n triangles
   const pageBackground = isLight
     ? `rgba(247,246,240,1)`
     : `rgba( 10, 10, 20, 1)`;
-  const triangleColor = isLight
-    ? [0 / 255, 19 / 255, 55 / 255, 0.4]
-    : [255, 255, 255, 0.05];
+  const triangleColor = isLight ? [0, 0, 0, 0.15] : [255, 255, 255, 0.05];
 
   const [r, g, b, a] = pageBackground
     .replace(" ", "")
@@ -90,6 +89,8 @@ void main() {
 
   const va = gl.createVertexArray();
   gl.bindVertexArray(va);
+
+  const N = 50; // n triangles
 
   let ps;
   {
@@ -184,7 +185,7 @@ void main() {
     const coordinate = [start[0], start[1]];
     let forward = true;
     let backward = false;
-    setInterval(() => {
+    refSetInterval = setInterval(() => {
       if (forward && coordinate[0] < end[0]) coordinate[0] += 0.01;
       if (forward && coordinate[0] >= end[0]) {
         backward = true;
@@ -201,3 +202,4 @@ void main() {
   }
   //
 };
+export const cleanUp = () => clearInterval(refSetInterval);
