@@ -23,7 +23,7 @@ const Header = (props) => {
         if (response.data) {
           console.log("data", response.data);
           console.log("status", response.status);
-          if (response.data !== user) setUser(response.data);
+          setUser(response.data);
         } else {
           console.log("error response", response);
         }
@@ -32,7 +32,7 @@ const Header = (props) => {
       }
     }
     fetchData();
-  }, [user]);
+  }, []);
 
   return (
     <Container>
