@@ -34,6 +34,18 @@ const Header = (props) => {
     fetchData();
   }, []);
 
+  const postLogout = async () => {
+    try {
+      await axios.post(
+        "https://auth.ikodi.eu/logout",
+        {},
+        { withCredentials: true }
+      );
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
     <Container>
       <Burger onClick={() => setIsVisible(!isVisible)} />
@@ -52,7 +64,7 @@ const Header = (props) => {
       ) : (
         <Link href="https://auth.ikodi.eu/logout" passHref>
           <a>
-            <Button>Déconnexion</Button>
+            <Button onClick={postLogout}>Déconnexion</Button>
           </a>
         </Link>
       )}
