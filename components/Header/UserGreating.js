@@ -21,21 +21,26 @@ const UserGreating = ({ user, open, setOpen, className }) => (
     <br />
     <p>Pour info, ci-dessous les données stockées en base.</p>
     <br />
-    <table>
-      <thead>
-        <tr>
-          <th colSpan="2">Informations en base de données</th>
-        </tr>
-      </thead>
-      <tbody>
-        {Object.getOwnPropertyNames(user).map((propname) => (
-          <tr key={propname}>
-            <td>{propname}</td>
-            <td>{user[propname]}</td>
+    <div style={{ width: "100%" }}>
+      <table>
+        <thead>
+          <tr>
+            <th colSpan="2">Informations en base de données</th>
           </tr>
-        ))}
-      </tbody>
-    </table>
+        </thead>
+        <tbody>
+          {Object.getOwnPropertyNames(user).map((propname) => {
+            if (user[propname] !== "")
+              return (
+                <tr key={propname}>
+                  <td>{propname}</td>
+                  <td className={"break"}>{user[propname].toString()}</td>
+                </tr>
+              );
+          })}
+        </tbody>
+      </table>
+    </div>
     <UserGreatingFooter>
       <Button onClick={() => console.log("hé")} color={"secondary"}>
         Supprimer ce compte

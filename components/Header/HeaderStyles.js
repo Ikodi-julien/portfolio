@@ -142,6 +142,9 @@ export const StyledUserGreating = styled(UserGreating)`
     th {
       padding: 5px 10px;
     }
+    td.break {
+      word-break: break-all;
+    }
   }
 `;
 

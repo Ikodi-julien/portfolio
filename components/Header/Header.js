@@ -26,6 +26,10 @@ const Header = (props) => {
   //   firstname: "",
   //   lastname: "",
   //   email: "jupellin39@gmail.com",
+  //   password:
+  //     "2b$10$PvkWglwOBiEbi9RgVWah32b$10$PvkWglwOBiEbi9RgVWah32b$10$PvkWglwOBiEbi9RgVWah3",
+  //   apisignup: true,
+  //   active: true,
   // };
 
   useEffect(() => {
