@@ -73,7 +73,7 @@ const Header = (props) => {
 
       <Nav visible={isVisible} setIsVisible={setIsVisible} slug={props.slug} />
       {user.nickname === "" ? (
-        <Link href="https://auth.ikodi.eu?app=porfolio" passHref>
+        <Link href="https://auth.ikodi.eu?app=portfolio" passHref>
           <a>
             <Button>Se connecter</Button>
           </a>
