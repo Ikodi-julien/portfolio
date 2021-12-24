@@ -31,6 +31,7 @@ export const dark = {
   footerBackground: "black",
   font: `#d9e4fa`,
   fontInverted: `#474747`,
+  shadow: `0 0 5px rgba(250,250,240, 0.2)`,
 };
 
 const lightPColor = `rgba(166,212,255,1)`;

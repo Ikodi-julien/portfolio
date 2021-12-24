@@ -10,6 +10,7 @@
 import styled from "styled-components";
 import NavSup from "./NavSup";
 import { FaEllipsisV } from "react-icons/fa";
+import UserGreating from "./UserGreating";
 
 export const Container = styled.section`
   position: fixed;
@@ -105,9 +106,46 @@ export const Burger = styled(FaEllipsisV)`
   }
 `;
 
-export const UserGreating = styled.div`
+export const UserButton = styled.div`
   position: absolute;
+  top: 110px;
+  right: 0;
+  padding: 5px;
+  font-size: 1.2em;
+`;
+
+export const StyledUserGreating = styled(UserGreating)`
+  position: absolute;
+  width: 320px;
+  padding: 15px;
   top: 60px;
-  left: 10px;
+  right: ${(props) => (props.open ? "10px" : "-1000px")};
+  transition: right 300ms;
   font-weight: bold;
+  background-color: ${({ theme }) => theme.pageBackground};
+  border-radius: 5px;
+  box-shadow: ${({ theme }) => theme.shadow};
+
+  & p {
+    font-weight: normal;
+  }
+  & table {
+    font-size: 0.8em;
+    margin: auto;
+    margin-bottom: 20px;
+
+    tr {
+      background: ${({ theme }) => theme.font};
+      color: ${({ theme }) => theme.pageBackground};
+    }
+    td,
+    th {
+      padding: 5px 10px;
+    }
+  }
+`;
+
+export const UserGreatingFooter = styled.footer`
+  width: fit-content;
+  margin: auto;
 `;

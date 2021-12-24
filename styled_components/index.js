@@ -71,11 +71,16 @@ export const Divider = styled.hr`
   margin: 10px 0;
 `;
 
-export const IconLink = styled.div`
-  padding: 1rem 0;
-  margin: 0 1rem;
+export const IconContainer = styled.div`
+  position: ${(props) => (props.position ? props.position : "relative")};
+  right: ${(props) => (props.right ? props.right : "")};
+  padding: ${(props) => (props.padding ? props.padding : "1rem 0")};
+  margin: ${(props) => (props.margin ? props.margin : "0 1rem")};
+  font-size: ${(props) => (props.fontSize ? props.fontSize : "1em")};
   display: flex;
   align-items: center;
+  justify-content: ${(props) =>
+    props.justifyContent ? props.justifyContent : "left"};
   cursor: pointer;
 `;
 

@@ -1,18 +1,32 @@
 /* eslint-disable @next/next/link-passhref */
-import Button from "/styled_components/Button";
-import Nav from "./Nav";
-import { LogoContainer } from "/styled_components";
-import { Container, Burger, UserGreating } from "./HeaderStyles";
+import axios from "axios";
+import { useState, useEffect, Fragment } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import Logo from "/public/logo_ikodi_lettres.png";
-import { useState, useEffect } from "react";
+import { FaUserAlt } from "react-icons/fa";
+import { LogoContainer, IconContainer } from "/styled_components";
+import Button from "/styled_components/Button";
 import ThemeButton from "../ThemeButton/ThemeButton";
-import axios from "axios";
+import {
+  Container,
+  Burger,
+  StyledUserGreating,
+  UserButton,
+} from "./HeaderStyles";
+import Nav from "./Nav";
+import Logo from "/public/logo_ikodi_lettres.png";
 
 const Header = (props) => {
   const [isVisible, setIsVisible] = useState(false);
+  const [isGreatingVisible, setGreatingIsVisible] = useState(true);
   const [user, setUser] = useState({ nickname: "" });
+  // const user = {
+  //   id: 32,
+  //   nickname: "ju",
+  //   firstname: "",
+  //   lastname: "",
+  //   email: "jupellin39@gmail.com",
+  // };
 
   useEffect(() => {
     async function fetchData() {
@@ -42,9 +56,10 @@ const Header = (props) => {
         {},
         { withCredentials: true }
       );
-      setUser({ nickname: "" });
     } catch (error) {
       console.log(error);
+    } finally {
+      setUser({ nickname: "" });
     }
   };
 
@@ -58,7 +73,7 @@ const Header = (props) => {
 
       <Nav visible={isVisible} setIsVisible={setIsVisible} slug={props.slug} />
       {user.nickname === "" ? (
-        <Link href="https://auth.ikodi.eu" passHref>
+        <Link href="https://auth.ikodi.eu?app=porfolio" passHref>
           <a>
             <Button>Se connecter</Button>
           </a>
@@ -68,7 +83,18 @@ const Header = (props) => {
       )}
       <ThemeButton slug={props.slug} appName={props.appName} />
       {user.nickname !== "" && (
-        <UserGreating>Bienvenue {user.nickname} !</UserGreating>
+        <Fragment>
+          <UserButton onClick={() => setGreatingIsVisible(true)}>
+            <IconContainer>
+              <FaUserAlt />
+            </IconContainer>
+          </UserButton>
+          <StyledUserGreating
+            user={user}
+            open={isGreatingVisible}
+            setOpen={setGreatingIsVisible}
+          />
+        </Fragment>
       )}
     </Container>
   );

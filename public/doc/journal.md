@@ -4,12 +4,13 @@
 
 - connexion auth -> ok
 - logout -> ok
+- css de project -> ok
 
 #### Reste à faire :
 
 - Gestion d'erreur en sortie de fetch,
 - Info login success et redirect auto sur portfolio après login success,
-- Préremplir les données de feedback si loggué,
+- Préremplir les données de feedback si loggué -> issue dans repo feedback ->
 - Mettre en place les animations, transitions et styles définitifs :
   - Sur liens et boutons,
   - Sur timeline,
