@@ -10,7 +10,7 @@
 import styled from "styled-components";
 import NavSup from "./NavSup";
 import { FaEllipsisV } from "react-icons/fa";
-import UserGreating from "./UserGreating";
+import UserWelcoming from "./UserWelcoming";
 
 export const Container = styled.section`
   position: fixed;
@@ -124,7 +124,7 @@ export const UserButton = styled.div`
   }
 `;
 
-export const StyledUserGreating = styled(UserGreating)`
+export const StyledUserWelcoming = styled(UserWelcoming)`
   position: absolute;
   width: 320px;
   padding: 15px;
@@ -158,7 +158,7 @@ export const StyledUserGreating = styled(UserGreating)`
   }
 `;
 
-export const UserGreatingFooter = styled.footer`
+export const UserWelcomingFooter = styled.footer`
   width: fit-content;
   margin: auto;
 `;

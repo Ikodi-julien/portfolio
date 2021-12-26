@@ -22,7 +22,7 @@ const AppDetails = ({ appDetails }) => (
       />
     </AppDetailsHero>
     <Row justifyContent="right">
-      <a>
+      <a href={appDetails.links.app}>
         <Button color="primary">
           {appDetails.name.toLowerCase()}.ikodi.eu{" "}
           <FaExternalLinkAlt

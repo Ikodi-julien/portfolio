@@ -1,9 +1,9 @@
 import { IconContainer } from "../../styled_components";
 import Button from "/styled_components/Button";
-import { UserGreatingFooter } from "./HeaderStyles";
+import { UserWelcomingFooter } from "./HeaderStyles";
 import { FaTimes } from "react-icons/fa";
 
-const UserGreating = ({ user, open, setOpen, className }) => (
+const UserWelcoming = ({ user, open, setOpen, className }) => (
   <article className={className}>
     <IconContainer
       onClick={() => setOpen(!open)}
@@ -44,12 +44,12 @@ const UserGreating = ({ user, open, setOpen, className }) => (
         </tbody>
       </table>
     </div>
-    <UserGreatingFooter>
+    <UserWelcomingFooter>
       <Button onClick={() => console.log("hé")} color={"secondary"}>
         Supprimer ce compte
       </Button>
-    </UserGreatingFooter>
+    </UserWelcomingFooter>
   </article>
 );
 
-export default UserGreating;
+export default UserWelcoming;

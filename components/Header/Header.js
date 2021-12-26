@@ -8,7 +8,7 @@ import ThemeButton from "../ThemeButton/ThemeButton";
 import {
   Container,
   Burger,
-  StyledUserGreating,
+  StyledUserWelcoming,
   UserButton,
 } from "./HeaderStyles";
 import Nav from "./Nav";
@@ -18,19 +18,19 @@ import postLogout from "../../helpers/postLogout";
 
 const Header = (props) => {
   const [isVisible, setIsVisible] = useState(false);
-  const [isGreatingVisible, setGreatingIsVisible] = useState(false);
-  const [user, setUser] = useState({ nickname: "" });
-  // const user = {
-  //   id: 32,
-  //   nickname: "ju",
-  //   firstname: "",
-  //   lastname: "",
-  //   email: "jupellin39@gmail.com",
-  //   password:
-  //     "2b$10$PvkWglwOBiEbi9RgVWah32b$10$PvkWglwOBiEbi9RgVWah32b$10$PvkWglwOBiEbi9RgVWah3",
-  //   apisignup: true,
-  //   active: true,
-  // };
+  const [isWelcomingVisible, setWelcomingIsVisible] = useState(false);
+  // const [user, setUser] = useState({ nickname: "" });
+  const user = {
+    id: 32,
+    nickname: "ju",
+    firstname: "",
+    lastname: "",
+    email: "jupellin39@gmail.com",
+    password:
+      "2b$10$PvkWglwOBiEbi9RgVWah32b$10$PvkWglwOBiEbi9RgVWah32b$10$PvkWglwOBiEbi9RgVWah3",
+    apisignup: true,
+    active: true,
+  };
 
   useEffect(() => {
     try {
@@ -39,7 +39,7 @@ const Header = (props) => {
         if (userData) {
           setUser(userData);
           if (!document.cookie.includes("connected=know")) {
-            setGreatingIsVisible(true);
+            setWelcomingIsVisible(true);
             document.cookie = "connected=know";
           }
         }
@@ -77,15 +77,15 @@ const Header = (props) => {
       <ThemeButton slug={props.slug} appName={props.appName} />
       {user.nickname !== "" && (
         <Fragment>
-          <UserButton onClick={() => setGreatingIsVisible(true)}>
+          <UserButton onClick={() => setWelcomingIsVisible(true)}>
             <IconContainer>
               <FaUserAlt />
             </IconContainer>
           </UserButton>
-          <StyledUserGreating
+          <StyledUserWelcoming
             user={user}
-            open={isGreatingVisible}
-            setOpen={setGreatingIsVisible}
+            open={isWelcomingVisible}
+            setOpen={setWelcomingIsVisible}
           />
         </Fragment>
       )}

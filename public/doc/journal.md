@@ -4,12 +4,15 @@
 
 - Styles Timeline -> ok,
 - Dans section About ajouter un autre "ring" pour les xp d'avant -> ok
+- Issue: affichage du UserGreating à chaque refresh, comportement attendu : affichage au premier seulement -> ok
+- Faire une Modale pour UserGreating ->
 
 #### Reste à faire :
 
-- Issue: affichage du UserGreating à chaque refresh, comportement attendu : affichage au premier seulement.
-- Faire une Modale pour UserGreating,
-- Finaliser l'animation des logos,
+- Brancher delete/me sur le bouton,
+- Finaliser l'animation des logos + mettre un divider entre les rings,
+- Mettre une bordure aux liens vers app dans projects,
+- Mettre un background degradé aux titres,
 - Finaliser les textes.
 
 ### le 24/12/2021
