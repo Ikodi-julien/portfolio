@@ -1,4 +1,4 @@
-const logoList = [
+export const logosDev = [
   "/assets/logo_aws.png",
   "/assets/logo_mongodb.png",
   "/assets/logo_next.png",
@@ -10,27 +10,37 @@ const logoList = [
   "/assets/logo_vue.png",
 ];
 
-export const logoAnimation = () => {
-  const container = document.getElementById("logoanimationcontainer");
-  const logoElt = [];
-  let increment = 360 / 9;
+export const logosPast = [
+  "/assets/logo_care.png",
+  "/assets/logo_chemist.png",
+  "/assets/logo_improvement.png",
+  "/assets/logo_iso.png",
+  "/assets/logo_plant.png",
+  "/assets/logo_vqr.png",
+];
+
+export const createLogoAnimation = (logos) => {
+  const parentContainer = document.getElementById("logoanimationcontainer");
+  const container = document.createElement("div");
+  container.style.position = "relative";
+  container.style.width = "300px";
+  container.style.height = "300px";
+  let increment = 360 / logos.length;
   let angle = 0;
-  let radius = 150;
+  let radius = 120;
 
   function radian(deg) {
     return deg * (Math.PI / 180);
   }
 
   (() => {
-    for (const logoUrl of logoList) {
+    for (const logoUrl of logos) {
       const newLogo = document.createElement("img");
-
-      //--------------------------------------------
 
       newLogo.src = logoUrl;
       newLogo.style.position = "absolute";
-      newLogo.style.width = "80px";
-      newLogo.style.height = "80px";
+      newLogo.style.width = "60px";
+      newLogo.style.height = "60px";
 
       let top = Math.sin(radian(angle)) * radius + radius;
       let left = Math.cos(radian(angle)) * radius + radius;
@@ -41,5 +51,6 @@ export const logoAnimation = () => {
 
       container.appendChild(newLogo);
     }
+    parentContainer.appendChild(container);
   })();
 };

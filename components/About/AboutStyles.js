@@ -9,12 +9,11 @@ export const TimelineContainer = styled.div`
   }
 
   ${({ theme }) => theme.breakPoints.ip} {
-    width: 90%;
+    width: 100%;
     margin: 30px 0;
   }
 
   ${({ theme }) => theme.breakPoints.sp} {
-    width: 100%;
     margin: 30px 0;
   }
 `;
@@ -23,8 +22,26 @@ export const LogoAnimationContainer = styled.div.attrs((props) => ({
   id: "logoanimationcontainer",
 }))`
   position: relative;
-  margin-top: 100px;
-  width: 400px;
-  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
   // border: 1px solid white;
+
+  ${({ theme }) => theme.breakPoints.ip} {
+    flex-direction: row;
+    width: 100%;
+  }
+
+  @media screen and (max-width: 700px) {
+    display: none;
+  }
+`;
+
+export const AboutRow = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 100%;
+  height: fit-content;
+  min-height: 600px;
 `;

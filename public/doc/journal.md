@@ -1,29 +1,37 @@
 # PORTFOLIO IKODI
 
-### le 23/12/2021
+### le 26/12/2021
 
-- connexion auth -> ok
-- logout -> ok
-- css de project -> ok
+- Styles Timeline -> ok,
+- Dans section About ajouter un autre "ring" pour les xp d'avant ->
 
 #### Reste à faire :
 
-- Gestion d'erreur en sortie de fetch,
-- Info login success et redirect auto sur portfolio après login success,
-- Préremplir les données de feedback si loggué -> issue dans repo feedback ->
 - Mettre en place les animations, transitions et styles définitifs :
-  - Sur liens et boutons,
-  - Sur timeline,
-  - Dans section About ajouter un autre "ring" pour les xp d'avant.
+- Finaliser les textes.
+
+### le 24/12/2021
+
+- Info login success et redirect auto sur portfolio après login success :
+  - Info en query depuis le portfolio -> ok
+- Améliorer l'info visuelle quand on est loggué -> quasiment...
+- Animation liens et boutons -> ok
+- Factorisation des fetchs et post -> ok
+
+### le 23/12/2021
+
+- connexion auth.ikodi.eu -> ok
+- logout avec auth.ikodi.eu -> ok
+- css de "Projects" -> ok
 
 ### le 22/12/2021
 
-- connexion auth -> en cours
+- connexion avec auth.ikodi.eu -> en cours
 
 ### le 21/12/2021
 
 - Finalisation des styles sur page détails d'une app -> ok (ajout de liens),
-- Animation du Hero pour theme light -> ok;
+- Animation du Hero pour theme light (choix des couleurs et réglages) -> ok;
 
 ### le 20/12/2021
 

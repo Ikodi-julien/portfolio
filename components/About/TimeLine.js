@@ -8,11 +8,17 @@ import TimelineDot from "@mui/lab/TimelineDot";
 import TimelineOppositeContent from "@mui/lab/TimelineOppositeContent";
 
 export default function OppositeContentTimeline() {
+  const width = "20%";
+  const maxWidth = "80px";
+  const minWidth = "80px";
+
   return (
     <Fragment>
-      <Timeline position="alternate">
+      <Timeline position="right">
         <TimelineItem>
-          <TimelineOppositeContent>2021</TimelineOppositeContent>
+          <TimelineOppositeContent style={{ width, maxWidth, minWidth }}>
+            2021
+          </TimelineOppositeContent>
           <TimelineSeparator>
             <TimelineDot />
             <TimelineConnector />
@@ -27,7 +33,9 @@ export default function OppositeContentTimeline() {
           </TimelineContent>
         </TimelineItem>
         <TimelineItem>
-          <TimelineOppositeContent>2019</TimelineOppositeContent>
+          <TimelineOppositeContent style={{ width, maxWidth, minWidth }}>
+            2019
+          </TimelineOppositeContent>
           <TimelineSeparator>
             <TimelineDot />
             <TimelineConnector />
@@ -37,7 +45,9 @@ export default function OppositeContentTimeline() {
           </TimelineContent>
         </TimelineItem>
         <TimelineItem>
-          <TimelineOppositeContent>2018</TimelineOppositeContent>
+          <TimelineOppositeContent style={{ width, maxWidth, minWidth }}>
+            2018
+          </TimelineOppositeContent>
           <TimelineSeparator>
             <TimelineDot />
             <TimelineConnector />
@@ -50,7 +60,9 @@ export default function OppositeContentTimeline() {
           </TimelineContent>
         </TimelineItem>
         <TimelineItem>
-          <TimelineOppositeContent>2005</TimelineOppositeContent>
+          <TimelineOppositeContent style={{ width, maxWidth, minWidth }}>
+            2005
+          </TimelineOppositeContent>
           <TimelineSeparator>
             <TimelineDot />
             <TimelineConnector />
@@ -63,19 +75,24 @@ export default function OppositeContentTimeline() {
           </TimelineContent>
         </TimelineItem>
         <TimelineItem>
-          <TimelineOppositeContent>2000</TimelineOppositeContent>
+          <TimelineOppositeContent style={{ width, maxWidth, minWidth }}>
+            2000
+          </TimelineOppositeContent>
           <TimelineSeparator>
             <TimelineDot />
             <TimelineConnector />
           </TimelineSeparator>
           <TimelineContent>
-            Technicien Qualité dans les industries plastique, automobile et TP.
+            Technicien Qualité dans les industries plastique (automobile),
+            mécanique et Travaux Publics.
             <br />
-            Audits de processus, contrôles, analyses, formation du personnel...
+            Normes ISO, audits de processus, analyses, formation du personnel...
           </TimelineContent>
         </TimelineItem>
         <TimelineItem>
-          <TimelineOppositeContent>1996</TimelineOppositeContent>
+          <TimelineOppositeContent style={{ width, maxWidth, minWidth }}>
+            1996
+          </TimelineOppositeContent>
           <TimelineSeparator>
             <TimelineDot />
             <TimelineConnector />
@@ -83,7 +100,7 @@ export default function OppositeContentTimeline() {
           <TimelineContent>
             Formation initiale en Chimie
             <br />
-            Travail en 3/8, industrie métallurgique...
+            Travail en 3/8 dans l&apos;industrie métallurgique.
           </TimelineContent>
         </TimelineItem>
       </Timeline>
