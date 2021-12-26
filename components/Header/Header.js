@@ -33,13 +33,20 @@ const Header = (props) => {
   // };
 
   useEffect(() => {
-    (async () => {
-      const userData = await fetchUser();
-      if (userData && userData.nickname !== user.nickname) {
-        setGreatingIsVisible(true);
-        setUser(userData);
+    if (!document.cookie.includes("connected=true")) {
+      try {
+        (async () => {
+          const userData = await fetchUser();
+          if (userData && userData.nickname !== user.nickname) {
+            setGreatingIsVisible(true);
+            setUser(userData);
+            document.cookie = "connected=true";
+          }
+        })();
+      } catch (error) {
+        console.log(error);
       }
-    })();
+    }
   }, []);
 
   const logoutHandler = () => {
