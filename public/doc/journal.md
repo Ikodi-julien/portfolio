@@ -5,11 +5,14 @@
 - Styles Timeline -> ok,
 - Dans section About ajouter un autre "ring" pour les xp d'avant -> ok
 - Issue: affichage du UserGreating à chaque refresh, comportement attendu : affichage au premier seulement -> ok
-- Faire une Modale pour UserGreating ->
+- Faire une Modale pour UserGreating -> finalement non, bien comme ça.
+- Ajout scrollTo top dans Layout -> ok
+- Brancher delete/me sur le bouton -> ok
+- Pourquoi l'id n'évolue pas après une suppression de compte -> 30 mn sur une erreur d'import :-/
+- Ajouter une confirmation de la suppression du compte et du logout ->
 
 #### Reste à faire :
 
-- Brancher delete/me sur le bouton,
 - Finaliser l'animation des logos + mettre un divider entre les rings,
 - Mettre une bordure aux liens vers app dans projects,
 - Mettre un background degradé aux titres,

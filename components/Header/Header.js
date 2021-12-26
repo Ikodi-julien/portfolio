@@ -34,13 +34,22 @@ const Header = (props) => {
   // };
 
   const logoutHandler = () => {
-    postLogout();
+    const message = postLogout();
+    if (message) alert("Vous êtes bien déconnecté.");
+    if (!message)
+      alert(
+        "Ça n'a pas fonctionné semble-t-il... peut-être réessayer ? Sinon, n'hésitez pas à me contacter pour que je fasse le nécessaire."
+      );
     setUser({ nickname: "" });
   };
 
   const handleDelete = async () => {
     const id = await deleteAccount();
-    console.log("id", id);
+    if (id) alert("Compte supprimé");
+    if (!id)
+      alert(
+        "Ça n'a pas fonctionné semble-t-il... peut-être réessayer ? Sinon, n'hésitez pas à me contacter pour que je fasse le nécessaire."
+      );
     setUser({ nickname: "" });
   };
 
