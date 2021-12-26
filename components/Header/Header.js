@@ -15,7 +15,7 @@ import Nav from "./Nav";
 import Logo from "/public/logo_ikodi_lettres.png";
 import fetchUser from "../../helpers/fetchUser";
 import postLogout from "../../helpers/postLogout";
-import deleteAccount from "../../helpers/postLogout";
+import deleteAccount from "../../helpers/deleteAccount";
 
 const Header = (props) => {
   const [isVisible, setIsVisible] = useState(false);
