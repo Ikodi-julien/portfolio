@@ -15,21 +15,32 @@ import Nav from "./Nav";
 import Logo from "/public/logo_ikodi_lettres.png";
 import fetchUser from "../../helpers/fetchUser";
 import postLogout from "../../helpers/postLogout";
+import deleteAccount from "../../helpers/postLogout";
 
 const Header = (props) => {
   const [isVisible, setIsVisible] = useState(false);
   const [isWelcomingVisible, setWelcomingIsVisible] = useState(false);
-  // const [user, setUser] = useState({ nickname: "" });
-  const user = {
-    id: 32,
-    nickname: "ju",
-    firstname: "",
-    lastname: "",
-    email: "jupellin39@gmail.com",
-    password:
-      "2b$10$PvkWglwOBiEbi9RgVWah32b$10$PvkWglwOBiEbi9RgVWah32b$10$PvkWglwOBiEbi9RgVWah3",
-    apisignup: true,
-    active: true,
+  const [user, setUser] = useState({ nickname: "" });
+  // const user = {
+  //   id: 32,
+  //   nickname: "ju",
+  //   firstname: "",
+  //   lastname: "",
+  //   email: "jupellin39@gmail.com",
+  //   password:
+  //     "2b$10$PvkWglwOBiEbi9RgVWah32b$10$PvkWglwOBiEbi9RgVWah32b$10$PvkWglwOBiEbi9RgVWah3",
+  //   apisignup: true,
+  //   active: true,
+  // };
+
+  const handleDelete = async () => {
+    try {
+      deleteAccount();
+    } catch (error) {
+      console.log(error);
+    } finally {
+      setUser({ nickname: "" });
+    }
   };
 
   useEffect(() => {
@@ -86,6 +97,7 @@ const Header = (props) => {
             user={user}
             open={isWelcomingVisible}
             setOpen={setWelcomingIsVisible}
+            deleteAccount={handleDelete}
           />
         </Fragment>
       )}
