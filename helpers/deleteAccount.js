@@ -8,8 +8,9 @@ const deleteAccount = async () => {
         withCredentials: true,
       }
     );
+    console.log("response.data", response.data);
     console.log("Deleted id:", response.data.id);
-    return response;
+    return response.data ? response.data.id : false;
   } catch (error) {
     console.log(error);
   }

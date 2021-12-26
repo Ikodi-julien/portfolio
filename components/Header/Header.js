@@ -39,7 +39,7 @@ const Header = (props) => {
   };
 
   const handleDelete = async () => {
-    const id = deleteAccount();
+    const id = await deleteAccount();
     console.log("id", id);
     setUser({ nickname: "" });
   };
