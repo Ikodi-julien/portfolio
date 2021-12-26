@@ -1,8 +1,9 @@
 import axios from "axios";
 
 const deleteAccount = async () => {
-  await axios.delete(`https://auth.ikodi.eu/me/credentials`, {
+  const response = await axios.delete(`https://auth.ikodi.eu/me/credentials`, {
     withCredentials: true,
   });
+  return response;
 };
 export default deleteAccount;

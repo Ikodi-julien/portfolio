@@ -33,9 +33,15 @@ const Header = (props) => {
   //   active: true,
   // };
 
+  const logoutHandler = () => {
+    postLogout();
+    setUser({ nickname: "" });
+  };
+
   const handleDelete = async () => {
     try {
-      deleteAccount();
+      const { data } = deleteAccount();
+      console.log("Deleted id :", data.id);
     } catch (error) {
       console.log(error);
     } finally {
@@ -59,11 +65,6 @@ const Header = (props) => {
       console.log(error);
     }
   }, []);
-
-  const logoutHandler = () => {
-    postLogout();
-    setUser({ nickname: "" });
-  };
 
   return (
     <Container>
