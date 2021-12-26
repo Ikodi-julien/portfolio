@@ -77,7 +77,7 @@ const Header = (props) => {
           </a>
         </Link>
       ) : (
-        <Button onClick={logoutHandler} color={"secondary"}>
+        <Button onClick={() => logoutHandler()} color={"secondary"}>
           Déconnexion
         </Button>
       )}
