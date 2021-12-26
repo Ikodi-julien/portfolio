@@ -44,6 +44,7 @@ export const ButtonFront = styled.button`
   cursor: pointer;
   display: flex;
   align-items: center;
+  transition: background-color 0.5s;
 
   &:hover {
     background-color: ${({ theme }) => theme.linkHovered};
@@ -86,7 +87,8 @@ export const IconContainer = styled.div`
 
 export const Row = styled.div`
   display: flex;
-  justify-content: space-evenly;
+  justify-content: ${(props) =>
+    props.justifyContent ? props.justifyContent : "space-evenly"};
   align-items: center;
   flex-wrap: wrap;
 `;

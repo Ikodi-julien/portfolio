@@ -34,8 +34,8 @@ export const dark = {
   shadow: `0 0 5px rgba(250,250,240, 0.2)`,
 };
 
-const lightPColor = `rgba(166,212,255,1)`;
-const lightSColor = `rgba(189,166,255,1)`;
+const lightPColor = `rgba(189,166,255,1)`;
+const lightSColor = `rgba(166,212,255,1)`;
 
 export const light = {
   primary: lightPColor,

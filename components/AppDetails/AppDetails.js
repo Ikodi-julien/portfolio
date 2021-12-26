@@ -21,7 +21,7 @@ const AppDetails = ({ appDetails }) => (
         height={400}
       />
     </AppDetailsHero>
-    <Row>
+    <Row justifyContent="right">
       <a>
         <Button color="primary">
           {appDetails.name.toLowerCase()}.ikodi.eu{" "}

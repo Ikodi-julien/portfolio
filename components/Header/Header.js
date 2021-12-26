@@ -1,5 +1,3 @@
-/* eslint-disable @next/next/link-passhref */
-import axios from "axios";
 import { useState, useEffect, Fragment } from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -15,10 +13,12 @@ import {
 } from "./HeaderStyles";
 import Nav from "./Nav";
 import Logo from "/public/logo_ikodi_lettres.png";
+import fetchUser from "../../helpers/fetchUser";
+import postLogout from "../../helpers/postLogout";
 
 const Header = (props) => {
   const [isVisible, setIsVisible] = useState(false);
-  const [isGreatingVisible, setGreatingIsVisible] = useState(true);
+  const [isGreatingVisible, setGreatingIsVisible] = useState(false);
   const [user, setUser] = useState({ nickname: "" });
   // const user = {
   //   id: 32,
@@ -33,38 +33,18 @@ const Header = (props) => {
   // };
 
   useEffect(() => {
-    async function fetchData() {
-      try {
-        const response = await axios.get("https://auth.ikodi.eu/me", {
-          withCredentials: true,
-        });
-        if (response.data) {
-          console.log("data", response.data);
-          console.log("status", response.status);
-          setUser(response.data);
-        } else {
-          console.log("error response", response);
-        }
-      } catch (error) {
-        console.log("error", error.toString());
+    (async () => {
+      const userData = await fetchUser();
+      if (userData && userData.nickname !== user) {
+        setGreatingIsVisible(true);
+        setUser(userData);
       }
-    }
-    fetchData();
+    })();
   }, []);
 
-  const postLogout = async () => {
-    console.log("hé!");
-    try {
-      await axios.post(
-        "https://auth.ikodi.eu/logout",
-        {},
-        { withCredentials: true }
-      );
-    } catch (error) {
-      console.log(error);
-    } finally {
-      setUser({ nickname: "" });
-    }
+  const logoutHandler = () => {
+    postLogout();
+    setUser({ nickname: "" });
   };
 
   return (
@@ -83,7 +63,9 @@ const Header = (props) => {
           </a>
         </Link>
       ) : (
-        <Button onClick={postLogout}>Déconnexion</Button>
+        <Button onClick={logoutHandler} color={"secondary"}>
+          Déconnexion
+        </Button>
       )}
       <ThemeButton slug={props.slug} appName={props.appName} />
       {user.nickname !== "" && (

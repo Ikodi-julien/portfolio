@@ -19,7 +19,10 @@ const UserGreating = ({ user, open, setOpen, className }) => (
     <h1>Bienvenue {user.nickname} !</h1>
     <p>Merci d&apos;avoir testé la connexion avec auth.ikodi.eu.</p>
     <br />
-    <p>Pour info, ci-dessous les données stockées en base.</p>
+    <p>
+      Pour info, ci-dessous les données stockées en base (le mot de passe est
+      stocké dans sa version cryptée).
+    </p>
     <br />
     <div style={{ width: "100%" }}>
       <table>
@@ -30,7 +33,7 @@ const UserGreating = ({ user, open, setOpen, className }) => (
         </thead>
         <tbody>
           {Object.getOwnPropertyNames(user).map((propname) => {
-            if (user[propname] !== "")
+            if (user[propname] !== "" && propname !== "password")
               return (
                 <tr key={propname}>
                   <td>{propname}</td>

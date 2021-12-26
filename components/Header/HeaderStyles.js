@@ -62,7 +62,11 @@ export const NavLink = styled.li`
   cursor: pointer;
   font-weight: 400;
   background-color: ${({ theme }) => theme.pageBackground};
+  transition: background-color 500ms;
 
+  &:hover {
+    background-color: rgba(63, 112, 203, 0.2);
+  }
   ${({ theme }) => theme.breakPoints.ip} {
     background-color: ${({ theme }) => theme.navBackground};
     padding: 8px;
@@ -112,6 +116,12 @@ export const UserButton = styled.div`
   right: 0;
   padding: 5px;
   font-size: 1.2em;
+  transform: scale(1);
+  transition: transform 500ms;
+
+  &:hover {
+    transform: scale(1.2);
+  }
 `;
 
 export const StyledUserGreating = styled(UserGreating)`
