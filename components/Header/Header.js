@@ -39,14 +39,9 @@ const Header = (props) => {
   };
 
   const handleDelete = async () => {
-    try {
-      const { data } = deleteAccount();
-      console.log("Deleted id :", data.id);
-    } catch (error) {
-      console.log(error);
-    } finally {
-      setUser({ nickname: "" });
-    }
+    const id = deleteAccount();
+    console.log("id", id);
+    setUser({ nickname: "" });
   };
 
   useEffect(() => {
