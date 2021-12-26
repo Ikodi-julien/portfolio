@@ -3,11 +3,13 @@
 ### le 26/12/2021
 
 - Styles Timeline -> ok,
-- Dans section About ajouter un autre "ring" pour les xp d'avant ->
+- Dans section About ajouter un autre "ring" pour les xp d'avant -> ok
 
 #### Reste à faire :
 
-- Mettre en place les animations, transitions et styles définitifs :
+- Issue: affichage du UserGreating à chaque refresh, comportement attendu : affichage au premier seulement.
+- Faire une Modale pour UserGreating,
+- Finaliser l'animation des logos,
 - Finaliser les textes.
 
 ### le 24/12/2021

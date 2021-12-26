@@ -35,7 +35,7 @@ const Header = (props) => {
   useEffect(() => {
     (async () => {
       const userData = await fetchUser();
-      if (userData && userData.nickname !== user) {
+      if (userData && userData.nickname !== user.nickname) {
         setGreatingIsVisible(true);
         setUser(userData);
       }
