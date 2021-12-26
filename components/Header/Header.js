@@ -33,19 +33,19 @@ const Header = (props) => {
   // };
 
   useEffect(() => {
-    if (!document.cookie.includes("connected=true")) {
-      try {
-        (async () => {
-          const userData = await fetchUser();
-          if (userData && userData.nickname !== user.nickname) {
+    try {
+      (async () => {
+        const userData = await fetchUser();
+        if (userData) {
+          setUser(userData);
+          if (!document.cookie.includes("connected=know")) {
             setGreatingIsVisible(true);
-            setUser(userData);
-            document.cookie = "connected=true";
+            document.cookie = "connected=know";
           }
-        })();
-      } catch (error) {
-        console.log(error);
-      }
+        }
+      })();
+    } catch (error) {
+      console.log(error);
     }
   }, []);
 
