@@ -1,3 +1,5 @@
+import axios from "axios";
+
 const postLogout = async () => {
   console.log("hé!");
   try {
