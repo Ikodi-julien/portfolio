@@ -14,7 +14,7 @@ export const Wrapper = styled.main`
     padding: 4em 3em;
   }
   ${({ theme }) => theme.breakPoints.ip} {
-    padding: 4em 2em;
+    padding: 4em 1em;
   }
   ${({ theme }) => theme.breakPoints.sp} {
     padding: 4em 0.5em;

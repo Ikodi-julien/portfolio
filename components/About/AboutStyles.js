@@ -18,7 +18,11 @@ export const TimelineContainer = styled.div`
   }
 `;
 
-export const LogoAnimation = styled.div``;
+export const LogoAnimation = styled.div`
+  & img {
+    transition: left 5s, top 5s;
+  }
+`;
 
 export const LogoAnimationContainer = styled.div`
   position: relative;
@@ -37,7 +41,7 @@ export const LogoAnimationDivider = styled.hr`
   width: 70%;
   margin: 15px auto;
   height: 3px;
-  background-color: ${({ theme }) => theme.font};
+  background: ${({ theme }) => theme.titleBackground};
   border-radius: 2px;
 `;
 

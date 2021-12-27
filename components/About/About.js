@@ -10,12 +10,11 @@ import {
 } from "./AboutStyles";
 import Timeline1 from "./TimeLine1";
 import Timeline2 from "./TimeLine2";
-import { createLogoAnimation, logosDev, logosPast } from "./logoAnimation";
+import { setAboutAnimation } from "./logoAnimation";
 
 const About = ({}) => {
   useEffect(() => {
-    createLogoAnimation(logosDev, "logoanimation1");
-    createLogoAnimation(logosPast, "logoanimation2");
+    setAboutAnimation();
   }, []);
 
   return (
@@ -33,7 +32,7 @@ const About = ({}) => {
           <LogoAnimation id="logoanimation1" />
         </LogoAnimationContainer>
       </AboutRow>
-      <LogoAnimationDivider />
+      <LogoAnimationDivider id="logoanimationdivider" />
       <AboutRow>
         <TimelineContainer>
           <Timeline2 />

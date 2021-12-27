@@ -54,6 +54,7 @@ export const ProjectLink = styled.div`
   font-weight: 600;
   font-size: 1.2em;
   width: fit-content;
+  max-width: 100%;
   padding: 0.5em 1em;
   margin: 1em auto;
   text-align: center;
@@ -62,9 +63,15 @@ export const ProjectLink = styled.div`
   border: 2px solid ${({ theme }) => theme.font};
   border-radius: 20px;
 
+  ${({ theme }) => theme.breakPoints.ip} {
+    font-size: 1em;
+  }
+
   & a {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
+    word-break: normal;
   }
   &:hover {
     transform: scale(1.02);

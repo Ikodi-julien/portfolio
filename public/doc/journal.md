@@ -1,14 +1,20 @@
 # PORTFOLIO IKODI
 
-### le 27/12/2021
+## le 27/12/2021 - Phase des derniers réglages avant les tests finaux
 
 - Mettre une bordure aux liens vers app dans projects -> ok,
 - Mettre un background degradé aux titres -> ok
-- Finaliser l'animation des logos + mettre un divider entre les rings -> en cours
+- Finaliser l'animation des logos + mettre un divider entre les rings -> ok
+- Fix :
+  - En vue smartphone :
+    - Voir techs par deux -> ok
+    - Inverser l'order ring / timeline -> finalement pas pour l'instant,
+    - Attention lien multiplicorne dépasse -> ok
 
 #### Reste à faire :
 
 - Finaliser les textes + ajouter le CV en pdf,
+- Tests de scenari et création d'issues,
 
 ### le 26/12/2021
 
@@ -71,7 +77,7 @@
 - Fin mis en forme About -> ok
 - Changement thème dark / light -> en cours
 
-### le 16/12/2021
+## le 16/12/2021 Phase ajout des features
 
 ### Fait
 
@@ -135,7 +141,7 @@ Fait :
     - NavMenu mobile (hamburger) -> ok
   - Button -> ok
 
-### Le 11/12/2021
+## Le 11/12/2021 - Phase de développement des composants
 
 - Se renseigner sur:
 
@@ -177,7 +183,7 @@ Recherche d'idée design pour portfolio, vu un sur yt je vais prendre les "style
 Modifications dans le CDC.
 Début des wireframes -> vue mobile section accueil + menu hamburger + section projets
 
-### Le 01/12/2022
+## Le 01/12/2022 - Phase de préparation
 
 Démarrage du projet de rénovation du mon portfolio.
 Objectif (cf CDC) + apprendre à utiliser Next.js
