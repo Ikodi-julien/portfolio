@@ -1,5 +1,15 @@
 # PORTFOLIO IKODI
 
+### le 27/12/2021
+
+- Mettre une bordure aux liens vers app dans projects -> ok,
+- Mettre un background degradé aux titres -> ok
+- Finaliser l'animation des logos + mettre un divider entre les rings,
+
+#### Reste à faire :
+
+- Finaliser les textes.
+
 ### le 26/12/2021
 
 - Styles Timeline -> ok,
@@ -9,14 +19,7 @@
 - Ajout scrollTo top dans Layout -> ok
 - Brancher delete/me sur le bouton -> ok
 - Pourquoi l'id n'évolue pas après une suppression de compte -> 30 mn sur une erreur d'import :-/
-- Ajouter une confirmation de la suppression du compte et du logout ->
-
-#### Reste à faire :
-
-- Finaliser l'animation des logos + mettre un divider entre les rings,
-- Mettre une bordure aux liens vers app dans projects,
-- Mettre un background degradé aux titres,
-- Finaliser les textes.
+- Ajouter une confirmation de la suppression du compte et du logout -> ok
 
 ### le 24/12/2021
 

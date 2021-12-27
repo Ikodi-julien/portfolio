@@ -1,6 +1,5 @@
 import { useState, useEffect, Fragment } from "react";
 import Image from "next/image";
-import Link from "next/link";
 import { FaUserAlt } from "react-icons/fa";
 import { LogoContainer, IconContainer } from "/styled_components";
 import Button from "/styled_components/Button";
@@ -74,17 +73,17 @@ const Header = (props) => {
     <Container>
       <Burger onClick={() => setIsVisible(!isVisible)} />
 
-      <LogoContainer>
-        <Image src={Logo} alt="Logo Ikodi" width={100} height={25} />
-      </LogoContainer>
+      <a href="https://ikodi.eu">
+        <LogoContainer>
+          <Image src={Logo} alt="Logo Ikodi" width={100} height={30} />
+        </LogoContainer>
+      </a>
 
       <Nav visible={isVisible} setIsVisible={setIsVisible} slug={props.slug} />
       {user.nickname === "" ? (
-        <Link href="https://auth.ikodi.eu?app=portfolio" passHref>
-          <a>
-            <Button>Se connecter</Button>
-          </a>
-        </Link>
+        <a href="https://auth.ikodi.eu?app=portfolio">
+          <Button>Se connecter</Button>
+        </a>
       ) : (
         <Button onClick={() => logoutHandler()} color={"secondary"}>
           Déconnexion

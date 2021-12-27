@@ -32,6 +32,11 @@ export const dark = {
   font: `#d9e4fa`,
   fontInverted: `#474747`,
   shadow: `0 0 5px rgba(250,250,240, 0.2)`,
+  titleBackground: `linear-gradient(
+    175deg,
+    rgba(255, 255, 255, 1) 20%,
+    rgba(255, 255, 255, 0.5)
+  )`,
 };
 
 const lightPColor = `rgba(189,166,255,1)`;
@@ -49,4 +54,9 @@ export const light = {
   font: `rgba(25,25,24,1)`,
   fontInverted: `rgba(247,246,240,1)`,
   shadow: `0 0 5px rgba(25,25,24, 0.2)`,
+  titleBackground: `linear-gradient(
+    175deg,
+    rgba(25,25,24,1) 20%,
+    rgba(25,25,24,.5)
+  )`,
 };

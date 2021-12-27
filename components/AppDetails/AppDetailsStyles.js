@@ -10,6 +10,13 @@ export const AppDetailsHero = styled.div`
 
 export const AppDetailsMainTitle = styled.h1`
   font-size: 3em;
+  width: fit-content;
+  height: fit-content;
+  align-self: start;
+  background: ${({ theme }) => theme.titleBackground};
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 `;
 
 export const AppTechCard = styled.article`

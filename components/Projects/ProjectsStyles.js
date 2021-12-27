@@ -36,7 +36,12 @@ export const ProjectCard = styled.article`
 
 export const ProjectTitle = styled.h1`
   font-size: 2em;
+  width: fit-content;
   margin: 0.5em 0;
+  background: ${({ theme }) => theme.titleBackground};
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 `;
 
 export const ProjectText = styled.p`
@@ -48,14 +53,21 @@ export const ProjectLink = styled.div`
   font-style: italic;
   font-weight: 600;
   font-size: 1.2em;
-  width: 100%;
+  width: fit-content;
+  padding: 0.5em 1em;
+  margin: 1em auto;
   text-align: center;
-  padding: 1em 0;
   transform: scale(1);
-  transition: all 300ms;
+  transition: transform 300ms;
+  border: 2px solid ${({ theme }) => theme.font};
+  border-radius: 20px;
 
+  & a {
+    display: flex;
+    align-items: center;
+  }
   &:hover {
-    transform: scale(1.01);
-    transition: all 300ms;
+    transform: scale(1.02);
+    transition: transform 300ms;
   }
 `;

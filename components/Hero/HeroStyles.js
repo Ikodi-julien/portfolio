@@ -16,17 +16,26 @@ export const HeroTitles = styled.div`
   left: 10%;
   width: 80%;
   height: 100%;
-  text-shadow: 0 0 5px ${({ theme }) => theme.fontInverted};
+  // text-shadow: 0 0 5px ${({ theme }) => theme.fontInverted};
 `;
 
 export const MainTitle = styled.h1`
   font-size: 4em;
   text-align: left;
+  width: fit-content;
+  background: ${({ theme }) => theme.titleBackground};
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 `;
 
 export const SubTitle = styled.h2`
   font-size: 2em;
   text-align: left;
-  color: inherit;
   display: flex;
+  width: fit-content;
+  background: ${({ theme }) => theme.titleBackground};
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 `;

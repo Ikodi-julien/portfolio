@@ -52,10 +52,9 @@ export const ButtonFront = styled.button`
 `;
 
 export const LogoContainer = styled.div`
-  background: rgba(255, 255, 255, 0.2);
-  height: 35px;
-  padding: 5px;
-  border-radius: 5px;
+  & img {
+    background: rgba(255, 255, 255, 0.2);
+  }
 
   ${({ theme }) => theme.breakPoints.dt} {
     display: none;
