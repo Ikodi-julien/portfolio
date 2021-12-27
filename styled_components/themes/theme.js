@@ -9,7 +9,7 @@ export const shared = {
   },
   breakPoints: {
     /* Smartphones (portrait) ----------- */
-    sp: "@media screen and (max-width : 380px)",
+    sp: "@media screen and (max-width : 400px)",
     /* iPads ----------- */
     ip: "@media screen and (max-width : 768px)",
     /* Desktops and laptops ----------- */
