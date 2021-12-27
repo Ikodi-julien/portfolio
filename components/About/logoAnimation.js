@@ -35,7 +35,9 @@ class LogoAnimationCls {
       return newLogo;
     });
     this.parentContainer = document.getElementById(eltId);
+    this.container = document.createElement("div");
     this.interval = 0;
+    this.timeOut = 0;
   }
 
   createContainer(elt) {
@@ -50,7 +52,9 @@ class LogoAnimationCls {
   }
 
   wait(duration) {
-    return new Promise((resolve) => setTimeout(() => resolve(true), duration));
+    return new Promise(
+      (resolve) => (this.timeOut = setTimeout(() => resolve(true), duration))
+    );
   }
 
   setPositions(elt, angle, radius) {
@@ -62,6 +66,11 @@ class LogoAnimationCls {
     return elt;
   }
 
+  resetPosition(elt) {
+    elt.style.top = 0;
+    elt.style.left = 0;
+    return elt;
+  }
   // This is to display logos on place at the beginning
   positionLogos(container) {
     return new Promise(async (resolve) => {
@@ -88,13 +97,14 @@ class LogoAnimationCls {
 
   closeAnimation() {
     clearInterval(this.interval);
-    this.parentContainer.innerHTML = "";
+    clearTimeout(this.timeOut);
+    this.logoElts = this.logoElts.map((element) => this.resetPosition(element));
+    this.container.innerHTML = "";
     this.angle = 0;
   }
 
   async init() {
-    const container = document.createElement("div");
-    const styledContainer = this.createContainer(container);
+    const styledContainer = this.createContainer(this.container);
     this.parentContainer.innerHTML = "";
     this.parentContainer.appendChild(styledContainer);
 
