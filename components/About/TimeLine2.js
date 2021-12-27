@@ -17,50 +17,6 @@ export default function OppositeContentTimeline() {
       <Timeline position="right">
         <TimelineItem>
           <TimelineOppositeContent style={{ width, maxWidth, minWidth }}>
-            2021
-          </TimelineOppositeContent>
-          <TimelineSeparator>
-            <TimelineDot />
-            <TimelineConnector />
-          </TimelineSeparator>
-          <TimelineContent>
-            Titre pro développeur web et web mobile
-            <br />
-            Certification Opquast 890/1000
-            <br />
-            Développement de plusieurs applications avec Next.JS, React, Vue.JS,
-            SQL, NoSQL...
-          </TimelineContent>
-        </TimelineItem>
-        <TimelineItem>
-          <TimelineOppositeContent style={{ width, maxWidth, minWidth }}>
-            2019
-          </TimelineOppositeContent>
-          <TimelineSeparator>
-            <TimelineDot />
-            <TimelineConnector />
-          </TimelineSeparator>
-          <TimelineContent>
-            Première app complète, avec PHP et MySQL
-          </TimelineContent>
-        </TimelineItem>
-        <TimelineItem>
-          <TimelineOppositeContent style={{ width, maxWidth, minWidth }}>
-            2018
-          </TimelineOppositeContent>
-          <TimelineSeparator>
-            <TimelineDot />
-            <TimelineConnector />
-          </TimelineSeparator>
-          <TimelineContent>
-            Référent paramètrages, développement des fonctionnalités (côté
-            client) et formation du personnel lors d&apos;un projet de
-            changement de logiciel professionnel (150 salariés, groupe de
-            travail sur 18 mois).
-          </TimelineContent>
-        </TimelineItem>
-        <TimelineItem>
-          <TimelineOppositeContent style={{ width, maxWidth, minWidth }}>
             2005
           </TimelineOppositeContent>
           <TimelineSeparator>

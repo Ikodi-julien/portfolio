@@ -3,16 +3,19 @@ import { Section, Text } from "../../styled_components";
 import Title from "../../styled_components/Title";
 import {
   TimelineContainer,
+  LogoAnimation,
   LogoAnimationContainer,
+  LogoAnimationDivider,
   AboutRow,
 } from "./AboutStyles";
-import Timeline from "./TimeLine";
+import Timeline1 from "./TimeLine1";
+import Timeline2 from "./TimeLine2";
 import { createLogoAnimation, logosDev, logosPast } from "./logoAnimation";
 
 const About = ({}) => {
   useEffect(() => {
-    createLogoAnimation(logosDev);
-    createLogoAnimation(logosPast);
+    createLogoAnimation(logosDev, "logoanimation1");
+    createLogoAnimation(logosPast, "logoanimation2");
   }, []);
 
   return (
@@ -24,9 +27,20 @@ const About = ({}) => {
       </Text>
       <AboutRow>
         <TimelineContainer>
-          <Timeline />
+          <Timeline1 />
         </TimelineContainer>
-        <LogoAnimationContainer />
+        <LogoAnimationContainer>
+          <LogoAnimation id="logoanimation1" />
+        </LogoAnimationContainer>
+      </AboutRow>
+      <LogoAnimationDivider />
+      <AboutRow>
+        <TimelineContainer>
+          <Timeline2 />
+        </TimelineContainer>
+        <LogoAnimationContainer>
+          <LogoAnimation id="logoanimation2" />
+        </LogoAnimationContainer>
       </AboutRow>
     </Section>
   );

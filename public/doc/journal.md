@@ -4,11 +4,11 @@
 
 - Mettre une bordure aux liens vers app dans projects -> ok,
 - Mettre un background degradé aux titres -> ok
-- Finaliser l'animation des logos + mettre un divider entre les rings,
+- Finaliser l'animation des logos + mettre un divider entre les rings -> en cours
 
 #### Reste à faire :
 
-- Finaliser les textes.
+- Finaliser les textes + ajouter le CV en pdf,
 
 ### le 26/12/2021
 

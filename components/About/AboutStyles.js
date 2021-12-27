@@ -18,9 +18,9 @@ export const TimelineContainer = styled.div`
   }
 `;
 
-export const LogoAnimationContainer = styled.div.attrs((props) => ({
-  id: "logoanimationcontainer",
-}))`
+export const LogoAnimation = styled.div``;
+
+export const LogoAnimationContainer = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
@@ -31,10 +31,14 @@ export const LogoAnimationContainer = styled.div.attrs((props) => ({
     flex-direction: row;
     width: 100%;
   }
+`;
 
-  @media screen and (max-width: 700px) {
-    display: none;
-  }
+export const LogoAnimationDivider = styled.hr`
+  width: 70%;
+  margin: 15px auto;
+  height: 3px;
+  background-color: ${({ theme }) => theme.font};
+  border-radius: 2px;
 `;
 
 export const AboutRow = styled.div`
@@ -43,5 +47,4 @@ export const AboutRow = styled.div`
   justify-content: space-evenly;
   width: 100%;
   height: fit-content;
-  min-height: 600px;
 `;
