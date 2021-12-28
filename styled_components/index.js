@@ -93,6 +93,44 @@ export const Row = styled.div`
 `;
 
 export const Text = styled.p`
-  font-size: 1.1em;
+  font-size: 1.3em;
   position: relative;
+  margin-bottom: 0.5em;
+
+  ${({ theme }) => theme.breakPoints.ip} {
+    font-size: 1.1em;
+  }
+  ${({ theme }) => theme.breakPoints.sp} {
+    font-size: 1em;
+  }
+`;
+
+export const StyledLinkContainer = styled.div`
+  font-style: italic;
+  font-weight: 600;
+  font-size: 1.2em;
+  width: fit-content;
+  max-width: 100%;
+  padding: 0.5em 1em;
+  margin: ${(props) => (props.margin ? props.margin : "1em auto")};
+  text-align: center;
+  transform: scale(1);
+  transition: transform 300ms;
+  border: 2px solid ${({ theme }) => theme.font};
+  border-radius: 20px;
+
+  ${({ theme }) => theme.breakPoints.ip} {
+    font-size: 1em;
+  }
+
+  & a {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    word-break: normal;
+  }
+  &:hover {
+    transform: scale(1.02);
+    transition: transform 300ms;
+  }
 `;

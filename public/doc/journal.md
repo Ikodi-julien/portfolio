@@ -1,5 +1,12 @@
 # PORTFOLIO IKODI
 
+### le 28/12/2021
+
+- Finaliser les textes,
+- Ajouter le CV en pdf,
+- Ajouter le Portfolio dans les projets,
+- Tests de scenari et création d'issues,
+
 ## le 27/12/2021 - Phase des derniers réglages avant les tests finaux
 
 - Mettre une bordure aux liens vers app dans projects -> ok,
@@ -10,11 +17,6 @@
     - Voir techs par deux -> ok
     - Inverser l'order ring / timeline -> finalement pas pour l'instant,
     - Attention lien multiplicorne dépasse -> ok
-
-#### Reste à faire :
-
-- Finaliser les textes + ajouter le CV en pdf,
-- Tests de scenari et création d'issues,
 
 ### le 26/12/2021
 

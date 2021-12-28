@@ -1,13 +1,8 @@
 import { useRouter } from "next/router";
-import { Row } from "../../styled_components";
+import { Row, StyledLinkContainer } from "../../styled_components";
 import Button from "../../styled_components/Button";
 import { StyledTag, TagContainer } from "../Tag/TagStyles";
-import {
-  ProjectCard,
-  ProjectText,
-  ProjectLink,
-  ProjectTitle,
-} from "./ProjectsStyles";
+import { ProjectCard, ProjectText, ProjectTitle } from "./ProjectsStyles";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import Image from "next/image";
 import Link from "next/link";
@@ -33,7 +28,7 @@ const Project = ({ project, slug }) => {
           onClick={handleClick}
         />
       </div>
-      <ProjectText>{project.desc}</ProjectText>
+      <ProjectText>{project.desc.short}</ProjectText>
       <TagContainer>
         {project.techno.frontend.lang.map((lang) => (
           <StyledTag key={lang} text={lang} />
@@ -55,7 +50,7 @@ const Project = ({ project, slug }) => {
           </Button>
         </a>
       </Row>
-      <ProjectLink>
+      <StyledLinkContainer>
         <em>
           <Link
             href={`https://${project.name.toLowerCase()}.ikodi.eu`}
@@ -69,7 +64,7 @@ const Project = ({ project, slug }) => {
             </a>
           </Link>
         </em>
-      </ProjectLink>
+      </StyledLinkContainer>
     </ProjectCard>
   );
 };
