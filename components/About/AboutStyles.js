@@ -19,6 +19,10 @@ export const TimelineContainer = styled.div`
 `;
 
 export const LogoAnimation = styled.div`
+  position: relative;
+  width: 250px;
+  height: 280px;
+
   & img {
     transition: left 5s, top 5s;
   }

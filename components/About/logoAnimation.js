@@ -34,17 +34,9 @@ class LogoAnimationCls {
       newLogo.style.height = "50px";
       return newLogo;
     });
-    this.parentContainer = document.getElementById(eltId);
-    this.container = document.createElement("div");
+    this.container = document.getElementById(eltId);
     this.interval = 0;
     this.timeOut = 0;
-  }
-
-  createContainer(elt) {
-    elt.style.position = "relative";
-    elt.style.width = "250px";
-    elt.style.height = "280px";
-    return elt;
   }
 
   getRadian(deg) {
@@ -79,7 +71,7 @@ class LogoAnimationCls {
         this.angle += this.increment;
 
         container.appendChild(elt);
-        await this.wait(300);
+        await this.wait(150);
       }
       resolve(true);
     });
@@ -95,7 +87,7 @@ class LogoAnimationCls {
     }
   }
 
-  closeAnimation() {
+  cleanUp() {
     clearInterval(this.interval);
     clearTimeout(this.timeOut);
     this.logoElts = this.logoElts.map((element) => this.resetPosition(element));
@@ -104,12 +96,7 @@ class LogoAnimationCls {
   }
 
   async init() {
-    const styledContainer = this.createContainer(this.container);
-    this.parentContainer.innerHTML = "";
-    this.parentContainer.appendChild(styledContainer);
-
-    await this.positionLogos(styledContainer);
-
+    await this.positionLogos(this.container);
     this.moveElts();
     this.interval = setInterval(() => this.moveElts(), 5000);
   }
@@ -132,7 +119,7 @@ const setAboutAnimation = () => {
       isRunning1 = true;
     }
     if (!entries[0].isIntersecting) {
-      lg1.closeAnimation();
+      lg1.cleanUp();
       isRunning1 = false;
     }
   }, options);
@@ -143,7 +130,7 @@ const setAboutAnimation = () => {
       isRunning2 = true;
     }
     if (!entries[0].isIntersecting) {
-      lg2.closeAnimation();
+      lg2.cleanUp();
       isRunning2 = false;
     }
   }, options);
