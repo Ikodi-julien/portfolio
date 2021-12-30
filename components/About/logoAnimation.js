@@ -79,7 +79,9 @@ class LogoAnimationCls {
 
   // When logos are placed, this sets new top and left value for each logo every given interval .
   moveElts() {
-    this.angle += this.increment;
+    this.angle += Math.floor(
+      Math.random() * this.increment * this.logoElts.length + 1
+    );
 
     for (const elt of this.logoElts) {
       this.setPositions(elt, this.angle, this.radius);
