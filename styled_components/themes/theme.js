@@ -9,7 +9,7 @@ export const shared = {
   },
   breakPoints: {
     /* Smartphones (portrait) ----------- */
-    sp: "@media screen and (max-width : 380px)",
+    sp: "@media screen and (max-width : 400px)",
     /* iPads ----------- */
     ip: "@media screen and (max-width : 768px)",
     /* Desktops and laptops ----------- */
@@ -31,10 +31,16 @@ export const dark = {
   footerBackground: "black",
   font: `#d9e4fa`,
   fontInverted: `#474747`,
+  shadow: `0 0 5px rgba(250,250,240, 0.2)`,
+  titleBackground: `linear-gradient(
+    175deg,
+    rgba(255, 255, 255, 1) 20%,
+    rgba(255, 255, 255, 0.5)
+  )`,
 };
 
-const lightPColor = `rgba(166,212,255,1)`;
-const lightSColor = `rgba(189,166,255,1)`;
+const lightPColor = `rgba(189,166,255,1)`;
+const lightSColor = `rgba(166,212,255,1)`;
 
 export const light = {
   primary: lightPColor,
@@ -48,4 +54,9 @@ export const light = {
   font: `rgba(25,25,24,1)`,
   fontInverted: `rgba(247,246,240,1)`,
   shadow: `0 0 5px rgba(25,25,24, 0.2)`,
+  titleBackground: `linear-gradient(
+    175deg,
+    rgba(25,25,24,1) 20%,
+    rgba(25,25,24,.5)
+  )`,
 };

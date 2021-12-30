@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Header from "./Header/Header";
 import Footer from "./Footer/Footer";
 import { Wrapper } from "../styled_components/index";
@@ -13,6 +14,8 @@ const StyledContainer = styled.div`
 `;
 
 const Layout = (props) => {
+  useEffect(() => window.scrollTo({ top: 0, left: 0, behavior: "smooth" }));
+
   return (
     <Theme theme={props.theme}>
       <StyledContainer>

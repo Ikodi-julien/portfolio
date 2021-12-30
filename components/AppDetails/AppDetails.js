@@ -37,8 +37,8 @@ const AppDetails = ({ appDetails }) => (
         height={560}
       />
     </AppDetailsHero>
-    <Row>
-      <a>
+    <Row justifyContent="right">
+      <a href={appDetails.links.app}>
         <Button color="primary">
           {appDetails.name.toLowerCase()}.ikodi.eu{" "}
           <FaExternalLinkAlt
@@ -53,12 +53,14 @@ const AppDetails = ({ appDetails }) => (
       </a>
     </Row>
     <Title title="Son Histoire" />
-    <Text>{appDetails.desc}</Text>
+    {appDetails.desc.long.map((text, index) => (
+      <Text key={index}>{text}</Text>
+    ))}
     <Title title="Fonctionnalités" />
     <ul>
       {appDetails.features.map((feature, i) => (
         <li key={i}>
-          <Text>{feature}</Text>
+          <Text>{`◦ ${feature}`}</Text>
         </li>
       ))}
     </ul>

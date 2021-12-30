@@ -1,5 +1,5 @@
 import { FooterWrapper, FooterRow, FooterLink } from "./FooterStyles";
-import { IconLink } from "../../styled_components";
+import { IconContainer } from "../../styled_components";
 import Link from "next/link";
 import {
   FaEnvelope,
@@ -13,31 +13,31 @@ const Footer = (props) => {
     <FooterWrapper>
       <div>
         <a href="mailto:julien.pellin@ikodi.eu">
-          <IconLink>
+          <IconContainer>
             <FaEnvelope style={{ fontSize: "1.5em", marginRight: "1em" }} />
             julien.pellin@ikodi.eu
-          </IconLink>
+          </IconContainer>
         </a>
         <Link href="https://feedback.ikodi.eu" passHref>
           <a>
-            <IconLink>
+            <IconContainer>
               <FaWpforms style={{ fontSize: "1.5em", marginRight: "1em" }} />
               Formulaire de feedback
-            </IconLink>
+            </IconContainer>
           </a>
         </Link>
       </div>
       <FooterRow>
-        <IconLink style={{ cursor: "pointer" }}>
+        <IconContainer style={{ cursor: "pointer" }}>
           <a href="https://www.linkedin.com/in/julien-pellin-934720188/">
             <FaLinkedin />
           </a>
-        </IconLink>
-        <IconLink style={{ cursor: "pointer" }}>
+        </IconContainer>
+        <IconContainer style={{ cursor: "pointer" }}>
           <a href="https://github.com/ikodi-julien">
             <FaGithubSquare />
           </a>
-        </IconLink>
+        </IconContainer>
       </FooterRow>
     </FooterWrapper>
   );

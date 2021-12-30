@@ -10,6 +10,7 @@
 import styled from "styled-components";
 import NavSup from "./NavSup";
 import { FaEllipsisV } from "react-icons/fa";
+import UserWelcoming from "./UserWelcoming";
 
 export const Container = styled.section`
   position: fixed;
@@ -61,7 +62,11 @@ export const NavLink = styled.li`
   cursor: pointer;
   font-weight: 400;
   background-color: ${({ theme }) => theme.pageBackground};
+  transition: background-color 500ms;
 
+  &:hover {
+    background-color: rgba(63, 112, 203, 0.2);
+  }
   ${({ theme }) => theme.breakPoints.ip} {
     background-color: ${({ theme }) => theme.navBackground};
     padding: 8px;
@@ -105,9 +110,55 @@ export const Burger = styled(FaEllipsisV)`
   }
 `;
 
-export const UserGreating = styled.div`
+export const UserButton = styled.div`
   position: absolute;
+  top: 110px;
+  right: 0;
+  padding: 5px;
+  font-size: 1.2em;
+  transform: scale(1);
+  transition: transform 500ms;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+`;
+
+export const StyledUserWelcoming = styled(UserWelcoming)`
+  position: absolute;
+  width: 320px;
+  padding: 15px;
   top: 60px;
-  left: 10px;
+  right: ${(props) => (props.open ? "10px" : "-1000px")};
+  transition: right 300ms;
   font-weight: bold;
+  background-color: ${({ theme }) => theme.pageBackground};
+  border-radius: 5px;
+  box-shadow: ${({ theme }) => theme.shadow};
+
+  & p {
+    font-weight: normal;
+  }
+  & table {
+    font-size: 0.8em;
+    margin: auto;
+    margin-bottom: 20px;
+
+    tr {
+      background: ${({ theme }) => theme.font};
+      color: ${({ theme }) => theme.pageBackground};
+    }
+    td,
+    th {
+      padding: 5px 10px;
+    }
+    td.break {
+      word-break: break-all;
+    }
+  }
+`;
+
+export const UserWelcomingFooter = styled.footer`
+  width: fit-content;
+  margin: auto;
 `;

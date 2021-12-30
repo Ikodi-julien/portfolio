@@ -13,8 +13,15 @@ export const StyledTitle = styled(Title)`
   color: ${({ theme }) => theme.font};
   margin-bottom: 3em;
   padding-top: 60px;
+
   & h2 {
     font-size: 2.5em;
+    width: fit-content;
+    background: ${({ theme }) => theme.titleBackground};
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
     ${({ theme }) => theme.breakPoints.sp} {
       font-size: 2em;
     }

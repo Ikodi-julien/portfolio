@@ -23,7 +23,7 @@ const Nav = ({ visible, setIsVisible, slug }) => {
         <Link href={`/${slug}#about`} passHref>
           <NavLink onClick={() => setIsVisible(false)}>Mon parcours</NavLink>
         </Link>
-        <Link href="https://ikodi.eu/blog?page_id=36" passHref>
+        <Link href="mailto:julien.pellin@ikodi.eu" passHref>
           <NavLink onClick={() => setIsVisible(false)}>Contact</NavLink>
         </Link>
         <NavLink onClick={() => setOpen(!open)}>

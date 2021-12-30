@@ -1,74 +1,109 @@
-/* eslint-disable @next/next/link-passhref */
-import Button from "/styled_components/Button";
-import Nav from "./Nav";
-import { LogoContainer } from "/styled_components";
-import { Container, Burger, UserGreating } from "./HeaderStyles";
+import { useState, useEffect, Fragment } from "react";
 import Image from "next/image";
-import Link from "next/link";
-import Logo from "/public/logo_ikodi_lettres.png";
-import { useState, useEffect } from "react";
+import { FaUserAlt } from "react-icons/fa";
+import { LogoContainer, IconContainer } from "/styled_components";
+import Button from "/styled_components/Button";
 import ThemeButton from "../ThemeButton/ThemeButton";
-import axios from "axios";
+import {
+  Container,
+  Burger,
+  StyledUserWelcoming,
+  UserButton,
+} from "./HeaderStyles";
+import Nav from "./Nav";
+import Logo from "/public/logo_ikodi_lettres.png";
+import fetchUser from "../../helpers/fetchUser";
+import postLogout from "../../helpers/postLogout";
+import deleteAccount from "../../helpers/deleteAccount";
 
 const Header = (props) => {
   const [isVisible, setIsVisible] = useState(false);
+  const [isWelcomingVisible, setWelcomingIsVisible] = useState(false);
   const [user, setUser] = useState({ nickname: "" });
+  // const user = {
+  //   id: 32,
+  //   nickname: "ju",
+  //   firstname: "",
+  //   lastname: "",
+  //   email: "jupellin39@gmail.com",
+  //   password:
+  //     "2b$10$PvkWglwOBiEbi9RgVWah32b$10$PvkWglwOBiEbi9RgVWah32b$10$PvkWglwOBiEbi9RgVWah3",
+  //   apisignup: true,
+  //   active: true,
+  // };
+
+  const logoutHandler = () => {
+    const message = postLogout();
+    if (message) alert("Vous êtes bien déconnecté.");
+    if (!message)
+      alert(
+        "Ça n'a pas fonctionné semble-t-il... peut-être réessayer ? Sinon, n'hésitez pas à me contacter pour que je fasse le nécessaire."
+      );
+    setUser({ nickname: "" });
+  };
+
+  const handleDelete = async () => {
+    const id = await deleteAccount();
+    if (id) alert("Compte supprimé");
+    if (!id)
+      alert(
+        "Ça n'a pas fonctionné semble-t-il... peut-être réessayer ? Sinon, n'hésitez pas à me contacter pour que je fasse le nécessaire."
+      );
+    setUser({ nickname: "" });
+  };
 
   useEffect(() => {
-    async function fetchData() {
-      try {
-        const response = await axios.get("https://auth.ikodi.eu/me", {
-          withCredentials: true,
-        });
-        if (response.data) {
-          console.log("data", response.data);
-          console.log("status", response.status);
-          setUser(response.data);
-        } else {
-          console.log("error response", response);
-        }
-      } catch (error) {
-        console.log("error", error.toString());
-      }
-    }
-    fetchData();
-  }, []);
-
-  const postLogout = async () => {
-    console.log("hé!");
     try {
-      await axios.post(
-        "https://auth.ikodi.eu/logout",
-        {},
-        { withCredentials: true }
-      );
-      setUser({ nickname: "" });
+      (async () => {
+        const userData = await fetchUser();
+        if (userData) {
+          setUser(userData);
+          if (!document.cookie.includes("connected=know")) {
+            setWelcomingIsVisible(true);
+            document.cookie = "connected=know";
+          }
+        }
+      })();
     } catch (error) {
       console.log(error);
     }
-  };
+  }, []);
 
   return (
     <Container>
       <Burger onClick={() => setIsVisible(!isVisible)} />
 
-      <LogoContainer>
-        <Image src={Logo} alt="Logo Ikodi" width={100} height={25} />
-      </LogoContainer>
+      <a href="https://ikodi.eu">
+        <LogoContainer>
+          <Image src={Logo} alt="Logo Ikodi" width={100} height={30} />
+        </LogoContainer>
+      </a>
 
       <Nav visible={isVisible} setIsVisible={setIsVisible} slug={props.slug} />
       {user.nickname === "" ? (
-        <Link href="https://auth.ikodi.eu" passHref>
-          <a>
-            <Button>Se connecter</Button>
-          </a>
-        </Link>
+        <a href="https://auth.ikodi.eu?app=portfolio">
+          <Button>Se connecter</Button>
+        </a>
       ) : (
-        <Button onClick={postLogout}>Déconnexion</Button>
+        <Button onClick={() => logoutHandler()} color={"secondary"}>
+          Déconnexion
+        </Button>
       )}
       <ThemeButton slug={props.slug} appName={props.appName} />
       {user.nickname !== "" && (
-        <UserGreating>Bienvenue {user.nickname} !</UserGreating>
+        <Fragment>
+          <UserButton onClick={() => setWelcomingIsVisible(true)}>
+            <IconContainer>
+              <FaUserAlt />
+            </IconContainer>
+          </UserButton>
+          <StyledUserWelcoming
+            user={user}
+            open={isWelcomingVisible}
+            setOpen={setWelcomingIsVisible}
+            deleteAccount={handleDelete}
+          />
+        </Fragment>
       )}
     </Container>
   );

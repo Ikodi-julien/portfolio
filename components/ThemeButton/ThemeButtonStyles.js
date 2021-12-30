@@ -6,4 +6,10 @@ export const ThemeButtonContainer = styled.div`
   right: 0;
   padding: 8px;
   cursor: pointer;
+  transform: scale(1);
+  transition: transform 500ms;
+
+  &:hover {
+    transform: scale(1.2);
+  }
 `;

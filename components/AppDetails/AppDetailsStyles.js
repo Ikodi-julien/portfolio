@@ -18,7 +18,21 @@ export const AppDetailsTitleWrapper = styled.div`
 `;
 
 export const AppDetailsMainTitle = styled.h1`
-  font-size: 3em;
+  font-size: 4em;
+  width: fit-content;
+  height: fit-content;
+  align-self: start;
+  background: ${({ theme }) => theme.titleBackground};
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  ${({ theme }) => theme.breakPoints.ip} {
+    font-size: 3.5em;
+  }
+  ${({ theme }) => theme.breakPoints.sp} {
+    font-size: 3em;
+  }
 `;
 
 export const AppTechCard = styled.article`
@@ -36,7 +50,17 @@ export const AppTechCard = styled.article`
 `;
 export const AppTechTitle = styled.h1`
   margin-top: 0;
-  font-size: 1.8em;
+  font-size: 2em;
+
+  ${({ theme }) => theme.breakPoints.ip} {
+    margin-right: 0;
+    font-size: 1.9em;
+  }
+
+  ${({ theme }) => theme.breakPoints.sp} {
+    margin-right: 0;
+    font-size: 1.7em;
+  }
 `;
 export const AppTechsContainer = styled.div`
   display: flex;
