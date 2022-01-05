@@ -51,15 +51,15 @@ const UserWelcoming = ({ user, open, setOpen, deleteAccount, className }) => {
         </table>
       </div>
       <UserWelcomingFooter>
-        <Button onClick={() => setModal(!isModalOpen)} color={"secondary"}>
-          Supprimer ce compte
-        </Button>
-        <ConfirmModal
+        <a href="https://auth.ikodi.eu">
+          <Button color={"secondary"}>Gérer le profil</Button>
+        </a>
+        {/* <ConfirmModal
           isOpen={isModalOpen}
           setIsOpen={setModal}
           text={`Confirmer la suppression du compte "${user.email}" ?`}
           actionToDispatch={deleteAccount}
-        />
+        /> */}
       </UserWelcomingFooter>
     </article>
   );
