@@ -18,7 +18,6 @@ export const appList = [
       "Pré-rendering des pages côté serveur",
       "Choix de thème clair ou sombre",
       "La connexion permet la consultation des données stockées en base de donnée, la pré-saisie dans le formulaire de feedback et la connexion à l'app concord.ikodi.eu",
-      "Animations svg et javascript",
     ],
     techno: {
       frontend: {
