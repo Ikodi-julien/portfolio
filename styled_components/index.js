@@ -62,9 +62,9 @@ export const LogoContainer = styled.div`
 `;
 
 export const Divider = styled.hr`
-  width: 20%;
+  width: ${(props) => (props.width ? props.width : "20%")};
   min-width: 120px;
-  height: 10px;
+  height: ${(props) => (props.height ? props.height : "10px")};
   border-radius: 5px;
   background: ${({ theme }) => theme.buttonBack};
   border: none;
@@ -76,7 +76,7 @@ export const IconContainer = styled.div`
   right: ${(props) => (props.right ? props.right : "")};
   padding: ${(props) => (props.padding ? props.padding : "1rem 0")};
   margin: ${(props) => (props.margin ? props.margin : "0 1rem")};
-  font-size: ${(props) => (props.fontSize ? props.fontSize : "1em")};
+  font-size: ${(props) => (props.fontSize ? props.fontSize : "2rem")};
   display: flex;
   align-items: center;
   justify-content: ${(props) =>
@@ -93,15 +93,15 @@ export const Row = styled.div`
 `;
 
 export const Text = styled.p`
-  font-size: 1.3em;
+  font-size: ${(props) => (props.fontSize ? props.margin : "1.3em")};
   position: relative;
   margin-bottom: 0.5em;
 
   ${({ theme }) => theme.breakPoints.ip} {
-    font-size: 1.1em;
+    font-size: ${(props) => (props.fontSize ? props.margin : "1.1em")};
   }
   ${({ theme }) => theme.breakPoints.sp} {
-    font-size: 1em;
+    font-size: ${(props) => (props.fontSize ? props.margin : "1em")};
   }
 `;
 

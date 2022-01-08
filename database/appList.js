@@ -1,54 +1,55 @@
 export const appList = [
-  {
-    id: "appId-0",
-    name: "Portfolio",
-    title: "Projet Portfolio",
-    imgUrl: ["/assets/portfolio_portfolio.png"],
-    desc: {
-      short:
-        "C’est ce même portfolio que vous visitez, développé avec Next.js. Voir les détails pour les fonctionnalités.",
-      long: [
-        `Après avoir développé plusieurs applications et utilisé diverses technologies, il était devenu nécessaire de mettre à jour mon portfolio.`,
-        `Développé en 3 semaines avec Next.js, en passant par les étapes de définition des besoins, conception, codage des interfaces utilisateurs, implémentation des fonctionnalités et gestion de bugs.`,
-        `J’ai voulu que ce portfolio, non seulement présente mon parcours et mes réalisations mais aussi, se comporte lui-même comme une application.`,
-        `Ainsi en plus de la présentation, il est possible de s’y connecter, de répondre à un questionnaire de feedback, de jouer, de passer d’un thème sombre à un thème clair, d’être reconnu sur les apps auth.ikodi.eu, concord.ikodi.eu et feedback.ikodi.eu sans s’identifier à nouveau.`,
-      ],
-    },
-    features: [
-      "Pré-rendering des pages côté serveur",
-      "Choix de thème clair ou sombre",
-      "La connexion permet la consultation des données stockées en base de donnée, la pré-saisie dans le formulaire de feedback et la connexion à l'app concord.ikodi.eu",
-    ],
-    techno: {
-      frontend: {
-        lang: ["Next.js", "React", "Javascript"],
-        packages: [
-          "@mui/lab",
-          "axios",
-          "next",
-          "react",
-          "react-dom",
-          "react-icons",
-          "styled-components",
-          "styled-normalize",
-        ],
-      },
-      backend: {
-        lang: ["Node.JS"],
-        db: ["Sans"],
-        packages: ["Next.js"],
-      },
-      deployment: {
-        host: "AWS",
-        proxy: "Nginx",
-        transfer_protocol: "ssh",
-      },
-    },
-    links: {
-      github: ["https://github.com/Ikodi-julien/portfolio"],
-      app: "https://portfolio.ikodi.eu",
-    },
-  },
+  // {
+  // id: "appId-0",
+  // name: "Portfolio",
+  // title: "Projet Portfolio",
+  // imgUrl: ["/assets/portfolio_portfolio.png"],
+  // desc: {
+  //   short:
+  //     "C’est ce même portfolio que vous visitez, développé avec Next.js. Voir les détails pour les fonctionnalités.",
+  //   long: [
+  //     `Après avoir développé plusieurs applications et utilisé diverses technologies, il était devenu nécessaire de mettre à jour mon portfolio.`,
+  //     `Développé en 3 semaines avec Next.js, en passant par les étapes de définition des besoins, conception, codage des interfaces utilisateurs, implémentation des fonctionnalités et gestion de bugs.`,
+  //     `J’ai voulu que ce portfolio, non seulement présente mon parcours et mes réalisations mais aussi, se comporte lui-même comme une application.`,
+  //     `Ainsi en plus de la présentation, il est possible de s’y connecter, de répondre à un questionnaire de feedback, de jouer, de passer d’un thème sombre à un thème clair, d’être reconnu sur les apps auth.ikodi.eu, concord.ikodi.eu et feedback.ikodi.eu sans s’identifier à nouveau.`,
+  //   ],
+  // },
+  // features: [
+  //   "Pré-rendering des pages côté serveur",
+  //   "Choix de thème clair ou sombre",
+  //   "La connexion permet la consultation des données stockées en base de donnée, la pré-saisie dans le formulaire de feedback et la connexion à l'app concord.ikodi.eu",
+  // ],
+  // techno: {
+  //   frontend: {
+  //     lang: ["Next.js", "React", "Javascript"],
+  //     packages: [
+  //       "@mui/lab",
+  //       "axios",
+  //       "next",
+  //       "react",
+  //       "react-dom",
+  //       "react-icons",
+  //       "styled-components",
+  //       "styled-normalize",
+  //     ],
+  //   },
+  //   backend: {
+  //     lang: ["Node.JS"],
+  //     db: ["Sans"],
+  //     packages: ["Next.js"],
+  //   },
+  //   deployment: {
+  //     host: "AWS",
+  //     proxy: "Nginx",
+  //     transfer_protocol: "ssh",
+  //     process_manager: "pm2",
+  //   },
+  // },
+  //   links: {
+  //     github: ["https://github.com/Ikodi-julien/portfolio"],
+  //     app: "https://portfolio.ikodi.eu",
+  //   },
+  // },
   {
     id: "appId-1",
     name: "Auth",
@@ -100,6 +101,7 @@ export const appList = [
         host: "AWS EC2",
         proxy: "nginx",
         transfer_protocol: "ssh",
+        process_manager: "pm2",
       },
     },
     links: {
@@ -165,6 +167,7 @@ export const appList = [
         host: "AWS EC2",
         proxy: "nginx",
         transfer_protocol: "ssh",
+        process_manager: "pm2",
       },
     },
     links: {
@@ -209,6 +212,7 @@ export const appList = [
         host: "AWS EC2",
         proxy: "nginx",
         transfer_protocol: "ssh",
+        process_manager: "pm2",
       },
     },
     links: {
