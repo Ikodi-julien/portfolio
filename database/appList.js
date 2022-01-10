@@ -148,7 +148,7 @@ export const appList = [
         tests: "mocha + chaï",
       },
       backend: {
-        lang: ["Node.js", "Express"],
+        lang: ["Node.js", "Express", "WebSocket"],
         db: ["PostgreSQL", "Redis"],
         packages: [
           "base-64",

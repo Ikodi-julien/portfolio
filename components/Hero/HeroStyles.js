@@ -8,6 +8,13 @@ export const StyledHeroAnimation = styled(HeroAnimation)`
   z-index: -1;
   display: "block";
 `;
+export const HeroAnimationContainer = styled.div`
+  display: flex;
+  justify-content: end;
+  width: 100%;
+  height: 50vh;
+  min-height: 300px;
+`;
 
 export const HeroTitles = styled.div`
   font-family: ${({ theme }) => theme.fonts.title};
@@ -34,8 +41,5 @@ export const SubTitle = styled.h2`
   text-align: left;
   display: flex;
   width: fit-content;
-  background: ${({ theme }) => theme.titleBackground};
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: ${({ theme }) => theme.subTitleColor};
 `;

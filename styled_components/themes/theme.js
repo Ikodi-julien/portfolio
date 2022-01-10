@@ -38,6 +38,7 @@ export const dark = {
     rgba(255, 255, 255, 1) 20%,
     rgba(255, 255, 255, 0.5)
   )`,
+  subTitleColor: `rgba(255, 255, 255, 0.6)`,
 };
 
 const lightPColor = `rgba(189,166,255,1)`;
@@ -61,4 +62,5 @@ export const light = {
     rgba(25,25,24,1) 20%,
     rgba(25,25,24,.5)
   )`,
+  subTitleColor: `rgba(0, 0, 0, 0.5)`,
 };

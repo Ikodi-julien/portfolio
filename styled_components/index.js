@@ -74,7 +74,7 @@ export const Divider = styled.hr`
 export const IconContainer = styled.div`
   position: ${(props) => (props.position ? props.position : "relative")};
   right: ${(props) => (props.right ? props.right : "")};
-  padding: ${(props) => (props.padding ? props.padding : "1rem 0")};
+  padding: ${(props) => (props.padding ? props.padding : "0")};
   margin: ${(props) => (props.margin ? props.margin : "0 1rem")};
   font-size: ${(props) => (props.fontSize ? props.fontSize : "2rem")};
   display: flex;
@@ -82,6 +82,11 @@ export const IconContainer = styled.div`
   justify-content: ${(props) =>
     props.justifyContent ? props.justifyContent : "left"};
   cursor: pointer;
+  & a {
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+  }
 `;
 
 export const Row = styled.div`
