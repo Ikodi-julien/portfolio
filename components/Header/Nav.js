@@ -6,25 +6,29 @@ import { FaHome } from "react-icons/fa";
 const Nav = ({ visible, setIsVisible, slug }) => {
   const [open, setOpen] = useState(false);
 
+  const handleNavClick = () => {
+    setIsVisible(false);
+    setOpen(false);
+  };
   return (
     <Fragment>
       <NavLinks isVisible={visible}>
         <Link href={`/${slug}`} passHref>
-          <NavLink onClick={() => setIsVisible(false)}>
+          <NavLink onClick={handleNavClick}>
             <FaHome />
           </NavLink>
         </Link>
         <Link href={`/${slug}#projects`} passHref>
-          <NavLink onClick={() => setIsVisible(false)}>Projets</NavLink>
+          <NavLink onClick={handleNavClick}>Projets</NavLink>
         </Link>
         <Link href={`/${slug}#tech`} passHref>
-          <NavLink onClick={() => setIsVisible(false)}>Technos</NavLink>
+          <NavLink onClick={handleNavClick}>Technos</NavLink>
         </Link>
         <Link href={`/${slug}#about`} passHref>
-          <NavLink onClick={() => setIsVisible(false)}>Mon parcours</NavLink>
+          <NavLink onClick={handleNavClick}>Mon parcours</NavLink>
         </Link>
         <Link href="mailto:julien.pellin@ikodi.eu" passHref>
-          <NavLink onClick={() => setIsVisible(false)}>Contact</NavLink>
+          <NavLink onClick={handleNavClick}>Contact</NavLink>
         </Link>
         <NavLink onClick={() => setOpen(!open)}>
           {open ? "Plutôt -" : "Encore +"}

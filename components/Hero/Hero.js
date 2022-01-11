@@ -15,12 +15,12 @@ const Hero = (props) => {
         <SubTitle>Julien PELLIN</SubTitle>
         <SubTitle>Développeur d&apos;applications pour le web</SubTitle>
         <SubTitle>
-          <IconContainer>
+          <IconContainer fontSize="2.5rem">
             <a href="https://www.linkedin.com/in/julien-pellin-934720188/">
               <FaLinkedin />
             </a>
           </IconContainer>
-          <IconContainer>
+          <IconContainer fontSize="2.5rem">
             <a href="https://github.com/ikodi-julien">
               <FaGithubSquare />
             </a>

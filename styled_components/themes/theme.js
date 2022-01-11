@@ -29,6 +29,7 @@ export const dark = {
   navBackground: `black`,
   cardBackground: "rgba(15,15,25,1)",
   footerBackground: "black",
+  footerFontColor: "rgba(170, 170, 170, 0.8)",
   font: `#d9e4fa`,
   fontInverted: `#474747`,
   shadow: `0 0 5px rgba(250,250,240, 0.2)`,
@@ -37,6 +38,7 @@ export const dark = {
     rgba(255, 255, 255, 1) 20%,
     rgba(255, 255, 255, 0.5)
   )`,
+  subTitleColor: `rgba(255, 255, 255, 0.6)`,
 };
 
 const lightPColor = `rgba(189,166,255,1)`;
@@ -51,6 +53,7 @@ export const light = {
   navBackground: `rgba(206,205,196,1)`,
   cardBackground: `rgba(241,239,231,1)`,
   footerBackground: `rgba(206,205,196,1)`,
+  footerFontColor: "rgba(40, 40, 40, 0.8)",
   font: `rgba(25,25,24,1)`,
   fontInverted: `rgba(247,246,240,1)`,
   shadow: `0 0 5px rgba(25,25,24, 0.2)`,
@@ -59,4 +62,5 @@ export const light = {
     rgba(25,25,24,1) 20%,
     rgba(25,25,24,.5)
   )`,
+  subTitleColor: `rgba(0, 0, 0, 0.5)`,
 };

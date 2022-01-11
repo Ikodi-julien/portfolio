@@ -9,7 +9,7 @@ const AppPage = ({ appDetails, theme, slug }) => {
   return (
     <Fragment>
       <Head>
-        <title>{appDetails.name}</title>
+        <title>Portfolio - {appDetails.name}</title>
         <meta name="descrition" content={appDetails.desc}></meta>
       </Head>
       <Layout theme={theme} slug={slug} appName={appDetails.name}>

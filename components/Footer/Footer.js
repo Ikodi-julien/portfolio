@@ -1,5 +1,10 @@
-import { FooterWrapper, FooterRow, FooterLink } from "./FooterStyles";
-import { IconContainer } from "../../styled_components";
+import {
+  FooterWrapper,
+  FooterRow,
+  FooterColumn,
+  FooterLink,
+} from "./FooterStyles";
+import { IconContainer, Divider, Text } from "../../styled_components";
 import Link from "next/link";
 import {
   FaEnvelope,
@@ -11,33 +16,42 @@ import {
 const Footer = (props) => {
   return (
     <FooterWrapper>
-      <div>
-        <a href="mailto:julien.pellin@ikodi.eu">
-          <IconContainer>
-            <FaEnvelope style={{ fontSize: "1.5em", marginRight: "1em" }} />
-            julien.pellin@ikodi.eu
-          </IconContainer>
-        </a>
-        <Link href="https://feedback.ikodi.eu" passHref>
-          <a>
+      <FooterRow>
+        <FooterColumn>
+          <a href="mailto:julien.pellin@ikodi.eu">
             <IconContainer>
-              <FaWpforms style={{ fontSize: "1.5em", marginRight: "1em" }} />
-              Formulaire de feedback
+              <FaEnvelope style={{ marginRight: "1rem" }} />
+            </IconContainer>
+            julien.pellin@ikodi.eu
+          </a>
+          <a href="https://feedback.ikodi.eu">
+            <IconContainer>
+              <FaWpforms style={{ marginRight: "1rem" }} />
+            </IconContainer>
+            Formulaire de feedback
+          </a>
+        </FooterColumn>
+
+        <div style={{ display: "flex" }}>
+          <a href="https://www.linkedin.com/in/julien-pellin-934720188/">
+            <IconContainer fontSize="1.8em">
+              <FaLinkedin />
             </IconContainer>
           </a>
-        </Link>
-      </div>
-      <FooterRow>
-        <IconContainer style={{ cursor: "pointer" }}>
-          <a href="https://www.linkedin.com/in/julien-pellin-934720188/">
-            <FaLinkedin />
-          </a>
-        </IconContainer>
-        <IconContainer style={{ cursor: "pointer" }}>
           <a href="https://github.com/ikodi-julien">
-            <FaGithubSquare />
+            <IconContainer fontSize="1.8em">
+              <FaGithubSquare />
+            </IconContainer>
           </a>
-        </IconContainer>
+        </div>
+      </FooterRow>
+      <div style={{ width: "100%", padding: "2rem 0" }}></div>
+      <Divider width="80%" height="2px" />
+      <div style={{ width: "100%", padding: "2rem 0" }}></div>
+      <FooterRow justifyContent="center">
+        <Text fontSize="1rem">
+          01/2022 - Ce portfolio est réalisé avec Next.js et React
+        </Text>
       </FooterRow>
     </FooterWrapper>
   );

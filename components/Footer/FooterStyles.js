@@ -1,23 +1,40 @@
 import styled from "styled-components";
 
 export const FooterWrapper = styled.section`
-  padding: 6em;
+  position: relative;
+  padding: 6rem;
   background: ${({ theme }) => theme.footerBackground};
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  color: ${({ theme }) => theme.footerFontColor};
+
   ${({ theme }) => theme.breakPoints.dt} {
-    padding: 2em;
+    padding: 2rem;
   }
   ${({ theme }) => theme.breakPoints.ip} {
-    padding: 1em;
+    padding: 1rem;
   }
   ${({ theme }) => theme.breakPoints.sp} {
-    padding: 0.5em;
+    padding: 0.5rem;
   }
 `;
 
 export const FooterRow = styled.div`
   display: flex;
-  font-size: 2em;
+  width: 100%;
+  justify-content: ${(props) =>
+    props.justifyContent ? props.justifyContent : "space-between"};
   flex-wrap: wrap;
+`;
+
+export const FooterColumn = styled.div`
+  display: flex;
+  flex-direction: column;
+  & a {
+    display: flex;
+    align-items: center;
+    color: ${({ theme }) => theme.footerFontColor};
+    padding: 2rem 0;
+  }
 `;
