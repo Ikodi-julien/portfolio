@@ -35,5 +35,6 @@ export const FooterColumn = styled.div`
     display: flex;
     align-items: center;
     color: ${({ theme }) => theme.footerFontColor};
+    padding: 2rem 0;
   }
 `;
