@@ -11,22 +11,24 @@ const Project = ({ project, slug }) => {
   const router = useRouter();
   const pathName = router.pathname;
 
-  const handleClick = () => {
-    router.push(`/details/${project.name}/${slug}`);
-  };
+  // const handleClick = () => {
+  //   router.push(`/details/${project.name}/${slug}`);
+  // };
 
   return (
     <ProjectCard key={project.title}>
       <ProjectTitle>{project.name}</ProjectTitle>
 
       <div style={{ cursor: "pointer", textAlign: "center" }}>
-        <Image
-          src={project.imgUrl[0]}
-          alt={project.title}
-          width={375}
-          height={240}
-          onClick={handleClick}
-        />
+        <a href={`/details/${project.name}/${slug}`} target="_blank">
+          <Image
+            src={project.imgUrl[0]}
+            alt={project.title}
+            width={375}
+            height={240}
+            // onClick={handleClick}
+          />
+        </a>
       </div>
       <ProjectText>{project.desc.short}</ProjectText>
       <TagContainer>
@@ -41,9 +43,9 @@ const Project = ({ project, slug }) => {
         ))}
       </TagContainer>
       <Row>
-        <Button color="primary" onClick={handleClick}>
-          + Détails
-        </Button>
+        <a href={`/details/${project.name}/${slug}`} target="_blank">
+          <Button color="primary">+ Détails</Button>
+        </a>
         <a href={project.links.github}>
           <Button color="secondary">
             <FaGithub style={{ fontSize: "1.2em" }} />
