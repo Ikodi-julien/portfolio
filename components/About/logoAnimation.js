@@ -8,6 +8,7 @@ const logosDev = [
   "/assets/logo_react.png",
   "/assets/logo_redis.png",
   "/assets/logo_vue.png",
+  "/assets/logo_docker.png",
 ];
 
 const logosPast = [

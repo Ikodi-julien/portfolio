@@ -19,8 +19,8 @@ const techList = [
     title: "Déploiement",
     icon: "FaAws",
     desc: [
-      "Avec AWS, Nginx.",
-      "Expérience avec Heroku, PlanetHoster, Gandi...",
+      "AWS / Nginx / Docker",
+      "Utilisation basique de Heroku, DigitalOcean, PlanetHoster, Gandi...",
     ],
   },
   {

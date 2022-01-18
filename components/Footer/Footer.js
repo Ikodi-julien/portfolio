@@ -48,10 +48,22 @@ const Footer = (props) => {
       <div style={{ width: "100%", padding: "2rem 0" }}></div>
       <Divider width="80%" height="2px" />
       <div style={{ width: "100%", padding: "2rem 0" }}></div>
-      <FooterRow justifyContent="center">
-        <Text fontSize="1rem">
-          01/2022 - Ce portfolio est réalisé avec Next.js et React
-        </Text>
+      <FooterRow justifyContent="left">
+        <ul>
+          <li>
+            <Text>01/2022</Text>
+          </li>
+          <li>
+            <Text fontSize="1rem">
+              Ce portfolio est réalisé avec Next.js et React
+            </Text>
+          </li>
+          <li>
+            <Text fontSize="1rem">
+              Il est déployé sur une instance AWS EC2 avec Docker
+            </Text>
+          </li>
+        </ul>
       </FooterRow>
     </FooterWrapper>
   );
