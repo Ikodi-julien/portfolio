@@ -4,6 +4,6 @@ services:
     build: .
     image: ikodi/portfolio
     ports:
-      - "6060:6060"
+      - "6001:6001"
     environment:
-      - PORT=6060
+      - PORT=6001

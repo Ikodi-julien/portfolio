@@ -1,6 +1,6 @@
 # Etapes dockerisation
 
-## 1/ Install docker sur AWS EC2
+## 1/ AWS - Install docker sur AWS EC2
 
 install docker engine:
 https://docs.docker.com/engine/install/ubuntu/
@@ -8,7 +8,7 @@ https://docs.docker.com/engine/install/ubuntu/
 linux postinstall:
 https://docs.docker.com/engine/install/linux-postinstall/
 
-## 2/ Containeriser le portfolio en dev
+## 2/ Local - Containeriser le portfolio
 
 a/ Dockerfile
 
@@ -37,10 +37,23 @@ services:
       - PORT=6060
 ```
 
-c/ test
+## 3/ AWS - Paramétrage et test
 
-Ok en local
+Ok en local, fait quelques changement pour tester en prod.
 
-3/ Image build le portfolio pour la prod et push
+- Création de l'enregistrement DNS test.ikodi.eu pour le premier déploiement avec docker -> ok
+- Paramétrage de nginx pour recevoir test.ikodi.eu et transférer sur le port 6060 -> ok
+- Paramétrage de certbot pour autoriser le https sur test.ikodi.eu -> ok
+- Vérifier que l'adresse est accessible et renvoie une app sur le port 6060 -> ok
+- Installer docker-compose -> ok
+- Installer l'auto-complétion de docker-compose -> ok
 
-4/ Pull et mise en ligne sur AWS avec nginx
+## 4/ Local - Image build le portfolio pour la prod et push
+
+- docker-compose build
+- docker-compose push ikodi/portfolio
+- git add .
+- git commit -a
+- git push
+
+## 5/ Pull et mise en ligne sur AWS avec nginx
