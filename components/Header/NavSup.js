@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Fragment } from "react";
 import { NavSupContainer, NavLink } from "./HeaderStyles";
-import { FaBloggerB, FaGamepad, FaWpforms } from "react-icons/fa";
+import { FaBloggerB, FaGamepad, FaWpforms, FaVirus } from "react-icons/fa";
 
 const NavSup = ({ open, setOpen, setIsVisible, className }) => {
   return (

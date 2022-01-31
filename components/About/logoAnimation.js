@@ -1,14 +1,15 @@
 const logosDev = [
   "/assets/logo_aws.png",
-  "/assets/logo_mongodb.png",
-  "/assets/logo_next.png",
-  "/assets/logo_node.png",
-  "/assets/logo_php.png",
-  "/assets/logo_psql.png",
-  "/assets/logo_react.png",
-  "/assets/logo_redis.png",
-  "/assets/logo_vue.png",
   "/assets/logo_docker.png",
+  "/assets/logo_node.png",
+  "/assets/logo_next.png",
+  "/assets/logo_symfony.png",
+  "/assets/logo_react.png",
+  "/assets/logo_vue.png",
+  "/assets/logo_mongodb.png",
+  // "/assets/logo_php.png",
+  "/assets/logo_psql.png",
+  "/assets/logo_redis.png",
 ];
 
 const logosPast = [

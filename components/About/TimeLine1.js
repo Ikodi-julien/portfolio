@@ -29,8 +29,8 @@ export default function OppositeContentTimeline() {
             <br />
             Certification Opquast 890/1000
             <br />
-            Développement de plusieurs applications avec Next.JS, React, Vue.JS,
-            SQL, NoSQL...
+            Développement d&quot;applications avec Next.JS, React, Vue.JS,
+            Symfony5, bases SQL, NoSQL...
           </TimelineContent>
         </TimelineItem>
 

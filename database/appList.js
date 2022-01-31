@@ -293,4 +293,44 @@ export const appList = [
       app: "https://multiplicorne.ikodi.eu",
     },
   },
+  {
+    id: "appId-5",
+    name: "Statcovid",
+    title: "Quelques stats relatives au Covid-19",
+    imgUrl: ["/assets/statcovid_portfolio.png"],
+    desc: {
+      short:
+        "Des statistiques liées au Covid-19 pour la france et par département",
+      long: [
+        `J'ai réalisé cette petite application afin d'apprendre à utiliser Symfony5.`,
+        `Des statistiques pour la France et par département, des graphiques pour voir l'évolution des données.`,
+        `Api 'https://coronavirusapifr.herokuapp.com/data/live/france'`,
+      ],
+    },
+    features: [
+      "Dernières données disponibles, reprend les données mises à disposition par le gouvernement.",
+      "Données pour la France, par département et historique sur 2 ans.",
+      "Graphiques.",
+    ],
+    techno: {
+      frontend: {
+        lang: ["twig", "sass", "js"],
+        packages: ["graph.js"],
+      },
+      backend: {
+        lang: ["Symfony5"],
+        db: ["Api externe"],
+        packages: ["webpack"],
+      },
+      deployment: {
+        host: "AWS - Docker",
+        proxy: "Nginx",
+        transfer_protocol: "ssh",
+      },
+    },
+    links: {
+      github: ["https://github.com/Ikodi-julien/statcovid"],
+      app: "https://statcovid.ikodi.eu",
+    },
+  },
 ];

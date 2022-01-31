@@ -7,7 +7,10 @@ const techList = [
   {
     title: "Backend",
     icon: "FaServer",
-    desc: [`Node et bases de données SQL et NoSQL.`, `Autodidacte PHP`],
+    desc: [
+      `Node et bases de données SQL et NoSQL.`,
+      `Autodidacte PHP, Symfony5`,
+    ],
   },
   {
     title: "Frontend",
@@ -20,7 +23,7 @@ const techList = [
     icon: "FaAws",
     desc: [
       "AWS / Nginx / Docker",
-      "Utilisation basique de Heroku, DigitalOcean, PlanetHoster, Gandi...",
+      "Parfois utilisation de Heroku, DigitalOcean, PlanetHoster, Gandi...",
     ],
   },
   {
