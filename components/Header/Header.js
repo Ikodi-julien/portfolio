@@ -73,12 +73,6 @@ const Header = (props) => {
     <Container>
       <Burger onClick={() => setIsVisible(!isVisible)} />
 
-      <a href="https://ikodi.eu">
-        <LogoContainer>
-          <Image src={Logo} alt="Logo Ikodi" width={100} height={30} />
-        </LogoContainer>
-      </a>
-
       <Nav visible={isVisible} setIsVisible={setIsVisible} slug={props.slug} />
       {user.nickname === "" ? (
         <a href="https://auth.ikodi.eu?app=portfolio">

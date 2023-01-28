@@ -17,6 +17,20 @@ export default function OppositeContentTimeline() {
       <Timeline position="right">
         <TimelineItem>
           <TimelineOppositeContent style={{ width, maxWidth, minWidth }}>
+            2022
+          </TimelineOppositeContent>
+          <TimelineSeparator>
+            <TimelineDot />
+            <TimelineConnector />
+          </TimelineSeparator>
+          <TimelineContent>
+            Développeur d&quot;applications web en entreprise.
+            <br />
+            Stack technique: Laravel / React / Oracle / MySql
+          </TimelineContent>
+        </TimelineItem>
+        <TimelineItem>
+          <TimelineOppositeContent style={{ width, maxWidth, minWidth }}>
             2021
           </TimelineOppositeContent>
           <TimelineSeparator>

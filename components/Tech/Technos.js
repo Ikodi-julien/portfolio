@@ -7,23 +7,20 @@ const techList = [
   {
     title: "Backend",
     icon: "FaServer",
-    desc: [
-      `Node et bases de données SQL et NoSQL.`,
-      `Autodidacte PHP, Symfony5`,
-    ],
+    desc: [`Laravel, Node`, `Bases de données SQL et NoSQL.`],
   },
   {
     title: "Frontend",
     icon: "FaReact",
 
-    desc: ["Expérience avec React-Redux, scss et un peu avec Vue.js"],
+    desc: ["React-Redux, scss"],
   },
   {
-    title: "Déploiement",
+    title: "Déploiement / Hébergement",
     icon: "FaAws",
     desc: [
-      "AWS / Nginx / Docker",
-      "Parfois utilisation de Heroku, DigitalOcean, PlanetHoster, Gandi...",
+      "AWS / Ubuntu/ Nginx / Docker / Gitlab",
+      "Heroku, DigitalOcean, PlanetHoster, Gandi...",
     ],
   },
   {
