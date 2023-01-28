@@ -22,12 +22,8 @@ const About = ({}) => {
 
   return (
     <Section>
-<<<<<<< HEAD
-      <Title title="Parcours pro" id="about" />
-=======
       <Title title="Mon parcours" id="about" />
 
->>>>>>> develop
       <Text>
         Developpeur d’applications pour le web depuis 2019, j’ai aussi une
         expérience dans les secteurs de la santé et de l’industrie
