@@ -2,9 +2,9 @@
   "name": "portfolio",
   "private": true,
   "scripts": {
-    "dev": "next dev --port 8000",
+    "dev": "next dev --port 6001",
     "build": "next build",
-    "start": "next start --port 6000",
+    "start": "next start",
     "lint": "next lint",
     "deploy": "git pull && npm i && npm run build && pm2 restart portfolio"
   },

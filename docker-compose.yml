@@ -1,0 +1,9 @@
+version: "3"
+services:
+  portfolio:
+    build: .
+    image: ikodi/portfolio
+    ports:
+      - "6001:6001"
+    environment:
+      - PORT=6001

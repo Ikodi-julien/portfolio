@@ -17,6 +17,20 @@ export default function OppositeContentTimeline() {
       <Timeline position="right">
         <TimelineItem>
           <TimelineOppositeContent style={{ width, maxWidth, minWidth }}>
+            2022
+          </TimelineOppositeContent>
+          <TimelineSeparator>
+            <TimelineDot />
+            <TimelineConnector />
+          </TimelineSeparator>
+          <TimelineContent>
+            Développeur d&quot;applications web en entreprise.
+            <br />
+            Stack technique: Laravel / React / Oracle / MySql
+          </TimelineContent>
+        </TimelineItem>
+        <TimelineItem>
+          <TimelineOppositeContent style={{ width, maxWidth, minWidth }}>
             2021
           </TimelineOppositeContent>
           <TimelineSeparator>
@@ -29,8 +43,8 @@ export default function OppositeContentTimeline() {
             <br />
             Certification Opquast 890/1000
             <br />
-            Développement de plusieurs applications avec Next.JS, React, Vue.JS,
-            SQL, NoSQL...
+            Développement d&quot;applications avec Next.JS, React, Vue.JS,
+            Symfony5, bases SQL, NoSQL...
           </TimelineContent>
         </TimelineItem>
 
